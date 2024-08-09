@@ -27,5 +27,5 @@ add_library(Echo SHARED src/test.cpp)
 
 target_include_directories(Echo PUBLIC "src/")
 
-target_link_libraries(Echo PRIVATE glm glfw glad stb_image imgui)
+target_link_libraries(Echo PRIVATE glfw glm glad stb_image imgui)
 

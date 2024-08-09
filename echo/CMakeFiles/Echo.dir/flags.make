@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DEcho_EXPORTS
 
-CXX_INCLUDES = -I/home/darius/Dev/cpp/echo/echo/src -I/home/darius/Dev/cpp/echo/echo/vendor/glm/include -I/home/darius/Dev/cpp/echo/echo/vendor/glad/include/glad -I/home/darius/Dev/cpp/echo/echo/vendor/stb_image/include -I/home/darius/Dev/cpp/echo/echo/vendor/imguiInclude/src
+CXX_INCLUDES = -I/home/darius/Dev/cpp/echo/echo/src -I/home/darius/Dev/cpp/echo/echo/vendor/glm/include -I/home/darius/Dev/cpp/echo/echo/vendor/glfw/include -I/home/darius/Dev/cpp/echo/echo/vendor/glad/include/glad -I/home/darius/Dev/cpp/echo/echo/vendor/stb_image/include -I/home/darius/Dev/cpp/echo/echo/vendor/imguiInclude/src
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -flto=auto -fno-fat-lto-objects -fPIC
 

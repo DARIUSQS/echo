@@ -188,7 +188,10 @@ lib/libimgui.so: echo/vendor/imguiInclude/CMakeFiles/imgui.dir/src/imgui/imgui_w
 lib/libimgui.so: echo/vendor/imguiInclude/CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_glfw.cpp.o
 lib/libimgui.so: echo/vendor/imguiInclude/CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_opengl3.cpp.o
 lib/libimgui.so: echo/vendor/imguiInclude/CMakeFiles/imgui.dir/build.make
+lib/libimgui.so: lib/libglfw3.a
 lib/libimgui.so: lib/libglad.so
+lib/libimgui.so: /usr/lib/librt.a
+lib/libimgui.so: /usr/lib/libm.so
 lib/libimgui.so: echo/vendor/imguiInclude/CMakeFiles/imgui.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library ../../../lib/libimgui.so"
 	cd /home/darius/Dev/cpp/echo/echo/vendor/imguiInclude && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imgui.dir/link.txt --verbose=$(VERBOSE)

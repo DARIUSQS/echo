@@ -92,8 +92,12 @@ Echo_EXTERNAL_OBJECTS =
 
 lib/libEcho.so: echo/CMakeFiles/Echo.dir/src/test.cpp.o
 lib/libEcho.so: echo/CMakeFiles/Echo.dir/build.make
+lib/libEcho.so: lib/libglfw3.a
 lib/libEcho.so: lib/libstb_image.so
 lib/libEcho.so: lib/libimgui.so
+lib/libEcho.so: lib/libglfw3.a
+lib/libEcho.so: /usr/lib/librt.a
+lib/libEcho.so: /usr/lib/libm.so
 lib/libEcho.so: lib/libglad.so
 lib/libEcho.so: echo/CMakeFiles/Echo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../lib/libEcho.so"

@@ -14,7 +14,7 @@ echo/vendor/imguiInclude/CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_glfw
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/strings.h /usr/include/assert.h \
  /home/darius/Dev/cpp/echo/echo/vendor/imguiInclude/src/imgui/backends/imgui_impl_glfw.h \
- /usr/include/GLFW/glfw3.h \
+ /home/darius/Dev/cpp/echo/echo/vendor/glfw/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/types.h \
  /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
