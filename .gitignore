@@ -1,0 +1,10 @@
+.cache/
+CMakeCache/
+MakeFile
+cmake_install.cmake
+compile_commands.json
+echo/.cache/
+echo/CMakeCache/
+echo/MakeFile
+echo/cmake_install.cmake
+echo/compile_commands.json
