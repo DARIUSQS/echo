@@ -1,6 +1,22 @@
-#include <test.h>
+#include "Application.h"
+#include <Echo.h>
 
-int main()
+class Sandbox : public Echo::Application
 {
-    Echo::Print();
+public:
+    Sandbox()
+    {
+
+    }
+    
+    ~Sandbox()
+    {
+
+    }
+};
+
+Echo::Application* Echo::CreateApplication()
+{
+    return new Sandbox();
 }
+

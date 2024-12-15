@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
   "../lib/libEcho.pdb"
   "../lib/libEcho.so"
-  "CMakeFiles/Echo.dir/src/test.cpp.o"
-  "CMakeFiles/Echo.dir/src/test.cpp.o.d"
+  "CMakeFiles/Echo.dir/link.d"
+  "CMakeFiles/Echo.dir/src/Application.cpp.o"
+  "CMakeFiles/Echo.dir/src/Application.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

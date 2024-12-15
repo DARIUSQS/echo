@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/sandbox.dir/link.d"
   "CMakeFiles/sandbox.dir/src/main.cpp.o"
   "CMakeFiles/sandbox.dir/src/main.cpp.o.d"
-  "sandbox"
-  "sandbox.pdb"
+  "bin/sandbox"
+  "bin/sandbox.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

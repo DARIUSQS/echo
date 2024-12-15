@@ -19,11 +19,15 @@ add_subdirectory(vendor/stb_image)
 add_subdirectory(vendor/glm)
 add_subdirectory(vendor/imguiInclude)
 
-add_library(Echo SHARED src/test.cpp)
+add_library(Echo SHARED src/Application.cpp)
 
 # file(GLOB_RECURSE SOURCE_FILES CONFIGURE_DEPENDS "include/*.cpp")
 
 # target_sources(opengl PRIVATE ${SOURCE_FILES})
+IF(WIN32)
+    target_compile_definitions(Echo PUBLIC EC_PLATFORM_WINDOWS = 1)
+    target_compile_definitions(Echo PUBLIC HAZEL_API = 1)
+ENDIF()
 
 target_include_directories(Echo PUBLIC "src/")
 

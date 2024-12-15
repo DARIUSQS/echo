@@ -21,7 +21,10 @@ add_executable(sandbox src/main.cpp)
 
 # target_sources(opengl PRIVATE ${SOURCE_FILES})
 
+# IF(WIN32)
+#     target_compile_definitions(Echo PUBLIC EC_PLATFORM_WINDOWS = 1)
+# ENDIF()
+
 target_include_directories(sandbox PUBLIC "src/")
 
 target_link_libraries(sandbox PRIVATE Echo)
-

@@ -21,7 +21,7 @@ echo/vendor/imguiInclude/CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_open
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
- /usr/include/bits/floatn-common.h /usr/include/bits/stdio.h \
+ /usr/include/bits/floatn-common.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
@@ -46,6 +46,6 @@ echo/vendor/imguiInclude/CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_open
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h \
- /usr/include/c++/14.2.1/bits/std_abs.h /usr/include/dlfcn.h \
- /usr/include/bits/dlfcn.h /usr/include/bits/dl_find_object.h
+ /usr/include/bits/stdlib-float.h /usr/include/c++/14.2.1/bits/std_abs.h \
+ /usr/include/dlfcn.h /usr/include/bits/dlfcn.h \
+ /usr/include/bits/dl_find_object.h
