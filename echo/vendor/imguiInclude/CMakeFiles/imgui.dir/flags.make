@@ -6,5 +6,5 @@ CXX_DEFINES = -Dimgui_EXPORTS
 
 CXX_INCLUDES = -I/home/darius/Dev/cpp/echo/echo/vendor/imguiInclude/src -I/home/darius/Dev/cpp/echo/echo/vendor/glfw/include -I/home/darius/Dev/cpp/echo/echo/vendor/glad/include/glad
 
-CXX_FLAGS = -std=gnu++17 -flto=auto -fno-fat-lto-objects -fPIC
+CXX_FLAGS =  -fPIC -O3 -DNDEBUG -std=gnu++17 -flto=auto -fno-fat-lto-objects -fPIC
 

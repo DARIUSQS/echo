@@ -6,5 +6,5 @@ C_DEFINES = -Dglad_EXPORTS
 
 C_INCLUDES = -I/home/darius/Dev/cpp/echo/echo/vendor/glad/include/glad
 
-C_FLAGS = -flto=auto -fno-fat-lto-objects -fPIC
+C_FLAGS = -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -fPIC
 

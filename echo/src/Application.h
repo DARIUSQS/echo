@@ -10,7 +10,6 @@ namespace Echo {
 
             void Run();
    };
-
    // Defined in CLIENT
    Application* CreateApplication();
 }

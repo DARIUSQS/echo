@@ -6,5 +6,5 @@ CXX_DEFINES = -Dstb_image_EXPORTS
 
 CXX_INCLUDES = -I/home/darius/Dev/cpp/echo/echo/vendor/stb_image/include
 
-CXX_FLAGS = -std=gnu++17 -flto=auto -fno-fat-lto-objects -fPIC
+CXX_FLAGS =  -fPIC -O3 -DNDEBUG -std=gnu++17 -flto=auto -fno-fat-lto-objects -fPIC
 

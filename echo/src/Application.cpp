@@ -1,5 +1,4 @@
 #include "Application.h"
-#include <iostream>
 
 namespace Echo {
     Application::Application(){}
@@ -9,7 +8,6 @@ namespace Echo {
     {
         while(true)
         {
-            std::cout << 3;
         }
     }
 }

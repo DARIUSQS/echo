@@ -1,4 +1,3 @@
-#include "Application.h"
 #include <Echo.h>
 
 class Sandbox : public Echo::Application
@@ -19,4 +18,3 @@ Echo::Application* Echo::CreateApplication()
 {
     return new Sandbox();
 }
-
