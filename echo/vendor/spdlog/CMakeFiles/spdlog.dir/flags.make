@@ -6,5 +6,5 @@ CXX_DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FWRITE_UNLOCKED
 
 CXX_INCLUDES = -I/home/darius/Dev/cpp/echo/echo/vendor/spdlog/include
 
-CXX_FLAGS =  -fPIC -O3 -DNDEBUG -std=c++17 -flto=auto -fno-fat-lto-objects
+CXX_FLAGS =  -fPIC -g -std=c++17 -flto=auto -fno-fat-lto-objects
 

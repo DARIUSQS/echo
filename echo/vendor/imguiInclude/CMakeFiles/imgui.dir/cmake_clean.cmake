@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
+  "../../../lib/libimgui.a"
   "../../../lib/libimgui.pdb"
-  "../../../lib/libimgui.so"
-  "CMakeFiles/imgui.dir/link.d"
   "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_glfw.cpp.o"
   "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_glfw.cpp.o.d"
   "CMakeFiles/imgui.dir/src/imgui/backends/imgui_impl_opengl3.cpp.o"

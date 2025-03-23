@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 
 project(imgui)
 
-add_library(imgui SHARED)
+add_library(imgui STATIC)
 
 target_sources(imgui PRIVATE
     "src/imgui/imgui.cpp"

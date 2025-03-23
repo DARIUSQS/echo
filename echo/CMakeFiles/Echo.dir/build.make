@@ -72,56 +72,167 @@ include echo/CMakeFiles/Echo.dir/flags.make
 echo/CMakeFiles/Echo.dir/codegen:
 .PHONY : echo/CMakeFiles/Echo.dir/codegen
 
+echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.cxx
+echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch -MF CMakeFiles/Echo.dir/cmake_pch.hxx.gch.d -o CMakeFiles/Echo.dir/cmake_pch.hxx.gch -c /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx.cxx
+
+echo/CMakeFiles/Echo.dir/cmake_pch.hxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/cmake_pch.hxx.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx.cxx > CMakeFiles/Echo.dir/cmake_pch.hxx.i
+
+echo/CMakeFiles/Echo.dir/cmake_pch.hxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/cmake_pch.hxx.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx.cxx -o CMakeFiles/Echo.dir/cmake_pch.hxx.s
+
 echo/CMakeFiles/Echo.dir/src/Application.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
 echo/CMakeFiles/Echo.dir/src/Application.cpp.o: echo/src/Application.cpp
+echo/CMakeFiles/Echo.dir/src/Application.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Application.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
 echo/CMakeFiles/Echo.dir/src/Application.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object echo/CMakeFiles/Echo.dir/src/Application.cpp.o"
-	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT echo/CMakeFiles/Echo.dir/src/Application.cpp.o -MF CMakeFiles/Echo.dir/src/Application.cpp.o.d -o CMakeFiles/Echo.dir/src/Application.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Application.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object echo/CMakeFiles/Echo.dir/src/Application.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Application.cpp.o -MF CMakeFiles/Echo.dir/src/Application.cpp.o.d -o CMakeFiles/Echo.dir/src/Application.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Application.cpp
 
 echo/CMakeFiles/Echo.dir/src/Application.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Application.cpp.i"
-	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darius/Dev/cpp/echo/echo/src/Application.cpp > CMakeFiles/Echo.dir/src/Application.cpp.i
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Application.cpp > CMakeFiles/Echo.dir/src/Application.cpp.i
 
 echo/CMakeFiles/Echo.dir/src/Application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Application.cpp.s"
-	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darius/Dev/cpp/echo/echo/src/Application.cpp -o CMakeFiles/Echo.dir/src/Application.cpp.s
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Application.cpp -o CMakeFiles/Echo.dir/src/Application.cpp.s
 
 echo/CMakeFiles/Echo.dir/src/Log.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
 echo/CMakeFiles/Echo.dir/src/Log.cpp.o: echo/src/Log.cpp
+echo/CMakeFiles/Echo.dir/src/Log.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Log.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
 echo/CMakeFiles/Echo.dir/src/Log.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object echo/CMakeFiles/Echo.dir/src/Log.cpp.o"
-	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT echo/CMakeFiles/Echo.dir/src/Log.cpp.o -MF CMakeFiles/Echo.dir/src/Log.cpp.o.d -o CMakeFiles/Echo.dir/src/Log.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object echo/CMakeFiles/Echo.dir/src/Log.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Log.cpp.o -MF CMakeFiles/Echo.dir/src/Log.cpp.o.d -o CMakeFiles/Echo.dir/src/Log.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Log.cpp
 
 echo/CMakeFiles/Echo.dir/src/Log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Log.cpp.i"
-	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/darius/Dev/cpp/echo/echo/src/Log.cpp > CMakeFiles/Echo.dir/src/Log.cpp.i
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Log.cpp > CMakeFiles/Echo.dir/src/Log.cpp.i
 
 echo/CMakeFiles/Echo.dir/src/Log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Log.cpp.s"
-	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/darius/Dev/cpp/echo/echo/src/Log.cpp -o CMakeFiles/Echo.dir/src/Log.cpp.s
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Log.cpp -o CMakeFiles/Echo.dir/src/Log.cpp.s
+
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o: echo/src/Platform/Linux/LinuxWindow.cpp
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o -MF CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o.d -o CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Platform/Linux/LinuxWindow.cpp
+
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Platform/Linux/LinuxWindow.cpp > CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Platform/Linux/LinuxWindow.cpp -o CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.s
+
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o: echo/src/Platform/Opengl/imguiRendererOpengl3.cpp
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o -MF CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o.d -o CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Platform/Opengl/imguiRendererOpengl3.cpp
+
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Platform/Opengl/imguiRendererOpengl3.cpp > CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Platform/Opengl/imguiRendererOpengl3.cpp -o CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.s
+
+echo/CMakeFiles/Echo.dir/src/Layer.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/Layer.cpp.o: echo/src/Layer.cpp
+echo/CMakeFiles/Echo.dir/src/Layer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Layer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/Layer.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object echo/CMakeFiles/Echo.dir/src/Layer.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Layer.cpp.o -MF CMakeFiles/Echo.dir/src/Layer.cpp.o.d -o CMakeFiles/Echo.dir/src/Layer.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Layer.cpp
+
+echo/CMakeFiles/Echo.dir/src/Layer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Layer.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Layer.cpp > CMakeFiles/Echo.dir/src/Layer.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/Layer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Layer.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Layer.cpp -o CMakeFiles/Echo.dir/src/Layer.cpp.s
+
+echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o: echo/src/LayerStack.cpp
+echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o -MF CMakeFiles/Echo.dir/src/LayerStack.cpp.o.d -o CMakeFiles/Echo.dir/src/LayerStack.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/LayerStack.cpp
+
+echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/LayerStack.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/LayerStack.cpp > CMakeFiles/Echo.dir/src/LayerStack.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/LayerStack.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/LayerStack.cpp -o CMakeFiles/Echo.dir/src/LayerStack.cpp.s
+
+echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/src/ImGui/ImGuiLayer.cpp
+echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o -MF CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o.d -o CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.cpp
+
+echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.cpp > CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.cpp -o CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.s
 
 # Object files for target Echo
 Echo_OBJECTS = \
 "CMakeFiles/Echo.dir/src/Application.cpp.o" \
-"CMakeFiles/Echo.dir/src/Log.cpp.o"
+"CMakeFiles/Echo.dir/src/Log.cpp.o" \
+"CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o" \
+"CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o" \
+"CMakeFiles/Echo.dir/src/Layer.cpp.o" \
+"CMakeFiles/Echo.dir/src/LayerStack.cpp.o" \
+"CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o"
 
 # External object files for target Echo
 Echo_EXTERNAL_OBJECTS =
 
+lib/libEcho.so: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
 lib/libEcho.so: echo/CMakeFiles/Echo.dir/src/Application.cpp.o
 lib/libEcho.so: echo/CMakeFiles/Echo.dir/src/Log.cpp.o
+lib/libEcho.so: echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o
+lib/libEcho.so: echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o
+lib/libEcho.so: echo/CMakeFiles/Echo.dir/src/Layer.cpp.o
+lib/libEcho.so: echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o
+lib/libEcho.so: echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o
 lib/libEcho.so: echo/CMakeFiles/Echo.dir/build.make
 lib/libEcho.so: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+lib/libEcho.so: lib/libspdlogd.a
 lib/libEcho.so: lib/libglfw3.a
-lib/libEcho.so: lib/libstb_image.so
-lib/libEcho.so: lib/libimgui.so
-lib/libEcho.so: lib/libspdlog.a
+lib/libEcho.so: lib/libglad.a
+lib/libEcho.so: lib/libstb_image.a
+lib/libEcho.so: lib/libimgui.a
 lib/libEcho.so: lib/libglfw3.a
 lib/libEcho.so: /usr/lib/librt.a
 lib/libEcho.so: /usr/lib/libm.so
-lib/libEcho.so: lib/libglad.so
+lib/libEcho.so: lib/libglad.a
 lib/libEcho.so: echo/CMakeFiles/Echo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library ../lib/libEcho.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library ../lib/libEcho.so"
 	cd /home/darius/Dev/cpp/echo/echo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Echo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

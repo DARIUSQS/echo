@@ -1,14 +1,16 @@
 #pragma  once 
-
+#include "Application.h"
+#include "Log.h"
 #ifdef EC_PLATFORM_WINDOWS 
 #else 
+
 extern Echo::Application* Echo::CreateApplication();
 
 int main(int argc, char** argv)
 {
     Echo::Log::Init();
-    Echo::Log::GetCoreLogger()->warn("Initialized Log!");
-    Echo::Log::GetClientLogger()->warn("Initialized Log!");
+    EC_CORE_INFO("Initialized Log!");
+
     auto app = Echo::CreateApplication();
     app->Run();
     delete app;

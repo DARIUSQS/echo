@@ -1,1 +1,2 @@
-/usr/bin/c++ -fPIC  -fPIC -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -Wl,--dependency-file=CMakeFiles/stb_image.dir/link.d -shared -Wl,-soname,libstb_image.so -o ../../../lib/libstb_image.so CMakeFiles/stb_image.dir/src/stb_image.cpp.o
+"/usr/bin/gcc-ar" qc ../../../lib/libstb_image.a CMakeFiles/stb_image.dir/src/stb_image.cpp.o
+"/usr/bin/gcc-ranlib" ../../../lib/libstb_image.a

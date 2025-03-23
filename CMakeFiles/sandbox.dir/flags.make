@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/darius/Dev/cpp/echo/src -I/home/darius/Dev/cpp/echo/echo/src
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -g -std=gnu++17
 

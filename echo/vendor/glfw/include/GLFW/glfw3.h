@@ -1867,7 +1867,7 @@ typedef void (* GLFWcursorenterfun)(GLFWwindow* window, int entered);
  *
  *  @since Added in version 3.0.  Replaces `GLFWmousewheelfun`.
  *
- *  @ingroup input
+ *  @ingroup inputGLFWwindow* window
  */
 typedef void (* GLFWscrollfun)(GLFWwindow* window, double xoffset, double yoffset);
 

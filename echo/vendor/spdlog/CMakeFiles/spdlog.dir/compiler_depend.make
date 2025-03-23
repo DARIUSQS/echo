@@ -63,9 +63,7 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/async.cpp.o: echo/vendor/spdlog/src
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -326,9 +324,7 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o: echo/v
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -590,9 +586,7 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/cfg.cpp.o: echo/vendor/spdlog/src/c
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -907,9 +901,7 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o: echo/vendor/spdl
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1190,9 +1182,7 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o: echo/vendor/spdlo
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1507,9 +1497,7 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/spdlog.cpp.o: echo/vendor/spdlog/sr
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1828,9 +1816,7 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o: echo/vendor/spd
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
-  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -2134,6 +2120,8 @@ echo/vendor/spdlog/src/color_sinks.cpp:
 
 /usr/include/c++/14.2.1/bits/istream.tcc:
 
+/usr/include/c++/14.2.1/bits/basic_ios.tcc:
+
 /usr/include/c++/14.2.1/bits/basic_ios.h:
 
 echo/vendor/spdlog/include/spdlog/spdlog.h:
@@ -2229,8 +2217,6 @@ echo/vendor/spdlog/include/spdlog/mdc.h:
 echo/vendor/spdlog/include/spdlog/logger-inl.h:
 
 /usr/include/limits.h:
-
-/usr/include/gnu/stubs-64.h:
 
 /usr/include/c++/14.2.1/bits/enable_special_members.h:
 
@@ -2374,21 +2360,13 @@ echo/vendor/spdlog/include/spdlog/pattern_formatter-inl.h:
 
 /usr/include/bits/struct_mutex.h:
 
+/usr/include/c++/14.2.1/bits/exception.h:
+
 echo/vendor/spdlog/include/spdlog/details/thread_pool.h:
 
-/usr/include/c++/14.2.1/bits/basic_ios.tcc:
-
-/usr/include/bits/stdlib-bsearch.h:
-
-/usr/include/c++/14.2.1/bit:
-
-/usr/include/c++/14.2.1/bits/vector.tcc:
-
-/usr/include/c++/14.2.1/cstddef:
-
-/usr/include/bits/stdio.h:
-
 /usr/include/c++/14.2.1/tr1/exp_integral.tcc:
+
+/usr/include/c++/14.2.1/bits/erase_if.h:
 
 /usr/include/c++/14.2.1/new:
 
@@ -2442,6 +2420,12 @@ echo/vendor/spdlog/src/async.cpp:
 
 /usr/include/bits/types/time_t.h:
 
+/usr/include/c++/14.2.1/bits/hashtable_policy.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/c++/14.2.1/bits/specfun.h:
+
 /usr/include/bits/mathcalls-helper-functions.h:
 
 echo/vendor/spdlog/include/spdlog/details/thread_pool-inl.h:
@@ -2453,12 +2437,6 @@ echo/vendor/spdlog/include/spdlog/details/thread_pool-inl.h:
 /usr/include/c++/14.2.1/bits/char_traits.h:
 
 echo/vendor/spdlog/include/spdlog/async_logger-inl.h:
-
-/usr/include/features.h:
-
-/usr/include/bits/types/__FILE.h:
-
-/usr/include/bits/sched.h:
 
 /usr/include/asm/unistd_64.h:
 
@@ -2564,6 +2542,12 @@ echo/vendor/spdlog/include/spdlog/details/file_helper.h:
 
 /usr/include/c++/14.2.1/utility:
 
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/features.h:
+
 /usr/include/bits/libm-simd-decl-stubs.h:
 
 /usr/include/c++/14.2.1/bits/parse_numbers.h:
@@ -2635,16 +2619,6 @@ echo/vendor/spdlog/include/spdlog/details/log_msg.h:
 /usr/include/c++/14.2.1/bits/charconv.h:
 
 /usr/include/bits/setjmp.h:
-
-/usr/include/c++/14.2.1/bits/erase_if.h:
-
-/usr/include/c++/14.2.1/bits/exception.h:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/c++/14.2.1/bits/specfun.h:
-
-/usr/include/c++/14.2.1/bits/hashtable_policy.h:
 
 /usr/include/c++/14.2.1/bits/exception_ptr.h:
 
@@ -2731,6 +2705,12 @@ echo/vendor/spdlog/include/spdlog/details/log_msg_buffer.h:
 /usr/include/c++/14.2.1/ext/atomicity.h:
 
 /usr/include/c++/14.2.1/bits/utility.h:
+
+/usr/include/c++/14.2.1/bit:
+
+/usr/include/c++/14.2.1/bits/vector.tcc:
+
+/usr/include/c++/14.2.1/cstddef:
 
 /usr/include/linux/posix_types.h:
 
@@ -2857,3 +2837,5 @@ echo/vendor/spdlog/include/spdlog/fmt/bundled/format.h:
 /usr/include/c++/14.2.1/bits/range_access.h:
 
 /usr/include/features-time64.h:
+
+/usr/include/gnu/stubs-64.h:

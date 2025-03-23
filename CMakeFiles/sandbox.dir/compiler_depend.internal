@@ -7,7 +7,18 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /home/darius/Dev/cpp/echo/echo/src/Core.h
  /home/darius/Dev/cpp/echo/echo/src/Echo.h
  /home/darius/Dev/cpp/echo/echo/src/EntryPoint.h
+ /home/darius/Dev/cpp/echo/echo/src/Events/ApplicationEvent.h
+ /home/darius/Dev/cpp/echo/echo/src/Events/Event.h
+ /home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.h
+ /home/darius/Dev/cpp/echo/echo/src/Layer.h
+ /home/darius/Dev/cpp/echo/echo/src/LayerStack.h
  /home/darius/Dev/cpp/echo/echo/src/Log.h
+ /home/darius/Dev/cpp/echo/echo/src/WindowTemplate.h
+ /home/darius/Dev/cpp/echo/echo/src/ecpch.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glext.h
+ /usr/include/GLFW/glfw3.h
+ /usr/include/KHR/khrplatform.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
@@ -65,9 +76,7 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/bits/stdint-intn.h
  /usr/include/bits/stdint-least.h
  /usr/include/bits/stdint-uintn.h
- /usr/include/bits/stdio.h
  /usr/include/bits/stdio_lim.h
- /usr/include/bits/stdlib-bsearch.h
  /usr/include/bits/stdlib-float.h
  /usr/include/bits/struct_mutex.h
  /usr/include/bits/struct_rwlock.h
@@ -113,6 +122,7 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/bits/waitflags.h
  /usr/include/bits/waitstatus.h
  /usr/include/bits/wchar.h
+ /usr/include/bits/wctype-wchar.h
  /usr/include/bits/wordsize.h
  /usr/include/bits/xopen_lim.h
  /usr/include/c++/14.2.1/algorithm
@@ -128,6 +138,8 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/c++/14.2.1/bits/allocator.h
  /usr/include/c++/14.2.1/bits/atomic_base.h
  /usr/include/c++/14.2.1/bits/atomic_lockfree_defines.h
+ /usr/include/c++/14.2.1/bits/basic_ios.h
+ /usr/include/c++/14.2.1/bits/basic_ios.tcc
  /usr/include/c++/14.2.1/bits/basic_string.h
  /usr/include/c++/14.2.1/bits/basic_string.tcc
  /usr/include/c++/14.2.1/bits/char_traits.h
@@ -149,8 +161,11 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/c++/14.2.1/bits/hashtable_policy.h
  /usr/include/c++/14.2.1/bits/invoke.h
  /usr/include/c++/14.2.1/bits/ios_base.h
+ /usr/include/c++/14.2.1/bits/istream.tcc
  /usr/include/c++/14.2.1/bits/locale_classes.h
  /usr/include/c++/14.2.1/bits/locale_classes.tcc
+ /usr/include/c++/14.2.1/bits/locale_facets.h
+ /usr/include/c++/14.2.1/bits/locale_facets.tcc
  /usr/include/c++/14.2.1/bits/localefwd.h
  /usr/include/c++/14.2.1/bits/memory_resource.h
  /usr/include/c++/14.2.1/bits/memoryfwd.h
@@ -158,6 +173,7 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/c++/14.2.1/bits/nested_exception.h
  /usr/include/c++/14.2.1/bits/new_allocator.h
  /usr/include/c++/14.2.1/bits/node_handle.h
+ /usr/include/c++/14.2.1/bits/ostream.tcc
  /usr/include/c++/14.2.1/bits/ostream_insert.h
  /usr/include/c++/14.2.1/bits/parse_numbers.h
  /usr/include/c++/14.2.1/bits/postypes.h
@@ -170,6 +186,7 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/c++/14.2.1/bits/shared_ptr_atomic.h
  /usr/include/c++/14.2.1/bits/shared_ptr_base.h
  /usr/include/c++/14.2.1/bits/specfun.h
+ /usr/include/c++/14.2.1/bits/sstream.tcc
  /usr/include/c++/14.2.1/bits/std_abs.h
  /usr/include/c++/14.2.1/bits/std_function.h
  /usr/include/c++/14.2.1/bits/std_mutex.h
@@ -223,6 +240,7 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/c++/14.2.1/cstring
  /usr/include/c++/14.2.1/ctime
  /usr/include/c++/14.2.1/cwchar
+ /usr/include/c++/14.2.1/cwctype
  /usr/include/c++/14.2.1/debug/assertions.h
  /usr/include/c++/14.2.1/debug/debug.h
  /usr/include/c++/14.2.1/exception
@@ -235,18 +253,23 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/c++/14.2.1/ext/type_traits.h
  /usr/include/c++/14.2.1/functional
  /usr/include/c++/14.2.1/initializer_list
+ /usr/include/c++/14.2.1/ios
  /usr/include/c++/14.2.1/iosfwd
+ /usr/include/c++/14.2.1/iostream
+ /usr/include/c++/14.2.1/istream
  /usr/include/c++/14.2.1/iterator
  /usr/include/c++/14.2.1/limits
  /usr/include/c++/14.2.1/map
  /usr/include/c++/14.2.1/memory
  /usr/include/c++/14.2.1/mutex
  /usr/include/c++/14.2.1/new
+ /usr/include/c++/14.2.1/ostream
  /usr/include/c++/14.2.1/pstl/execution_defs.h
  /usr/include/c++/14.2.1/pstl/glue_algorithm_defs.h
  /usr/include/c++/14.2.1/pstl/glue_memory_defs.h
  /usr/include/c++/14.2.1/pstl/pstl_config.h
  /usr/include/c++/14.2.1/ratio
+ /usr/include/c++/14.2.1/sstream
  /usr/include/c++/14.2.1/stdexcept
  /usr/include/c++/14.2.1/streambuf
  /usr/include/c++/14.2.1/string
@@ -276,6 +299,8 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++locale.h
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h
+ /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h
+ /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/error_constants.h
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr.h
@@ -355,6 +380,7 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/include/time.h
  /usr/include/unistd.h
  /usr/include/wchar.h
+ /usr/include/wctype.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h
@@ -362,11 +388,22 @@ CMakeFiles/sandbox.dir/src/main.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h
 
 bin/sandbox
- /home/darius/Dev/cpp/echo/lib/libglad.so
- /home/darius/Dev/cpp/echo/lib/libimgui.so
- /home/darius/Dev/cpp/echo/lib/libstb_image.so
+ /usr/lib/Scrt1.o
+ /usr/lib/crti.o
+ /usr/lib/crtn.o
  /usr/lib/libc.so
  /usr/lib/libgcc_s.so
+ /usr/lib/libgcc_s.so.1
  /usr/lib/libm.so
+ /usr/lib/libstdc++.so
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/libgcc.a
  /usr/lib/ld-linux-x86-64.so.2
+ /usr/lib/libc.so.6
+ /usr/lib/libc_nonshared.a
+ /usr/lib/libm.so.6
+ /usr/lib/libmvec.so.1
+ /home/darius/Dev/cpp/echo/CMakeFiles/sandbox.dir/src/main.cpp.o
+ /home/darius/Dev/cpp/echo/lib/libEcho.so
 

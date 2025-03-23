@@ -4,7 +4,23 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DEcho_EXPORTS -DSPDLOG_COMPILED_LIB
 
-CXX_INCLUDES = -I/home/darius/Dev/cpp/echo/echo/src -I/home/darius/Dev/cpp/echo/echo/vendor/glfw/include -I/home/darius/Dev/cpp/echo/echo/vendor/glm/include -I/home/darius/Dev/cpp/echo/echo/vendor/glad/include/glad -I/home/darius/Dev/cpp/echo/echo/vendor/stb_image/include -I/home/darius/Dev/cpp/echo/echo/vendor/imguiInclude/src -I/home/darius/Dev/cpp/echo/echo/vendor/spdlog/include
+CXX_INCLUDES = -I/home/darius/Dev/cpp/echo/echo/src -I/home/darius/Dev/cpp/echo/echo/vendor/spdlog/include -I/home/darius/Dev/cpp/echo/echo/vendor/glfw/include -I/home/darius/Dev/cpp/echo/echo/vendor/glm/include -I/home/darius/Dev/cpp/echo/echo/vendor/glad/include/glad -I/home/darius/Dev/cpp/echo/echo/vendor/stb_image/include -I/home/darius/Dev/cpp/echo/echo/vendor/imguiInclude/src
 
-CXX_FLAGS =  -fPIC -O3 -DNDEBUG -std=gnu++17 -flto=auto -fno-fat-lto-objects -fPIC
+CXX_FLAGS =  -fPIC -g -std=gnu++17 -flto=auto -fno-fat-lto-objects -fPIC
+
+# PCH options: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch_OPTIONS = -Winvalid-pch;-x;c++-header;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/Application.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/Log.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/Layer.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
 

@@ -23,8 +23,9 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose Release or Debug
-CMAKE_BUILD_TYPE:STRING=Release
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -396,6 +397,10 @@ SPDLOG_FMT_EXTERNAL:BOOL=OFF
 
 //Use external fmt header-only library instead of bundled
 SPDLOG_FMT_EXTERNAL_HO:BOOL=OFF
+
+//Use the unlocked variant of fwrite. Leave this on unless your
+// libc doesn't have it
+SPDLOG_FWRITE_UNLOCKED:BOOL=ON
 
 //Generate the install target
 SPDLOG_INSTALL:BOOL=OFF
@@ -940,7 +945,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=31
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=4
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.

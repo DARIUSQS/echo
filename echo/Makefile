@@ -175,6 +175,21 @@ Echo/fast:
 	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/build
 .PHONY : Echo/fast
 
+# target to build an object file
+cmake_pch.hxx.gch:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+.PHONY : cmake_pch.hxx.gch
+
+# target to preprocess a source file
+cmake_pch.hxx.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/cmake_pch.hxx.i
+.PHONY : cmake_pch.hxx.i
+
+# target to generate assembly for a file
+cmake_pch.hxx.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/cmake_pch.hxx.s
+.PHONY : cmake_pch.hxx.s
+
 src/Application.o: src/Application.cpp.o
 .PHONY : src/Application.o
 
@@ -198,6 +213,78 @@ src/Application.s: src/Application.cpp.s
 src/Application.cpp.s:
 	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
+
+src/ImGui/ImGuiLayer.o: src/ImGui/ImGuiLayer.cpp.o
+.PHONY : src/ImGui/ImGuiLayer.o
+
+# target to build an object file
+src/ImGui/ImGuiLayer.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o
+.PHONY : src/ImGui/ImGuiLayer.cpp.o
+
+src/ImGui/ImGuiLayer.i: src/ImGui/ImGuiLayer.cpp.i
+.PHONY : src/ImGui/ImGuiLayer.i
+
+# target to preprocess a source file
+src/ImGui/ImGuiLayer.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.i
+.PHONY : src/ImGui/ImGuiLayer.cpp.i
+
+src/ImGui/ImGuiLayer.s: src/ImGui/ImGuiLayer.cpp.s
+.PHONY : src/ImGui/ImGuiLayer.s
+
+# target to generate assembly for a file
+src/ImGui/ImGuiLayer.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.s
+.PHONY : src/ImGui/ImGuiLayer.cpp.s
+
+src/Layer.o: src/Layer.cpp.o
+.PHONY : src/Layer.o
+
+# target to build an object file
+src/Layer.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Layer.cpp.o
+.PHONY : src/Layer.cpp.o
+
+src/Layer.i: src/Layer.cpp.i
+.PHONY : src/Layer.i
+
+# target to preprocess a source file
+src/Layer.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Layer.cpp.i
+.PHONY : src/Layer.cpp.i
+
+src/Layer.s: src/Layer.cpp.s
+.PHONY : src/Layer.s
+
+# target to generate assembly for a file
+src/Layer.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Layer.cpp.s
+.PHONY : src/Layer.cpp.s
+
+src/LayerStack.o: src/LayerStack.cpp.o
+.PHONY : src/LayerStack.o
+
+# target to build an object file
+src/LayerStack.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o
+.PHONY : src/LayerStack.cpp.o
+
+src/LayerStack.i: src/LayerStack.cpp.i
+.PHONY : src/LayerStack.i
+
+# target to preprocess a source file
+src/LayerStack.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.i
+.PHONY : src/LayerStack.cpp.i
+
+src/LayerStack.s: src/LayerStack.cpp.s
+.PHONY : src/LayerStack.s
+
+# target to generate assembly for a file
+src/LayerStack.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.s
+.PHONY : src/LayerStack.cpp.s
 
 src/Log.o: src/Log.cpp.o
 .PHONY : src/Log.o
@@ -223,6 +310,54 @@ src/Log.cpp.s:
 	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Log.cpp.s
 .PHONY : src/Log.cpp.s
 
+src/Platform/Linux/LinuxWindow.o: src/Platform/Linux/LinuxWindow.cpp.o
+.PHONY : src/Platform/Linux/LinuxWindow.o
+
+# target to build an object file
+src/Platform/Linux/LinuxWindow.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o
+.PHONY : src/Platform/Linux/LinuxWindow.cpp.o
+
+src/Platform/Linux/LinuxWindow.i: src/Platform/Linux/LinuxWindow.cpp.i
+.PHONY : src/Platform/Linux/LinuxWindow.i
+
+# target to preprocess a source file
+src/Platform/Linux/LinuxWindow.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.i
+.PHONY : src/Platform/Linux/LinuxWindow.cpp.i
+
+src/Platform/Linux/LinuxWindow.s: src/Platform/Linux/LinuxWindow.cpp.s
+.PHONY : src/Platform/Linux/LinuxWindow.s
+
+# target to generate assembly for a file
+src/Platform/Linux/LinuxWindow.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.s
+.PHONY : src/Platform/Linux/LinuxWindow.cpp.s
+
+src/Platform/Opengl/imguiRendererOpengl3.o: src/Platform/Opengl/imguiRendererOpengl3.cpp.o
+.PHONY : src/Platform/Opengl/imguiRendererOpengl3.o
+
+# target to build an object file
+src/Platform/Opengl/imguiRendererOpengl3.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o
+.PHONY : src/Platform/Opengl/imguiRendererOpengl3.cpp.o
+
+src/Platform/Opengl/imguiRendererOpengl3.i: src/Platform/Opengl/imguiRendererOpengl3.cpp.i
+.PHONY : src/Platform/Opengl/imguiRendererOpengl3.i
+
+# target to preprocess a source file
+src/Platform/Opengl/imguiRendererOpengl3.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.i
+.PHONY : src/Platform/Opengl/imguiRendererOpengl3.cpp.i
+
+src/Platform/Opengl/imguiRendererOpengl3.s: src/Platform/Opengl/imguiRendererOpengl3.cpp.s
+.PHONY : src/Platform/Opengl/imguiRendererOpengl3.s
+
+# target to generate assembly for a file
+src/Platform/Opengl/imguiRendererOpengl3.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.s
+.PHONY : src/Platform/Opengl/imguiRendererOpengl3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -236,12 +371,30 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Echo"
+	@echo "... cmake_pch.hxx.gch"
+	@echo "... cmake_pch.hxx.i"
+	@echo "... cmake_pch.hxx.s"
 	@echo "... src/Application.o"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
+	@echo "... src/ImGui/ImGuiLayer.o"
+	@echo "... src/ImGui/ImGuiLayer.i"
+	@echo "... src/ImGui/ImGuiLayer.s"
+	@echo "... src/Layer.o"
+	@echo "... src/Layer.i"
+	@echo "... src/Layer.s"
+	@echo "... src/LayerStack.o"
+	@echo "... src/LayerStack.i"
+	@echo "... src/LayerStack.s"
 	@echo "... src/Log.o"
 	@echo "... src/Log.i"
 	@echo "... src/Log.s"
+	@echo "... src/Platform/Linux/LinuxWindow.o"
+	@echo "... src/Platform/Linux/LinuxWindow.i"
+	@echo "... src/Platform/Linux/LinuxWindow.s"
+	@echo "... src/Platform/Opengl/imguiRendererOpengl3.o"
+	@echo "... src/Platform/Opengl/imguiRendererOpengl3.i"
+	@echo "... src/Platform/Opengl/imguiRendererOpengl3.s"
 .PHONY : help
 
 

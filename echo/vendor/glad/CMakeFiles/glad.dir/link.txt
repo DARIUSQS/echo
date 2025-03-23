@@ -1,1 +1,2 @@
-/usr/bin/cc -fPIC -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -Wl,--dependency-file=CMakeFiles/glad.dir/link.d -shared -Wl,-soname,libglad.so -o ../../../lib/libglad.so CMakeFiles/glad.dir/src/glad.c.o
+"/usr/bin/gcc-ar" qc ../../../lib/libglad.a CMakeFiles/glad.dir/src/glad.c.o
+"/usr/bin/gcc-ranlib" ../../../lib/libglad.a

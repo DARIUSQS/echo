@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../lib/libspdlog.a"
-  "../../../lib/libspdlog.pdb"
+  "../../../lib/libspdlogd.a"
+  "../../../lib/libspdlogd.pdb"
   "CMakeFiles/spdlog.dir/src/async.cpp.o"
   "CMakeFiles/spdlog.dir/src/async.cpp.o.d"
   "CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o"

@@ -1,4 +1,4 @@
-// dear imgui: Platform Backend for GLFW
+// dear imgui: Platform Backend for GLFWimgui_impl_glfw
 // This needs to be used along with a Renderer (e.g. OpenGL3, Vulkan, WebGPU..)
 // (Info: GLFW is a cross-platform general purpose library for handling windows, inputs, OpenGL/Vulkan graphics context creation, etc.)
 // (Requires: GLFW 3.1+. Prefer GLFW 3.3+ or GLFW 3.4+ for full feature support.)
@@ -1345,7 +1345,7 @@ static ImGuiMouseSource GetMouseSourceFromMessageExtraInfo()
     if ((extra_info & 0xFFFFFF80) == 0xFF515780)
         return ImGuiMouseSource_TouchScreen;
     return ImGuiMouseSource_Mouse;
-}
+}imgui_impl_glfw
 static LRESULT CALLBACK ImGui_ImplGlfw_WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
     ImGui_ImplGlfw_Data* bd = ImGui_ImplGlfw_GetBackendData();
