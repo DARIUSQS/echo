@@ -17,7 +17,7 @@ namespace Echo
             inline unsigned int GetHeight() const override { return m_Data.Height;}
 
             inline void SetEventCallback(const std::function<void (Event &)> &callback) override { m_Data.EventCallback = callback;}
-            GLFWwindow* GetWindowData() override {return m_Window;}
+            void* GetWindowData() override {return m_Window;}
             void SetVSync(bool enabled) override;
             bool inline IsVSync() const override {return m_Data.VSync;};
         private:

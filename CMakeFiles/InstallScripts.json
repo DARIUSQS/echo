@@ -1,0 +1,16 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/darius/Dev/cpp/echo/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/vendor/glfw/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/vendor/glfw/src/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/vendor/glfw/docs/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/vendor/spdlog/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/vendor/glad/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/vendor/stb_image/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/vendor/glm/cmake_install.cmake",
+		"/home/darius/Dev/cpp/echo/echo/vendor/imguiInclude/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

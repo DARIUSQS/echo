@@ -1,3 +1,5 @@
+#include "Events/KeyEvent.h"
+#include "Log.h"
 #include <Echo.h>
 
 class ExempleLayer : public Echo::Layer
@@ -8,12 +10,15 @@ public:
 
     void OnUpdate() override
     {
-        EC_INFO("{0} Layer::Update", m_DebugName);
     }
 
     void OnEvent(Echo::Event& event) override
     {
-        EC_INFO("Layer[Exemple]: {0}", event);
+        if(event.GetEventType() == Echo::EventType::KeyPressed)
+        {
+            Echo::KeyEventPressed& e = (Echo::KeyEventPressed&) event;
+            if(e.GetKeyCode() == EC_KEY_W) EC_TRACE("W Pressed");
+        }
     }
 };
 
@@ -22,8 +27,8 @@ class Sandbox : public Echo::Application
 public:
     Sandbox()
     {
-        PushLayer(new ExempleLayer());
         PushLayer(new Echo::ImGuiLayer());
+        PushLayer(new ExempleLayer());
     }
     
     ~Sandbox()

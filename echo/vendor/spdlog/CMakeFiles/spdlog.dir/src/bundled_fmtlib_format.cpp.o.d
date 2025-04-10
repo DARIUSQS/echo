@@ -15,12 +15,11 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o: \
  /usr/include/c++/14.2.1/bits/functexcept.h \
  /usr/include/c++/14.2.1/bits/exception_defines.h \
  /usr/include/c++/14.2.1/bits/cpp_type_traits.h \
+ /usr/include/c++/14.2.1/bits/version.h \
  /usr/include/c++/14.2.1/ext/type_traits.h \
  /usr/include/c++/14.2.1/ext/numeric_traits.h \
  /usr/include/c++/14.2.1/bits/stl_pair.h \
- /usr/include/c++/14.2.1/type_traits \
- /usr/include/c++/14.2.1/bits/version.h \
- /usr/include/c++/14.2.1/bits/move.h \
+ /usr/include/c++/14.2.1/type_traits /usr/include/c++/14.2.1/bits/move.h \
  /usr/include/c++/14.2.1/bits/utility.h \
  /usr/include/c++/14.2.1/bits/stl_iterator_base_types.h \
  /usr/include/c++/14.2.1/bits/stl_iterator_base_funcs.h \
@@ -78,7 +77,7 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o: \
  /usr/include/c++/14.2.1/bits/requires_hosted.h /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
- /usr/include/bits/fp-fast.h \
+ /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
  /usr/include/bits/iscanonical.h /usr/include/c++/14.2.1/bits/specfun.h \
@@ -156,6 +155,12 @@ echo/vendor/spdlog/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o: \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/linux/sched/types.h /usr/include/linux/types.h \
+ /usr/include/asm/types.h /usr/include/asm-generic/types.h \
+ /usr/include/asm-generic/int-ll64.h /usr/include/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
+ /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
  /usr/include/bits/types/struct_sched_param.h /usr/include/bits/cpu-set.h \
  /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
  /usr/include/bits/types/struct_tm.h \

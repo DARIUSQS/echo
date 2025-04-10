@@ -7,6 +7,7 @@
 #include "GLFW/glfw3.h"
 #include "Events/ApplicationEvent.h"
 #include "Events/MouseEvent.h"
+#include <GL/gl.h>
 
 namespace Echo 
 {
@@ -127,6 +128,8 @@ namespace Echo
             data.EventCallback(event);
         });     
 
+        
+
         glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xpos, double ypos)
         {
             WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
@@ -134,13 +137,20 @@ namespace Echo
             MouseMovedEvent event((float)xpos, (float)ypos);
             data.EventCallback(event);
         });
+
+        glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
+        {
+            WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+            KeyEventTyped event(keycode);
+            data.EventCallback(event);
+        });
     }
 
     void LinuxWindow::OnUpdate()
     {
         glfwSwapBuffers(m_Window);
+        glClear(GL_COLOR_BUFFER_BIT);
         glfwPollEvents();
-
     }
 
     void LinuxWindow::Shutdown()

@@ -36,6 +36,21 @@ namespace Echo
         private:
             int m_Repeat;
     };
+    class KeyEventTyped : public KeyEvent
+    {
+        public:
+            KeyEventTyped(int KeyCode)
+                : KeyEvent(KeyCode) {}
+            
+            std::string ToString() const override
+            {
+                std::stringstream ss;
+                ss << "KeyTypedEvent: " << m_KeyCode;
+                return ss.str();
+            }
+
+            EVENT_CLASS_TYPE(KeyTyped);
+    };
 
     class KeyEventReleased : public KeyEvent
     {

@@ -3,8 +3,10 @@
 #include "Events/ApplicationEvent.h"
 #include "Events/KeyEvent.h"
 #include "Events/Event.h"
+#include "InputTemplate.h"
 #include "Log.h"
 #include "ecpch.h"
+#include <GLFW/glfw3.h>
 
 namespace Echo {
 
@@ -33,7 +35,7 @@ namespace Echo {
             if(e.m_Handled) break;
         }
 
-        EC_CORE_TRACE("{0}", e);      
+        // EC_CORE_TRACE("{0}", e);      
     }
 
     Application::~Application() {}

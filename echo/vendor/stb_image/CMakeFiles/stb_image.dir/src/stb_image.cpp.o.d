@@ -50,14 +50,14 @@ echo/vendor/stb_image/CMakeFiles/stb_image.dir/src/stb_image.cpp.o: \
  /usr/include/c++/14.2.1/cmath \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/bits/cpp_type_traits.h \
+ /usr/include/c++/14.2.1/bits/version.h \
  /usr/include/c++/14.2.1/ext/type_traits.h /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
- /usr/include/bits/fp-fast.h \
+ /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h /usr/include/c++/14.2.1/bits/version.h \
- /usr/include/c++/14.2.1/bits/specfun.h \
+ /usr/include/bits/iscanonical.h /usr/include/c++/14.2.1/bits/specfun.h \
  /usr/include/c++/14.2.1/bits/stl_algobase.h \
  /usr/include/c++/14.2.1/bits/functexcept.h \
  /usr/include/c++/14.2.1/bits/exception_defines.h \

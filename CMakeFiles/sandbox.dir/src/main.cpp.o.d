@@ -1,6 +1,7 @@
 CMakeFiles/sandbox.dir/src/main.cpp.o: \
  /home/darius/Dev/cpp/echo/src/main.cpp /usr/include/stdc-predef.h \
- /home/darius/Dev/cpp/echo/echo/src/Echo.h \
+ /home/darius/Dev/cpp/echo/echo/src/Events/KeyEvent.h \
+ /home/darius/Dev/cpp/echo/echo/src/Events/Event.h \
  /home/darius/Dev/cpp/echo/echo/src/Core.h \
  /usr/include/c++/14.2.1/cassert \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -11,9 +12,6 @@ CMakeFiles/sandbox.dir/src/main.cpp.o: \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
  /usr/include/c++/14.2.1/pstl/pstl_config.h /usr/include/assert.h \
- /home/darius/Dev/cpp/echo/echo/src/Application.h \
- /home/darius/Dev/cpp/echo/echo/src/Events/ApplicationEvent.h \
- /home/darius/Dev/cpp/echo/echo/src/Events/Event.h \
  /home/darius/Dev/cpp/echo/echo/src/ecpch.h \
  /usr/include/c++/14.2.1/iostream \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
@@ -54,6 +52,12 @@ CMakeFiles/sandbox.dir/src/main.cpp.o: \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/bits/types/time_t.h \
  /usr/include/bits/types/struct_timespec.h /usr/include/bits/sched.h \
+ /usr/include/linux/sched/types.h /usr/include/linux/types.h \
+ /usr/include/asm/types.h /usr/include/asm-generic/types.h \
+ /usr/include/asm-generic/int-ll64.h /usr/include/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
+ /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
  /usr/include/bits/types/struct_sched_param.h /usr/include/bits/cpu-set.h \
  /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
  /usr/include/bits/types/struct_timeval.h \
@@ -185,7 +189,9 @@ CMakeFiles/sandbox.dir/src/main.cpp.o: \
  /usr/include/c++/14.2.1/bits/stl_bvector.h \
  /usr/include/c++/14.2.1/bits/vector.tcc /usr/include/c++/14.2.1/array \
  /usr/include/c++/14.2.1/compare /usr/include/c++/14.2.1/sstream \
- /usr/include/c++/14.2.1/bits/sstream.tcc \
+ /usr/include/c++/14.2.1/bits/sstream.tcc /usr/include/c++/14.2.1/deque \
+ /usr/include/c++/14.2.1/bits/stl_deque.h \
+ /usr/include/c++/14.2.1/bits/deque.tcc \
  /home/darius/Dev/cpp/echo/echo/src/Log.h /usr/include/spdlog/spdlog.h \
  /usr/include/spdlog/common.h /usr/include/spdlog/details/null_mutex.h \
  /usr/include/c++/14.2.1/atomic /usr/include/spdlog/tweakme.h \
@@ -204,7 +210,7 @@ CMakeFiles/sandbox.dir/src/main.cpp.o: \
  /usr/include/c++/14.2.1/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
- /usr/include/bits/fp-fast.h \
+ /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
  /usr/include/bits/iscanonical.h /usr/include/c++/14.2.1/bits/specfun.h \
@@ -240,13 +246,7 @@ CMakeFiles/sandbox.dir/src/main.cpp.o: \
  /usr/include/spdlog/details/os.h /usr/include/spdlog/details/os-inl.h \
  /usr/include/sys/stat.h /usr/include/bits/stat.h \
  /usr/include/bits/struct_stat.h /usr/include/bits/statx.h \
- /usr/include/linux/stat.h /usr/include/linux/types.h \
- /usr/include/asm/types.h /usr/include/asm-generic/types.h \
- /usr/include/asm-generic/int-ll64.h /usr/include/asm/bitsperlong.h \
- /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
- /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
- /usr/include/bits/statx-generic.h \
+ /usr/include/linux/stat.h /usr/include/bits/statx-generic.h \
  /usr/include/bits/types/struct_statx_timestamp.h \
  /usr/include/bits/types/struct_statx.h /usr/include/fcntl.h \
  /usr/include/bits/fcntl.h /usr/include/bits/fcntl-linux.h \
@@ -275,10 +275,16 @@ CMakeFiles/sandbox.dir/src/main.cpp.o: \
  /usr/include/spdlog/sinks/stdout_color_sinks.h \
  /usr/include/spdlog/sinks/stdout_color_sinks-inl.h \
  /home/darius/Dev/cpp/echo/echo/src/ecpch.h \
+ /home/darius/Dev/cpp/echo/echo/src/Echo.h \
+ /home/darius/Dev/cpp/echo/echo/src/Application.h \
+ /home/darius/Dev/cpp/echo/echo/src/Events/ApplicationEvent.h \
  /home/darius/Dev/cpp/echo/echo/src/Layer.h \
  /home/darius/Dev/cpp/echo/echo/src/WindowTemplate.h \
  /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h \
  /home/darius/Dev/cpp/echo/echo/src/LayerStack.h \
  /home/darius/Dev/cpp/echo/echo/src/EntryPoint.h \
- /home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.h
+ /home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.h \
+ /home/darius/Dev/cpp/echo/echo/src/Events/MouseEvent.h \
+ /home/darius/Dev/cpp/echo/echo/src/Codes/KeyCodes.h \
+ /home/darius/Dev/cpp/echo/echo/src/Codes/MouseCodes.h

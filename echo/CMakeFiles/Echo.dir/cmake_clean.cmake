@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Echo.dir/src/LayerStack.cpp.o.d"
   "CMakeFiles/Echo.dir/src/Log.cpp.o"
   "CMakeFiles/Echo.dir/src/Log.cpp.o.d"
+  "CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o"
+  "CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o.d"
   "CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o"
   "CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o.d"
   "CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o"

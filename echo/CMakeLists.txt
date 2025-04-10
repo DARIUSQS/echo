@@ -27,6 +27,7 @@ add_library(Echo SHARED
                         src/Application.cpp
                         src/Log.cpp
                         src/Platform/Linux/LinuxWindow.cpp
+                        src/Platform/Linux/LinuxInput.cpp
                         src/Platform/Opengl/imguiRendererOpengl3.cpp
                         src/Layer.cpp
                         src/LayerStack.cpp
