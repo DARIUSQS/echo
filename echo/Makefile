@@ -238,6 +238,30 @@ src/ImGui/ImGuiLayer.cpp.s:
 	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.s
 .PHONY : src/ImGui/ImGuiLayer.cpp.s
 
+src/ImGui/imguiRendererOpengl3.o: src/ImGui/imguiRendererOpengl3.cpp.o
+.PHONY : src/ImGui/imguiRendererOpengl3.o
+
+# target to build an object file
+src/ImGui/imguiRendererOpengl3.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/ImGui/imguiRendererOpengl3.cpp.o
+.PHONY : src/ImGui/imguiRendererOpengl3.cpp.o
+
+src/ImGui/imguiRendererOpengl3.i: src/ImGui/imguiRendererOpengl3.cpp.i
+.PHONY : src/ImGui/imguiRendererOpengl3.i
+
+# target to preprocess a source file
+src/ImGui/imguiRendererOpengl3.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/ImGui/imguiRendererOpengl3.cpp.i
+.PHONY : src/ImGui/imguiRendererOpengl3.cpp.i
+
+src/ImGui/imguiRendererOpengl3.s: src/ImGui/imguiRendererOpengl3.cpp.s
+.PHONY : src/ImGui/imguiRendererOpengl3.s
+
+# target to generate assembly for a file
+src/ImGui/imguiRendererOpengl3.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/ImGui/imguiRendererOpengl3.cpp.s
+.PHONY : src/ImGui/imguiRendererOpengl3.cpp.s
+
 src/Layer.o: src/Layer.cpp.o
 .PHONY : src/Layer.o
 
@@ -358,29 +382,29 @@ src/Platform/Linux/LinuxWindow.cpp.s:
 	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.s
 .PHONY : src/Platform/Linux/LinuxWindow.cpp.s
 
-src/Platform/Opengl/imguiRendererOpengl3.o: src/Platform/Opengl/imguiRendererOpengl3.cpp.o
-.PHONY : src/Platform/Opengl/imguiRendererOpengl3.o
+src/Platform/Opengl/OpenGLContext.o: src/Platform/Opengl/OpenGLContext.cpp.o
+.PHONY : src/Platform/Opengl/OpenGLContext.o
 
 # target to build an object file
-src/Platform/Opengl/imguiRendererOpengl3.cpp.o:
-	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o
-.PHONY : src/Platform/Opengl/imguiRendererOpengl3.cpp.o
+src/Platform/Opengl/OpenGLContext.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.o
+.PHONY : src/Platform/Opengl/OpenGLContext.cpp.o
 
-src/Platform/Opengl/imguiRendererOpengl3.i: src/Platform/Opengl/imguiRendererOpengl3.cpp.i
-.PHONY : src/Platform/Opengl/imguiRendererOpengl3.i
+src/Platform/Opengl/OpenGLContext.i: src/Platform/Opengl/OpenGLContext.cpp.i
+.PHONY : src/Platform/Opengl/OpenGLContext.i
 
 # target to preprocess a source file
-src/Platform/Opengl/imguiRendererOpengl3.cpp.i:
-	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.i
-.PHONY : src/Platform/Opengl/imguiRendererOpengl3.cpp.i
+src/Platform/Opengl/OpenGLContext.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.i
+.PHONY : src/Platform/Opengl/OpenGLContext.cpp.i
 
-src/Platform/Opengl/imguiRendererOpengl3.s: src/Platform/Opengl/imguiRendererOpengl3.cpp.s
-.PHONY : src/Platform/Opengl/imguiRendererOpengl3.s
+src/Platform/Opengl/OpenGLContext.s: src/Platform/Opengl/OpenGLContext.cpp.s
+.PHONY : src/Platform/Opengl/OpenGLContext.s
 
 # target to generate assembly for a file
-src/Platform/Opengl/imguiRendererOpengl3.cpp.s:
-	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.s
-.PHONY : src/Platform/Opengl/imguiRendererOpengl3.cpp.s
+src/Platform/Opengl/OpenGLContext.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.s
+.PHONY : src/Platform/Opengl/OpenGLContext.cpp.s
 
 # Help Target
 help:
@@ -404,6 +428,9 @@ help:
 	@echo "... src/ImGui/ImGuiLayer.o"
 	@echo "... src/ImGui/ImGuiLayer.i"
 	@echo "... src/ImGui/ImGuiLayer.s"
+	@echo "... src/ImGui/imguiRendererOpengl3.o"
+	@echo "... src/ImGui/imguiRendererOpengl3.i"
+	@echo "... src/ImGui/imguiRendererOpengl3.s"
 	@echo "... src/Layer.o"
 	@echo "... src/Layer.i"
 	@echo "... src/Layer.s"
@@ -419,9 +446,9 @@ help:
 	@echo "... src/Platform/Linux/LinuxWindow.o"
 	@echo "... src/Platform/Linux/LinuxWindow.i"
 	@echo "... src/Platform/Linux/LinuxWindow.s"
-	@echo "... src/Platform/Opengl/imguiRendererOpengl3.o"
-	@echo "... src/Platform/Opengl/imguiRendererOpengl3.i"
-	@echo "... src/Platform/Opengl/imguiRendererOpengl3.s"
+	@echo "... src/Platform/Opengl/OpenGLContext.o"
+	@echo "... src/Platform/Opengl/OpenGLContext.i"
+	@echo "... src/Platform/Opengl/OpenGLContext.s"
 .PHONY : help
 
 

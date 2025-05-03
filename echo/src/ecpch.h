@@ -10,4 +10,5 @@
 #include <sstream>
 #include <deque>
 
+#include "Core.h"
 #include "Log.h"

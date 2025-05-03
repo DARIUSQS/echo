@@ -23,14 +23,15 @@ add_subdirectory(vendor/stb_image)
 add_subdirectory(vendor/glm)
 add_subdirectory(vendor/imguiInclude)
 
-add_library(Echo SHARED 
+add_library(Echo STATIC
                         src/Application.cpp
                         src/Log.cpp
                         src/Platform/Linux/LinuxWindow.cpp
                         src/Platform/Linux/LinuxInput.cpp
-                        src/Platform/Opengl/imguiRendererOpengl3.cpp
+                        src/Platform/Opengl/OpenGLContext.cpp
                         src/Layer.cpp
                         src/LayerStack.cpp
+                        src/ImGui/imguiRendererOpengl3.cpp
                         src/ImGui/ImGuiLayer.cpp)
 
 # IF(WIN32)

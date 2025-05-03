@@ -190,6 +190,8 @@ echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch: \
  /usr/include/c++/14.2.1/bits/sstream.tcc /usr/include/c++/14.2.1/deque \
  /usr/include/c++/14.2.1/bits/stl_deque.h \
  /usr/include/c++/14.2.1/bits/deque.tcc \
+ /home/darius/Dev/cpp/echo/echo/src/Core.h \
+ /usr/include/c++/14.2.1/cassert /usr/include/assert.h \
  /home/darius/Dev/cpp/echo/echo/src/Log.h \
  /home/darius/Dev/cpp/echo/echo/vendor/spdlog/include/spdlog/spdlog.h \
  /home/darius/Dev/cpp/echo/echo/vendor/spdlog/include/spdlog/common.h \
@@ -242,7 +244,6 @@ echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch: \
  /home/darius/Dev/cpp/echo/echo/vendor/spdlog/include/spdlog/logger.h \
  /home/darius/Dev/cpp/echo/echo/vendor/spdlog/include/spdlog/details/backtracer.h \
  /home/darius/Dev/cpp/echo/echo/vendor/spdlog/include/spdlog/details/circular_q.h \
- /usr/include/c++/14.2.1/cassert /usr/include/assert.h \
  /home/darius/Dev/cpp/echo/echo/vendor/spdlog/include/spdlog/details/log_msg_buffer.h \
  /home/darius/Dev/cpp/echo/echo/vendor/spdlog/include/spdlog/details/log_msg.h \
  /home/darius/Dev/cpp/echo/echo/vendor/spdlog/include/spdlog/version.h \

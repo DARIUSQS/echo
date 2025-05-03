@@ -8,7 +8,7 @@
 #include "GLFW/glfw3.h"
 #include "imgui/imgui.h"
 #include "imgui/backends/imgui_impl_glfw.h"
-#include "Platform/Opengl/imguiRendererOpengl3.h"
+#include "imguiRendererOpengl3.h"
 #include "Application.h"
 #include <memory>
 
@@ -63,13 +63,17 @@ namespace Echo
     {
         ImGui::CreateContext();
         ImGui::StyleColorsDark();
+        ImGui::LoadIniSettingsFromDisk("imgui.ini");
+        ImGui::SaveIniSettingsToMemory();
+
         ImGui_ImplGlfw_InitForOpenGL(static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowData()), false);
         ImGui_ImplOpenGL3_Init("#version 410");
 
         ImGuiIO& io = ImGui::GetIO();
         io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
         io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
-
+        ImGui::GetIO().ConfigFlags |= ImGuiConfigFlags_DockingEnable; // Docking
+ 
         io.KeyMap[ImGuiKey_Tab] = GLFW_KEY_TAB;
         io.KeyMap[ImGuiKey_LeftArrow] = GLFW_KEY_LEFT;
         io.KeyMap[ImGuiKey_RightArrow] = GLFW_KEY_RIGHT;
@@ -95,8 +99,12 @@ namespace Echo
     
     void ImGuiLayer::OnDetach()
     {
-
+        ImGui::SaveIniSettingsToDisk("imgui.ini");
+        ImGui_ImplOpenGL3_Shutdown();
+        ImGui_ImplGlfw_Shutdown();
+        ImGui::DestroyContext();
     }
+
     bool ImGuiLayer::OnMouseButtonPressedEvent(MouseButtonEvent& e)
     {
         ImGuiIO& io = ImGui::GetIO();

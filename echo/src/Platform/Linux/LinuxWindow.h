@@ -1,5 +1,7 @@
 #pragma once
+#include "Renderer/RenderContext.h"
 #include "WindowTemplate.h"
+#include "imgui/imgui_internal.h"
 #include <GLFW/glfw3.h>
 #include <functional>
 
@@ -25,6 +27,7 @@ namespace Echo
             virtual void Shutdown();
         private:
             GLFWwindow* m_Window;
+            RenderContext* m_Context;
             
             struct WindowData
             {

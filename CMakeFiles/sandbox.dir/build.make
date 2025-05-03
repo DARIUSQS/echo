@@ -96,7 +96,14 @@ sandbox_EXTERNAL_OBJECTS =
 bin/sandbox: CMakeFiles/sandbox.dir/src/main.cpp.o
 bin/sandbox: CMakeFiles/sandbox.dir/build.make
 bin/sandbox: CMakeFiles/sandbox.dir/compiler_depend.ts
-bin/sandbox: lib/libEcho.so
+bin/sandbox: lib/libEcho.a
+bin/sandbox: lib/libspdlogd.a
+bin/sandbox: lib/libstb_image.a
+bin/sandbox: lib/libimgui.a
+bin/sandbox: lib/libglfw3.a
+bin/sandbox: /usr/lib/librt.a
+bin/sandbox: /usr/lib/libm.so
+bin/sandbox: lib/libglad.a
 bin/sandbox: CMakeFiles/sandbox.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/sandbox"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sandbox.dir/link.txt --verbose=$(VERBOSE)

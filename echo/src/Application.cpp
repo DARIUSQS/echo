@@ -1,11 +1,9 @@
+#include "ecpch.h"
+#include <glad.h>
 #include "Application.h"
 #include "Core.h"
 #include "Events/ApplicationEvent.h"
-#include "Events/KeyEvent.h"
 #include "Events/Event.h"
-#include "InputTemplate.h"
-#include "Log.h"
-#include "ecpch.h"
 #include <GLFW/glfw3.h>
 
 namespace Echo {
@@ -42,13 +40,16 @@ namespace Echo {
     
     void Application::Run()
     {
-        KeyEventPressed e(3, 5);
-        EC_CORE_TRACE(e);
+        glClearColor(0.1f, 0.1f, 0.1f, 1);
+
         while(m_Running)
         {
+            glClear(GL_COLOR_BUFFER_BIT);
+
             for(Layer* layer : m_LayerStack) layer->OnUpdate();
             m_Window->OnUpdate();    
         }
+
     }
 
     void Application::PushLayer(Layer* layer)

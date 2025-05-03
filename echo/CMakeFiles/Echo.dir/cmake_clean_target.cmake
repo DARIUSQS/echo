@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "lib/libEcho.a"
+  "../lib/libEcho.a"
 )

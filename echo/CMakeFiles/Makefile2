@@ -270,12 +270,12 @@ CMakeFiles/Echo.dir/all: vendor/stb_image/CMakeFiles/stb_image.dir/all
 CMakeFiles/Echo.dir/all: vendor/imguiInclude/CMakeFiles/imgui.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Echo.dir/build.make CMakeFiles/Echo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Echo.dir/build.make CMakeFiles/Echo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Echo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target Echo"
 .PHONY : CMakeFiles/Echo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Echo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/darius/Dev/cpp/echo/echo/CMakeFiles 75
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/darius/Dev/cpp/echo/echo/CMakeFiles 76
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Echo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/darius/Dev/cpp/echo/echo/CMakeFiles 0
 .PHONY : CMakeFiles/Echo.dir/rule
@@ -287,7 +287,7 @@ Echo: CMakeFiles/Echo.dir/rule
 # codegen rule for target.
 CMakeFiles/Echo.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Echo.dir/build.make CMakeFiles/Echo.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Finished codegen for target Echo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target Echo"
 .PHONY : CMakeFiles/Echo.dir/codegen
 
 # clean rule for target.
@@ -334,7 +334,7 @@ vendor/glfw/CMakeFiles/uninstall.dir/clean:
 vendor/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f vendor/glfw/src/CMakeFiles/glfw.dir/build.make vendor/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendor/glfw/src/CMakeFiles/glfw.dir/build.make vendor/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58 "Built target glfw"
 .PHONY : vendor/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -351,7 +351,7 @@ glfw: vendor/glfw/src/CMakeFiles/glfw.dir/rule
 # codegen rule for target.
 vendor/glfw/src/CMakeFiles/glfw.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendor/glfw/src/CMakeFiles/glfw.dir/build.make vendor/glfw/src/CMakeFiles/glfw.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57 "Finished codegen for target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58 "Finished codegen for target glfw"
 .PHONY : vendor/glfw/src/CMakeFiles/glfw.dir/codegen
 
 # clean rule for target.
@@ -366,7 +366,7 @@ vendor/glfw/src/CMakeFiles/glfw.dir/clean:
 vendor/glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f vendor/glfw/src/CMakeFiles/update_mappings.dir/build.make vendor/glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendor/glfw/src/CMakeFiles/update_mappings.dir/build.make vendor/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=76 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=77 "Built target update_mappings"
 .PHONY : vendor/glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -383,7 +383,7 @@ update_mappings: vendor/glfw/src/CMakeFiles/update_mappings.dir/rule
 # codegen rule for target.
 vendor/glfw/src/CMakeFiles/update_mappings.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendor/glfw/src/CMakeFiles/update_mappings.dir/build.make vendor/glfw/src/CMakeFiles/update_mappings.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=76 "Finished codegen for target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=77 "Finished codegen for target update_mappings"
 .PHONY : vendor/glfw/src/CMakeFiles/update_mappings.dir/codegen
 
 # clean rule for target.
@@ -398,7 +398,7 @@ vendor/glfw/src/CMakeFiles/update_mappings.dir/clean:
 vendor/spdlog/CMakeFiles/spdlog.dir/all:
 	$(MAKE) $(MAKESILENT) -f vendor/spdlog/CMakeFiles/spdlog.dir/build.make vendor/spdlog/CMakeFiles/spdlog.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendor/spdlog/CMakeFiles/spdlog.dir/build.make vendor/spdlog/CMakeFiles/spdlog.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=66,67,68,69,70,71,72,73 "Built target spdlog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=67,68,69,70,71,72,73,74 "Built target spdlog"
 .PHONY : vendor/spdlog/CMakeFiles/spdlog.dir/all
 
 # Build rule for subdir invocation for target.
@@ -415,7 +415,7 @@ spdlog: vendor/spdlog/CMakeFiles/spdlog.dir/rule
 # codegen rule for target.
 vendor/spdlog/CMakeFiles/spdlog.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendor/spdlog/CMakeFiles/spdlog.dir/build.make vendor/spdlog/CMakeFiles/spdlog.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=66,67,68,69,70,71,72,73 "Finished codegen for target spdlog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=67,68,69,70,71,72,73,74 "Finished codegen for target spdlog"
 .PHONY : vendor/spdlog/CMakeFiles/spdlog.dir/codegen
 
 # clean rule for target.
@@ -430,7 +430,7 @@ vendor/spdlog/CMakeFiles/spdlog.dir/clean:
 vendor/glad/CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f vendor/glad/CMakeFiles/glad.dir/build.make vendor/glad/CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendor/glad/CMakeFiles/glad.dir/build.make vendor/glad/CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=11,12 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=12,13 "Built target glad"
 .PHONY : vendor/glad/CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -447,7 +447,7 @@ glad: vendor/glad/CMakeFiles/glad.dir/rule
 # codegen rule for target.
 vendor/glad/CMakeFiles/glad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendor/glad/CMakeFiles/glad.dir/build.make vendor/glad/CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=11,12 "Finished codegen for target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=12,13 "Finished codegen for target glad"
 .PHONY : vendor/glad/CMakeFiles/glad.dir/codegen
 
 # clean rule for target.
@@ -462,7 +462,7 @@ vendor/glad/CMakeFiles/glad.dir/clean:
 vendor/stb_image/CMakeFiles/stb_image.dir/all:
 	$(MAKE) $(MAKESILENT) -f vendor/stb_image/CMakeFiles/stb_image.dir/build.make vendor/stb_image/CMakeFiles/stb_image.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendor/stb_image/CMakeFiles/stb_image.dir/build.make vendor/stb_image/CMakeFiles/stb_image.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=74,75 "Built target stb_image"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=75,76 "Built target stb_image"
 .PHONY : vendor/stb_image/CMakeFiles/stb_image.dir/all
 
 # Build rule for subdir invocation for target.
@@ -479,7 +479,7 @@ stb_image: vendor/stb_image/CMakeFiles/stb_image.dir/rule
 # codegen rule for target.
 vendor/stb_image/CMakeFiles/stb_image.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendor/stb_image/CMakeFiles/stb_image.dir/build.make vendor/stb_image/CMakeFiles/stb_image.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=74,75 "Finished codegen for target stb_image"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=75,76 "Finished codegen for target stb_image"
 .PHONY : vendor/stb_image/CMakeFiles/stb_image.dir/codegen
 
 # clean rule for target.
@@ -495,7 +495,7 @@ vendor/imguiInclude/CMakeFiles/imgui.dir/all: vendor/glfw/src/CMakeFiles/glfw.di
 vendor/imguiInclude/CMakeFiles/imgui.dir/all: vendor/glad/CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f vendor/imguiInclude/CMakeFiles/imgui.dir/build.make vendor/imguiInclude/CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendor/imguiInclude/CMakeFiles/imgui.dir/build.make vendor/imguiInclude/CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=58,59,60,61,62,63,64,65 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=59,60,61,62,63,64,65,66 "Built target imgui"
 .PHONY : vendor/imguiInclude/CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
@@ -512,7 +512,7 @@ imgui: vendor/imguiInclude/CMakeFiles/imgui.dir/rule
 # codegen rule for target.
 vendor/imguiInclude/CMakeFiles/imgui.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendor/imguiInclude/CMakeFiles/imgui.dir/build.make vendor/imguiInclude/CMakeFiles/imgui.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=58,59,60,61,62,63,64,65 "Finished codegen for target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/darius/Dev/cpp/echo/echo/CMakeFiles --progress-num=59,60,61,62,63,64,65,66 "Finished codegen for target imgui"
 .PHONY : vendor/imguiInclude/CMakeFiles/imgui.dir/codegen
 
 # clean rule for target.

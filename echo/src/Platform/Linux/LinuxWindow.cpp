@@ -1,8 +1,7 @@
-#include "Core.h"
-#include "Events/Event.h"
-#include "Events/KeyEvent.h"
 #include "ecpch.h"
-#include "glad.h"
+#include "Events/KeyEvent.h"
+#include "Platform/Opengl/OpenGLContext.h"
+#include "Renderer/RenderContext.h"
 #include "LinuxWindow.h"
 #include "GLFW/glfw3.h"
 #include "Events/ApplicationEvent.h"
@@ -35,6 +34,7 @@ namespace Echo
         m_Data.Width = props.Width;
 
         EC_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
+
         if(!s_GLFWInitialized)
         {
             int success = glfwInit();
@@ -44,10 +44,9 @@ namespace Echo
         }
         
         m_Window = glfwCreateWindow(m_Data.Width, m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
-        glfwMakeContextCurrent(m_Window);
     
-        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-        EC_ASSERT(status, "Failed to initialize glad");
+        m_Context = new OpenGLContext(m_Window);
+        m_Context->Init();
 
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
@@ -148,8 +147,7 @@ namespace Echo
 
     void LinuxWindow::OnUpdate()
     {
-        glfwSwapBuffers(m_Window);
-        glClear(GL_COLOR_BUFFER_BIT);
+        m_Context->SwapBuffers();
         glfwPollEvents();
     }
 

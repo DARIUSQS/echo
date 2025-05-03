@@ -399,6 +399,7 @@ bin/sandbox: /usr/lib/Scrt1.o \
   /usr/lib/crti.o \
   /usr/lib/crtn.o \
   /usr/lib/libc.so \
+  /usr/lib/libdl.a \
   /usr/lib/libgcc_s.so \
   /usr/lib/libgcc_s.so.1 \
   /usr/lib/libm.so \
@@ -411,13 +412,29 @@ bin/sandbox: /usr/lib/Scrt1.o \
   /usr/lib/libc_nonshared.a \
   /usr/lib/libm.so.6 \
   /usr/lib/libmvec.so.1 \
+  /usr/lib/librt.a \
   CMakeFiles/sandbox.dir/src/main.cpp.o \
-  lib/libEcho.so
+  lib/libEcho.a \
+  lib/libglad.a \
+  lib/libglfw3.a \
+  lib/libimgui.a \
+  lib/libspdlogd.a \
+  lib/libstb_image.a
 
+
+lib/libstb_image.a:
+
+lib/libspdlogd.a:
+
+lib/libimgui.a:
+
+lib/libglad.a:
+
+lib/libEcho.a:
+
+/usr/lib/librt.a:
 
 /usr/lib/libmvec.so.1:
-
-lib/libEcho.so:
 
 /usr/lib/libc_nonshared.a:
 
@@ -468,6 +485,8 @@ lib/libEcho.so:
 /usr/include/spdlog/fmt/fmt.h:
 
 /usr/include/spdlog/details/periodic_worker-inl.h:
+
+lib/libglfw3.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:
 
@@ -758,6 +777,8 @@ echo/src/Echo.h:
 /usr/lib/libc.so.6:
 
 echo/src/Layer.h:
+
+/usr/lib/libdl.a:
 
 /usr/include/bits/uintn-identity.h:
 

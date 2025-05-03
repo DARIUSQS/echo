@@ -3,6 +3,7 @@
 
 echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
   echo/CMakeFiles/Echo.dir/cmake_pch.hxx.cxx \
+  echo/src/Core.h \
   echo/src/Log.h \
   echo/src/ecpch.h \
   echo/vendor/spdlog/include/spdlog/common.h \
@@ -333,22 +334,16 @@ echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch: echo/CMakeFiles/Echo.dir/cmake_pch.h
 echo/CMakeFiles/Echo.dir/src/Application.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
   echo/src/Application.cpp \
   echo/src/Application.h \
-  echo/src/Core.h \
   echo/src/Events/ApplicationEvent.h \
   echo/src/Events/Event.h \
-  echo/src/Events/KeyEvent.h \
-  echo/src/InputTemplate.h \
   echo/src/Layer.h \
   echo/src/LayerStack.h \
   echo/src/WindowTemplate.h \
   echo/src/ecpch.h \
+  echo/vendor/glad/include/glad/glad.h \
+  echo/vendor/glad/include/glad/khrplatform.h \
   echo/vendor/glfw/include/GLFW/glfw3.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GL/glext.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/assert.h \
   /usr/include/c++/14.2.1/algorithm \
-  /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/deque \
   /usr/include/c++/14.2.1/functional \
   /usr/include/c++/14.2.1/iostream \
@@ -358,24 +353,21 @@ echo/CMakeFiles/Echo.dir/src/Application.cpp.o: echo/CMakeFiles/Echo.dir/cmake_p
   /usr/include/c++/14.2.1/unordered_map \
   /usr/include/c++/14.2.1/utility \
   /usr/include/c++/14.2.1/vector \
-  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
-  /usr/include/features.h \
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
 
 echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
   echo/src/Application.h \
-  echo/src/Core.h \
   echo/src/Events/ApplicationEvent.h \
   echo/src/Events/Event.h \
   echo/src/Events/KeyEvent.h \
   echo/src/Events/MouseEvent.h \
   echo/src/ImGui/ImGuiLayer.cpp \
   echo/src/ImGui/ImGuiLayer.h \
+  echo/src/ImGui/imguiRendererOpengl3.h \
   echo/src/Layer.h \
   echo/src/LayerStack.h \
-  echo/src/Platform/Opengl/imguiRendererOpengl3.h \
   echo/src/WindowTemplate.h \
   echo/src/ecpch.h \
   echo/vendor/glfw/include/GLFW/glfw3.h \
@@ -387,7 +379,6 @@ echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/cm
   /usr/include/KHR/khrplatform.h \
   /usr/include/assert.h \
   /usr/include/c++/14.2.1/algorithm \
-  /usr/include/c++/14.2.1/cassert \
   /usr/include/c++/14.2.1/deque \
   /usr/include/c++/14.2.1/functional \
   /usr/include/c++/14.2.1/iostream \
@@ -397,7 +388,6 @@ echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/cm
   /usr/include/c++/14.2.1/unordered_map \
   /usr/include/c++/14.2.1/utility \
   /usr/include/c++/14.2.1/vector \
-  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/features.h \
   /usr/include/stdc-predef.h \
   /usr/include/string.h \
@@ -406,123 +396,9 @@ echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/cm
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
 
-echo/CMakeFiles/Echo.dir/src/Layer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
-  echo/src/Core.h \
-  echo/src/Events/Event.h \
-  echo/src/Layer.cpp \
-  echo/src/Layer.h \
-  echo/src/ecpch.h \
-  /usr/include/assert.h \
-  /usr/include/c++/14.2.1/algorithm \
-  /usr/include/c++/14.2.1/cassert \
-  /usr/include/c++/14.2.1/deque \
-  /usr/include/c++/14.2.1/functional \
-  /usr/include/c++/14.2.1/iostream \
-  /usr/include/c++/14.2.1/memory \
-  /usr/include/c++/14.2.1/sstream \
-  /usr/include/c++/14.2.1/string \
-  /usr/include/c++/14.2.1/unordered_map \
-  /usr/include/c++/14.2.1/utility \
-  /usr/include/c++/14.2.1/vector \
-  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h
-
-echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
-  echo/src/Core.h \
-  echo/src/Events/Event.h \
-  echo/src/Layer.h \
-  echo/src/LayerStack.cpp \
-  echo/src/LayerStack.h \
-  echo/src/ecpch.h \
-  /usr/include/assert.h \
-  /usr/include/c++/14.2.1/algorithm \
-  /usr/include/c++/14.2.1/cassert \
-  /usr/include/c++/14.2.1/deque \
-  /usr/include/c++/14.2.1/functional \
-  /usr/include/c++/14.2.1/iostream \
-  /usr/include/c++/14.2.1/memory \
-  /usr/include/c++/14.2.1/sstream \
-  /usr/include/c++/14.2.1/string \
-  /usr/include/c++/14.2.1/unordered_map \
-  /usr/include/c++/14.2.1/utility \
-  /usr/include/c++/14.2.1/vector \
-  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h
-
-echo/CMakeFiles/Echo.dir/src/Log.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
-  echo/src/Log.cpp \
-  /usr/include/stdc-predef.h
-
-echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
-  echo/src/Application.h \
-  echo/src/Core.h \
-  echo/src/Events/ApplicationEvent.h \
-  echo/src/Events/Event.h \
-  echo/src/InputTemplate.h \
-  echo/src/Layer.h \
-  echo/src/LayerStack.h \
-  echo/src/Platform/Linux/LinuxInput.cpp \
-  echo/src/WindowTemplate.h \
-  echo/src/ecpch.h \
-  echo/vendor/glfw/include/GLFW/glfw3.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GL/glext.h \
-  /usr/include/KHR/khrplatform.h \
-  /usr/include/assert.h \
-  /usr/include/c++/14.2.1/algorithm \
-  /usr/include/c++/14.2.1/cassert \
-  /usr/include/c++/14.2.1/deque \
-  /usr/include/c++/14.2.1/functional \
-  /usr/include/c++/14.2.1/iostream \
-  /usr/include/c++/14.2.1/memory \
-  /usr/include/c++/14.2.1/sstream \
-  /usr/include/c++/14.2.1/string \
-  /usr/include/c++/14.2.1/unordered_map \
-  /usr/include/c++/14.2.1/utility \
-  /usr/include/c++/14.2.1/vector \
-  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
-
-echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
-  echo/src/Core.h \
-  echo/src/Events/ApplicationEvent.h \
-  echo/src/Events/Event.h \
-  echo/src/Events/KeyEvent.h \
-  echo/src/Events/MouseEvent.h \
-  echo/src/Platform/Linux/LinuxWindow.cpp \
-  echo/src/Platform/Linux/LinuxWindow.h \
-  echo/src/WindowTemplate.h \
-  echo/src/ecpch.h \
-  echo/vendor/glad/include/glad/glad.h \
-  echo/vendor/glad/include/glad/khrplatform.h \
-  echo/vendor/glfw/include/GLFW/glfw3.h \
-  /usr/include/GL/gl.h \
-  /usr/include/assert.h \
-  /usr/include/c++/14.2.1/algorithm \
-  /usr/include/c++/14.2.1/cassert \
-  /usr/include/c++/14.2.1/deque \
-  /usr/include/c++/14.2.1/functional \
-  /usr/include/c++/14.2.1/iostream \
-  /usr/include/c++/14.2.1/memory \
-  /usr/include/c++/14.2.1/sstream \
-  /usr/include/c++/14.2.1/string \
-  /usr/include/c++/14.2.1/unordered_map \
-  /usr/include/c++/14.2.1/utility \
-  /usr/include/c++/14.2.1/vector \
-  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
-
-echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
-  echo/src/Platform/Opengl/imguiRendererOpengl3.cpp \
-  echo/src/Platform/Opengl/imguiRendererOpengl3.h \
+echo/CMakeFiles/Echo.dir/src/ImGui/imguiRendererOpengl3.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
+  echo/src/ImGui/imguiRendererOpengl3.cpp \
+  echo/src/ImGui/imguiRendererOpengl3.h \
   echo/vendor/glad/include/glad/glad.h \
   echo/vendor/glad/include/glad/khrplatform.h \
   echo/vendor/imguiInclude/src/imgui/imconfig.h \
@@ -537,77 +413,358 @@ echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o: echo/CM
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
 
-lib/libEcho.so: lib/libglad.a \
-  lib/libglfw3.a \
-  lib/libimgui.a \
-  lib/libspdlogd.a \
-  lib/libstb_image.a \
-  /usr/lib/crti.o \
-  /usr/lib/crtn.o \
-  /usr/lib/libc.so \
-  /usr/lib/libdl.a \
-  /usr/lib/libgcc_s.so \
-  /usr/lib/libgcc_s.so.1 \
-  /usr/lib/libm.so \
-  /usr/lib/libstdc++.so \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/libgcc.a \
-  /usr/lib/ld-linux-x86-64.so.2 \
-  /usr/lib/libc.so.6 \
-  /usr/lib/libc_nonshared.a \
-  /usr/lib/libm.so.6 \
-  /usr/lib/libmvec.so.1 \
-  /usr/lib/librt.a \
-  echo/CMakeFiles/Echo.dir/src/Application.cpp.o \
-  echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o \
-  echo/CMakeFiles/Echo.dir/src/Layer.cpp.o \
-  echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o \
-  echo/CMakeFiles/Echo.dir/src/Log.cpp.o \
-  echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o \
-  echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o \
-  echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o
+echo/CMakeFiles/Echo.dir/src/Layer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
+  echo/src/Events/Event.h \
+  echo/src/Layer.cpp \
+  echo/src/Layer.h \
+  echo/src/ecpch.h \
+  /usr/include/c++/14.2.1/algorithm \
+  /usr/include/c++/14.2.1/deque \
+  /usr/include/c++/14.2.1/functional \
+  /usr/include/c++/14.2.1/iostream \
+  /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/sstream \
+  /usr/include/c++/14.2.1/string \
+  /usr/include/c++/14.2.1/unordered_map \
+  /usr/include/c++/14.2.1/utility \
+  /usr/include/c++/14.2.1/vector \
+  /usr/include/stdc-predef.h
+
+echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
+  echo/src/Events/Event.h \
+  echo/src/Layer.h \
+  echo/src/LayerStack.cpp \
+  echo/src/LayerStack.h \
+  echo/src/ecpch.h \
+  /usr/include/c++/14.2.1/algorithm \
+  /usr/include/c++/14.2.1/deque \
+  /usr/include/c++/14.2.1/functional \
+  /usr/include/c++/14.2.1/iostream \
+  /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/sstream \
+  /usr/include/c++/14.2.1/string \
+  /usr/include/c++/14.2.1/unordered_map \
+  /usr/include/c++/14.2.1/utility \
+  /usr/include/c++/14.2.1/vector \
+  /usr/include/stdc-predef.h
+
+echo/CMakeFiles/Echo.dir/src/Log.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
+  echo/src/Log.cpp \
+  /usr/include/stdc-predef.h
+
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
+  echo/src/Application.h \
+  echo/src/Events/ApplicationEvent.h \
+  echo/src/Events/Event.h \
+  echo/src/InputTemplate.h \
+  echo/src/Layer.h \
+  echo/src/LayerStack.h \
+  echo/src/Platform/Linux/LinuxInput.cpp \
+  echo/src/WindowTemplate.h \
+  echo/src/ecpch.h \
+  echo/vendor/glfw/include/GLFW/glfw3.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glext.h \
+  /usr/include/KHR/khrplatform.h \
+  /usr/include/c++/14.2.1/algorithm \
+  /usr/include/c++/14.2.1/deque \
+  /usr/include/c++/14.2.1/functional \
+  /usr/include/c++/14.2.1/iostream \
+  /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/sstream \
+  /usr/include/c++/14.2.1/string \
+  /usr/include/c++/14.2.1/unordered_map \
+  /usr/include/c++/14.2.1/utility \
+  /usr/include/c++/14.2.1/vector \
+  /usr/include/stdc-predef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
+
+echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
+  echo/src/Events/ApplicationEvent.h \
+  echo/src/Events/Event.h \
+  echo/src/Events/KeyEvent.h \
+  echo/src/Events/MouseEvent.h \
+  echo/src/Platform/Linux/LinuxWindow.cpp \
+  echo/src/Platform/Linux/LinuxWindow.h \
+  echo/src/Platform/Opengl/OpenGLContext.h \
+  echo/src/Renderer/RenderContext.h \
+  echo/src/WindowTemplate.h \
+  echo/src/ecpch.h \
+  echo/vendor/glfw/include/GLFW/glfw3.h \
+  echo/vendor/imguiInclude/src/imgui/imconfig.h \
+  echo/vendor/imguiInclude/src/imgui/imgui.h \
+  echo/vendor/imguiInclude/src/imgui/imgui_internal.h \
+  echo/vendor/imguiInclude/src/imgui/imstb_textedit.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glext.h \
+  /usr/include/KHR/khrplatform.h \
+  /usr/include/assert.h \
+  /usr/include/c++/14.2.1/algorithm \
+  /usr/include/c++/14.2.1/bits/cpp_type_traits.h \
+  /usr/include/c++/14.2.1/bits/requires_hosted.h \
+  /usr/include/c++/14.2.1/bits/std_abs.h \
+  /usr/include/c++/14.2.1/cmath \
+  /usr/include/c++/14.2.1/cstdlib \
+  /usr/include/c++/14.2.1/deque \
+  /usr/include/c++/14.2.1/ext/type_traits.h \
+  /usr/include/c++/14.2.1/functional \
+  /usr/include/c++/14.2.1/iostream \
+  /usr/include/c++/14.2.1/math.h \
+  /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/sstream \
+  /usr/include/c++/14.2.1/stdlib.h \
+  /usr/include/c++/14.2.1/string \
+  /usr/include/c++/14.2.1/unordered_map \
+  /usr/include/c++/14.2.1/utility \
+  /usr/include/c++/14.2.1/vector \
+  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
+  /usr/include/features.h \
+  /usr/include/math.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/string.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/float.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h
+
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx \
+  echo/src/Platform/Opengl/OpenGLContext.cpp \
+  echo/src/Platform/Opengl/OpenGLContext.h \
+  echo/src/Renderer/RenderContext.h \
+  echo/src/ecpch.h \
+  echo/vendor/glad/include/glad/glad.h \
+  echo/vendor/glad/include/glad/khrplatform.h \
+  echo/vendor/glfw/include/GLFW/glfw3.h \
+  /usr/include/GL/gl.h \
+  /usr/include/c++/14.2.1/algorithm \
+  /usr/include/c++/14.2.1/deque \
+  /usr/include/c++/14.2.1/functional \
+  /usr/include/c++/14.2.1/iostream \
+  /usr/include/c++/14.2.1/memory \
+  /usr/include/c++/14.2.1/sstream \
+  /usr/include/c++/14.2.1/string \
+  /usr/include/c++/14.2.1/unordered_map \
+  /usr/include/c++/14.2.1/utility \
+  /usr/include/c++/14.2.1/vector \
+  /usr/include/stdc-predef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
 
 
-echo/CMakeFiles/Echo.dir/src/Platform/Opengl/imguiRendererOpengl3.cpp.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xtestintrin.h:
 
-echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveintrin.h:
 
-echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavecintrin.h:
 
-echo/CMakeFiles/Echo.dir/src/Layer.cpp.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xmmintrin.h:
 
-echo/CMakeFiles/Echo.dir/src/Application.cpp.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/x86gprintrin.h:
 
-echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/waitpkgintrin.h:
 
-/usr/lib/librt.a:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vpclmulqdqintrin.h:
 
-/usr/lib/libmvec.so.1:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tsxldtrkintrin.h:
 
-/usr/lib/libc_nonshared.a:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/smmintrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/libgcc.a:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sha512intrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sgxintrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/serializeintrin.h:
 
-lib/libstb_image.a:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/raointintrin.h:
 
-lib/libspdlogd.a:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/popcntintrin.h:
 
-lib/libimgui.a:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pkuintrin.h:
 
-lib/libglad.a:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pconfigintrin.h:
 
-echo/vendor/glad/include/glad/khrplatform.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitxintrin.h:
 
-echo/vendor/glad/include/glad/glad.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mwaitintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mm_malloc.h:
+
+echo/src/Platform/Opengl/OpenGLContext.cpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/ia32intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/hresetintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/gfniintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fxsrintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cetintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmiintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint16intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxifmaintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectvlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/fmaintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vp2intersectintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnnivlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vldqintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vlbwintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/enqcmdintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmiintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2vlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmi2intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512pfintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmaintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16vlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124fmapsintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vpopcntdqvlintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxint8intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxfp16intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxcomplexintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxbf16intrin.h:
+
+echo/src/Platform/Opengl/OpenGLContext.h:
 
 echo/src/Platform/Linux/LinuxWindow.cpp:
 
 echo/src/Platform/Linux/LinuxInput.cpp:
+
+echo/src/InputTemplate.h:
 
 echo/src/Log.cpp:
 
@@ -615,9 +772,13 @@ echo/src/LayerStack.cpp:
 
 echo/src/Layer.cpp:
 
+/usr/include/GL/glext.h:
+
+/usr/include/GL/gl.h:
+
 echo/vendor/imguiInclude/src/imgui/imconfig.h:
 
-echo/src/Platform/Opengl/imguiRendererOpengl3.h:
+echo/src/ImGui/imguiRendererOpengl3.h:
 
 echo/src/ImGui/ImGuiLayer.h:
 
@@ -625,43 +786,39 @@ echo/src/ImGui/ImGuiLayer.cpp:
 
 echo/src/Events/MouseEvent.h:
 
-/usr/include/GL/glext.h:
+echo/vendor/glad/include/glad/khrplatform.h:
 
-/usr/include/GL/gl.h:
+echo/vendor/glad/include/glad/glad.h:
 
 /usr/include/KHR/khrplatform.h:
 
 echo/src/WindowTemplate.h:
 
-echo/src/LayerStack.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vbmivlintrin.h:
 
-/usr/lib/libc.so.6:
+echo/src/LayerStack.h:
 
 echo/src/Layer.h:
 
-echo/src/InputTemplate.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/amxtileintrin.h:
 
 echo/src/Events/Event.h:
 
-echo/src/Core.h:
-
-/usr/lib/crti.o:
-
 echo/src/Application.h:
 
-echo/src/Application.cpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/keylockerintrin.h:
 
-echo/CMakeFiles/Echo.dir/src/Log.cpp.o:
+echo/src/Application.cpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h:
 
-lib/libglfw3.a:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:
 
 /usr/include/time.h:
+
+echo/src/ImGui/imguiRendererOpengl3.cpp:
 
 /usr/include/sys/single_threaded.h:
 
@@ -685,9 +842,9 @@ lib/libglfw3.a:
 
 /usr/include/linux/limits.h:
 
-/usr/include/limits.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wbnoinvdintrin.h:
 
-echo/src/Platform/Opengl/imguiRendererOpengl3.cpp:
+/usr/include/limits.h:
 
 /usr/include/gnu/stubs-64.h:
 
@@ -705,17 +862,25 @@ echo/src/Platform/Opengl/imguiRendererOpengl3.cpp:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512ifmavlintrin.h:
+
 /usr/include/c++/14.2.1/utility:
 
 /usr/include/c++/14.2.1/unordered_map:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tmmintrin.h:
+
 /usr/include/c++/14.2.1/tr1/riemann_zeta.tcc:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/emmintrin.h:
 
 /usr/include/c++/14.2.1/tr1/poly_hermite.tcc:
 
 /usr/include/c++/14.2.1/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/14.2.1/tr1/legendre_function.tcc:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clflushoptintrin.h:
 
 /usr/include/c++/14.2.1/tr1/hypergeometric.tcc:
 
@@ -736,10 +901,6 @@ echo/src/Platform/Opengl/imguiRendererOpengl3.cpp:
 /usr/include/c++/14.2.1/string:
 
 /usr/include/c++/14.2.1/streambuf:
-
-/usr/lib/libgcc_s.so:
-
-/usr/include/c++/14.2.1/bits/atomic_base.h:
 
 /usr/include/linux/errno.h:
 
@@ -781,6 +942,8 @@ echo/src/Platform/Opengl/imguiRendererOpengl3.cpp:
 
 /usr/include/c++/14.2.1/bits/std_thread.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512dqintrin.h:
+
 /usr/include/bits/types/struct_timespec.h:
 
 /usr/include/bits/types/sigset_t.h:
@@ -793,6 +956,8 @@ echo/src/ecpch.h:
 
 /usr/include/c++/14.2.1/bits/version.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512erintrin.h:
+
 /usr/include/bits/types/locale_t.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:
@@ -803,9 +968,13 @@ echo/src/ecpch.h:
 
 /usr/include/bits/timex.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fp16intrin.h:
+
 /usr/include/bits/errno.h:
 
 /usr/include/bits/time64.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cmpccxaddintrin.h:
 
 /usr/include/bits/stdlib-float.h:
 
@@ -814,6 +983,8 @@ echo/src/ecpch.h:
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
 
 /usr/include/bits/stdint-least.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512cdintrin.h:
 
 /usr/include/bits/types/error_t.h:
 
@@ -829,8 +1000,6 @@ echo/src/ecpch.h:
 
 /usr/include/bits/sched.h:
 
-/usr/lib/libc.so:
-
 /usr/include/bits/pthreadtypes.h:
 
 echo/vendor/spdlog/include/spdlog/spdlog.h:
@@ -843,17 +1012,21 @@ echo/vendor/spdlog/include/spdlog/spdlog.h:
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
-/usr/lib/libm.so:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/f16cintrin.h:
 
 /usr/include/c++/14.2.1/bits/this_thread_sleep.h:
 
 /usr/include/bits/posix2_lim.h:
+
+echo/vendor/imguiInclude/src/imgui/imstb_textedit.h:
 
 /usr/include/bits/mathcalls.h:
 
 /usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/types/timer_t.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512fintrin.h:
 
 /usr/include/gnu/stubs.h:
 
@@ -863,25 +1036,23 @@ echo/vendor/spdlog/include/spdlog/spdlog.h:
 
 /usr/include/c++/14.2.1/ctime:
 
-/usr/include/c++/14.2.1/limits:
-
-/usr/include/c++/14.2.1/backward/binders.h:
-
-/usr/include/asm-generic/errno-base.h:
-
 /usr/include/bits/mathcalls-macros.h:
 
 /usr/include/asm-generic/int-ll64.h:
 
 /usr/include/c++/14.2.1/bits/unique_ptr.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm3intrin.h:
+
+echo/vendor/imguiInclude/src/imgui/imgui_internal.h:
+
 /usr/include/alloca.h:
 
 echo/vendor/spdlog/include/spdlog/details/null_mutex.h:
 
-/usr/lib/libdl.a:
-
 /usr/include/bits/uintn-identity.h:
+
+echo/src/Renderer/RenderContext.h:
 
 /usr/include/c++/14.2.1/bits/char_traits.h:
 
@@ -902,8 +1073,6 @@ echo/vendor/spdlog/include/spdlog/formatter.h:
 /usr/include/c++/14.2.1/functional:
 
 echo/vendor/spdlog/include/spdlog/sinks/ansicolor_sink.h:
-
-/usr/lib/libgcc_s.so.1:
 
 /usr/include/c++/14.2.1/bits/streambuf_iterator.h:
 
@@ -927,6 +1096,8 @@ echo/vendor/spdlog/include/spdlog/details/periodic_worker.h:
 
 echo/vendor/spdlog/include/spdlog/details/synchronous_factory.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/movdirintrin.h:
+
 /usr/include/bits/libc-header-start.h:
 
 /usr/include/c++/14.2.1/ext/aligned_buffer.h:
@@ -943,13 +1114,9 @@ echo/vendor/glfw/include/GLFW/glfw3.h:
 
 /usr/include/c++/14.2.1/bits/align.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/usermsrintrin.h:
+
 echo/vendor/spdlog/include/spdlog/sinks/stdout_color_sinks.h:
-
-/usr/include/asm-generic/bitsperlong.h:
-
-/usr/include/asm-generic/types.h:
-
-/usr/include/c++/14.2.1/bits/chrono.h:
 
 /usr/include/c++/14.2.1/ext/concurrence.h:
 
@@ -961,6 +1128,8 @@ echo/src/Log.h:
 
 /usr/include/bits/stdio_lim.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchiintrin.h:
+
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/c++/14.2.1/bits/predefined_ops.h:
@@ -969,9 +1138,11 @@ echo/src/Log.h:
 
 /usr/include/bits/floatn-common.h:
 
-/usr/lib/libm.so.6:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsavesintrin.h:
 
 /usr/include/c++/14.2.1/bits/parse_numbers.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rdseedintrin.h:
 
 /usr/include/c++/14.2.1/bits/shared_ptr_base.h:
 
@@ -981,13 +1152,13 @@ echo/src/Log.h:
 
 /usr/include/bits/select.h:
 
-/usr/lib/libstdc++.so:
-
 /usr/include/locale.h:
 
 /usr/include/c++/14.2.1/bits/uniform_int_dist.h:
 
 /usr/include/c++/14.2.1/bits/uses_allocator_args.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lwpintrin.h:
 
 /usr/include/c++/14.2.1/typeinfo:
 
@@ -996,6 +1167,20 @@ echo/src/Log.h:
 echo/vendor/spdlog/include/spdlog/fmt/bundled/format.h:
 
 /usr/include/c++/14.2.1/bits/ptr_traits.h:
+
+echo/src/Core.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/vaesintrin.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/c++/14.2.1/bits/chrono.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/adxintrin.h:
 
 /usr/include/bits/waitstatus.h:
 
@@ -1015,19 +1200,29 @@ echo/vendor/spdlog/include/spdlog/details/log_msg.h:
 
 echo/vendor/spdlog/include/spdlog/fmt/fmt.h:
 
-/usr/include/c++/14.2.1/bits/std_mutex.h:
-
-/usr/include/c++/14.2.1/ext/numeric_traits.h:
-
-echo/vendor/spdlog/include/spdlog/details/backtracer.h:
-
-/usr/include/c++/14.2.1/bits/ios_base.h:
-
 /usr/include/bits/types.h:
 
 /usr/include/c++/14.2.1/tr1/gamma.tcc:
 
 echo/vendor/spdlog/include/spdlog/details/registry.h:
+
+/usr/include/c++/14.2.1/sstream:
+
+echo/CMakeFiles/Echo.dir/cmake_pch.hxx:
+
+/usr/include/c++/14.2.1/bits/std_mutex.h:
+
+/usr/include/c++/14.2.1/ext/numeric_traits.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bwintrin.h:
+
+echo/vendor/spdlog/include/spdlog/details/backtracer.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bitalgvlintrin.h:
+
+/usr/include/c++/14.2.1/bits/ios_base.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16vlintrin.h:
 
 echo/vendor/spdlog/include/spdlog/tweakme.h:
 
@@ -1049,6 +1244,8 @@ echo/vendor/spdlog/include/spdlog/fmt/bundled/base.h:
 
 /usr/include/c++/14.2.1/pstl/glue_algorithm_defs.h:
 
+/usr/include/c++/14.2.1/math.h:
+
 echo/vendor/spdlog/include/spdlog/common.h:
 
 /usr/include/c++/14.2.1/bits/allocator.h:
@@ -1061,6 +1258,10 @@ echo/vendor/spdlog/include/spdlog/common.h:
 
 /usr/include/bits/types/__sigset_t.h:
 
+/usr/include/c++/14.2.1/limits:
+
+/usr/include/c++/14.2.1/backward/binders.h:
+
 echo/vendor/spdlog/include/spdlog/details/console_globals.h:
 
 /usr/include/c++/14.2.1/bits/ostream_insert.h:
@@ -1071,11 +1272,11 @@ echo/vendor/spdlog/include/spdlog/details/console_globals.h:
 
 /usr/include/bits/endian.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/wmmintrin.h:
+
 /usr/include/c++/14.2.1/concepts:
 
 /usr/include/c++/14.2.1/bits/locale_facets.tcc:
-
-/usr/lib/ld-linux-x86-64.so.2:
 
 /usr/include/c++/14.2.1/cmath:
 
@@ -1083,13 +1284,15 @@ echo/vendor/spdlog/include/spdlog/details/console_globals.h:
 
 /usr/include/c++/14.2.1/initializer_list:
 
-echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o:
-
 /usr/include/asm/types.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clzerointrin.h:
 
 /usr/include/c++/14.2.1/ext/type_traits.h:
 
 /usr/include/c++/14.2.1/bits/concept_check.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/rtmintrin.h:
 
 echo/src/Events/KeyEvent.h:
 
@@ -1105,13 +1308,15 @@ echo/src/Events/KeyEvent.h:
 
 /usr/include/c++/14.2.1/bits/cxxabi_init_exception.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/prfchwintrin.h:
+
 /usr/include/wctype.h:
 
 /usr/include/sched.h:
 
 /usr/include/bits/fp-fast.h:
 
-/usr/lib/crtn.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/tbmintrin.h:
 
 /usr/include/c++/14.2.1/bits/atomic_lockfree_defines.h:
 
@@ -1120,6 +1325,8 @@ echo/src/Events/KeyEvent.h:
 echo/src/Platform/Linux/LinuxWindow.h:
 
 /usr/include/bits/iscanonical.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/pmmintrin.h:
 
 /usr/include/c++/14.2.1/bits/stl_iterator.h:
 
@@ -1137,11 +1344,17 @@ echo/vendor/imguiInclude/src/imgui/backends/imgui_impl_glfw.h:
 
 /usr/include/bits/mathcalls-helper-functions.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/mmintrin.h:
+
+/usr/include/c++/14.2.1/bits/atomic_base.h:
+
 /usr/include/c++/14.2.1/bits/basic_ios.tcc:
 
 /usr/include/bits/setjmp.h:
 
 /usr/include/c++/14.2.1/bits/charconv.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx5124vnniwintrin.h:
 
 /usr/include/c++/14.2.1/bits/cpp_type_traits.h:
 
@@ -1163,6 +1376,8 @@ echo/vendor/imguiInclude/src/imgui/backends/imgui_impl_glfw.h:
 
 /usr/include/c++/14.2.1/bits/functexcept.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxvnniint8intrin.h:
+
 /usr/include/c++/14.2.1/bits/stl_deque.h:
 
 /usr/include/c++/14.2.1/bits/hash_bytes.h:
@@ -1173,7 +1388,11 @@ echo/vendor/imguiInclude/src/imgui/backends/imgui_impl_glfw.h:
 
 /usr/include/c++/14.2.1/cstdint:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/immintrin.h:
+
 /usr/include/c++/14.2.1/bits/istream.tcc:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/bmi2intrin.h:
 
 /usr/include/c++/14.2.1/bits/locale_classes.h:
 
@@ -1195,7 +1414,13 @@ echo/vendor/imguiInclude/src/imgui/backends/imgui_impl_glfw.h:
 
 /usr/include/c++/14.2.1/bits/new_allocator.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/clwbintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512bf16intrin.h:
+
 /usr/include/c++/14.2.1/bits/node_handle.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/uintrintrin.h:
 
 /usr/include/stdint.h:
 
@@ -1231,6 +1456,8 @@ echo/vendor/imguiInclude/src/imgui/backends/imgui_impl_glfw.h:
 
 /usr/include/c++/14.2.1/compare:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/shaintrin.h:
+
 /usr/include/c++/14.2.1/bits/stl_heap.h:
 
 /usr/include/c++/14.2.1/bits/stl_algobase.h:
@@ -1263,15 +1490,23 @@ echo/vendor/spdlog/include/spdlog/details/log_msg_buffer.h:
 
 /usr/include/c++/14.2.1/bits/uses_allocator.h:
 
+/usr/include/c++/14.2.1/stdlib.h:
+
 /usr/include/c++/14.2.1/ext/atomicity.h:
 
 /usr/include/c++/14.2.1/bits/stl_construct.h:
 
 /usr/include/c++/14.2.1/bits/utility.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx2intrin.h:
+
 /usr/include/c++/14.2.1/bit:
 
 /usr/include/c++/14.2.1/bits/vector.tcc:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/lzcntintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avx512vnniintrin.h:
 
 /usr/include/c++/14.2.1/cstddef:
 
@@ -1284,6 +1519,8 @@ echo/vendor/spdlog/include/spdlog/details/log_msg_buffer.h:
 /usr/include/asm-generic/errno.h:
 
 /usr/include/c++/14.2.1/chrono:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/avxneconvertintrin.h:
 
 /usr/include/c++/14.2.1/memory:
 
@@ -1311,6 +1548,8 @@ echo/vendor/spdlog/include/spdlog/details/log_msg_buffer.h:
 
 /usr/include/c++/14.2.1/debug/assertions.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/sm4intrin.h:
+
 echo/vendor/imguiInclude/src/imgui/imgui.h:
 
 /usr/include/c++/14.2.1/deque:
@@ -1335,6 +1574,10 @@ echo/vendor/imguiInclude/src/imgui/imgui.h:
 
 /usr/include/c++/14.2.1/ostream:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/xsaveoptintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/cldemoteintrin.h:
+
 /usr/include/c++/14.2.1/bits/locale_facets.h:
 
 /usr/include/c++/14.2.1/pstl/execution_defs.h:
@@ -1342,7 +1585,3 @@ echo/vendor/imguiInclude/src/imgui/imgui.h:
 /usr/include/c++/14.2.1/pstl/pstl_config.h:
 
 /usr/include/c++/14.2.1/ratio:
-
-echo/CMakeFiles/Echo.dir/cmake_pch.hxx:
-
-/usr/include/c++/14.2.1/sstream:

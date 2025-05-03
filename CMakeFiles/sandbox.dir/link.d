@@ -3,7 +3,14 @@ bin/sandbox: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
   CMakeFiles/sandbox.dir/src/main.cpp.o \
-  lib/libEcho.so \
+  lib/libEcho.a \
+  lib/libspdlogd.a \
+  lib/libstb_image.a \
+  lib/libimgui.a \
+  lib/libglfw3.a \
+  /usr/lib/librt.a \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libdl.a \
+  lib/libglad.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libm.so \
@@ -40,7 +47,21 @@ bin/sandbox: \
 
 CMakeFiles/sandbox.dir/src/main.cpp.o:
 
-lib/libEcho.so:
+lib/libEcho.a:
+
+lib/libspdlogd.a:
+
+lib/libstb_image.a:
+
+lib/libimgui.a:
+
+lib/libglfw3.a:
+
+/usr/lib/librt.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libdl.a:
+
+lib/libglad.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libstdc++.so:
 
