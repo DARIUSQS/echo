@@ -370,13 +370,12 @@ echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o: echo/CMakeFiles/Echo.dir/cm
   echo/src/LayerStack.h \
   echo/src/WindowTemplate.h \
   echo/src/ecpch.h \
+  echo/vendor/glad/include/glad/glad.h \
+  echo/vendor/glad/include/glad/khrplatform.h \
   echo/vendor/glfw/include/GLFW/glfw3.h \
   echo/vendor/imguiInclude/src/imgui/backends/imgui_impl_glfw.h \
   echo/vendor/imguiInclude/src/imgui/imconfig.h \
   echo/vendor/imguiInclude/src/imgui/imgui.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GL/glext.h \
-  /usr/include/KHR/khrplatform.h \
   /usr/include/assert.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/deque \
@@ -638,7 +637,6 @@ echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.o: echo/CMakeFile
   echo/vendor/glad/include/glad/glad.h \
   echo/vendor/glad/include/glad/khrplatform.h \
   echo/vendor/glfw/include/GLFW/glfw3.h \
-  /usr/include/GL/gl.h \
   /usr/include/c++/14.2.1/algorithm \
   /usr/include/c++/14.2.1/deque \
   /usr/include/c++/14.2.1/functional \
@@ -762,6 +760,10 @@ echo/src/Platform/Opengl/OpenGLContext.h:
 
 echo/src/Platform/Linux/LinuxWindow.cpp:
 
+/usr/include/GL/glext.h:
+
+/usr/include/GL/gl.h:
+
 echo/src/Platform/Linux/LinuxInput.cpp:
 
 echo/src/InputTemplate.h:
@@ -771,10 +773,6 @@ echo/src/Log.cpp:
 echo/src/LayerStack.cpp:
 
 echo/src/Layer.cpp:
-
-/usr/include/GL/glext.h:
-
-/usr/include/GL/gl.h:
 
 echo/vendor/imguiInclude/src/imgui/imconfig.h:
 

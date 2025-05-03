@@ -6,7 +6,6 @@
 #include "GLFW/glfw3.h"
 #include "Events/ApplicationEvent.h"
 #include "Events/MouseEvent.h"
-#include <GL/gl.h>
 
 namespace Echo 
 {

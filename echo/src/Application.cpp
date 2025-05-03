@@ -19,6 +19,34 @@ namespace Echo {
 
         m_Window = std::unique_ptr<Window>(Window::Create());
         m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+        
+        /// Triangle
+        
+        glGenVertexArrays(1, &VAO);
+        glBindVertexArray(VAO);
+
+        glGenBuffers(1, &VBO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+        float vertices[3 * 3] = 
+        {
+            -0.5f, -0.5f, 0.0f, 
+            0.5f, -0.5f, 0.0f,
+            0.0f, 0.5f, 0.0f
+        };
+
+        unsigned int indices[3] = {0, 1, 2};
+
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+        glEnableVertexAttribArray(0);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
+
+        glGenBuffers(1, &IBO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+        
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
     }
 
     void Application::OnEvent(Event& e)
@@ -40,13 +68,17 @@ namespace Echo {
     
     void Application::Run()
     {
-        glClearColor(0.1f, 0.1f, 0.1f, 1);
 
         while(m_Running)
         {
-            glClear(GL_COLOR_BUFFER_BIT);
-
+            glClearColor(0.1f, 0.1f, 0.1f, 1);
+            glClear(GL_COLOR_BUFFER_BIT); 
+            
             for(Layer* layer : m_LayerStack) layer->OnUpdate();
+
+            glBindVertexArray(VAO);
+            glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+
             m_Window->OnUpdate();    
         }
 
@@ -64,7 +96,7 @@ namespace Echo {
 
     bool Application::OnWindowResize(WindowResizeEvent& e)
     {
-        /// Resize
+        glViewport(0, 0, e.GetWidth(), e.GetHeight());
         return true;
     }
 

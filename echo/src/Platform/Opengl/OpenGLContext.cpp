@@ -1,7 +1,6 @@
 #include "ecpch.h"
 #include "OpenGLContext.h"
 #include <glad.h>
-#include <GL/gl.h>
 #include <GLFW/glfw3.h>
 
 namespace Echo

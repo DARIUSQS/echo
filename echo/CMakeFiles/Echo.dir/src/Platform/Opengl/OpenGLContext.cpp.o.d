@@ -11,6 +11,5 @@ echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.o: \
  /home/darius/Dev/cpp/echo/echo/vendor/glad/include/glad/glad.h \
  /home/darius/Dev/cpp/echo/echo/vendor/glad/include/glad/khrplatform.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
- /usr/include/GL/gl.h \
  /home/darius/Dev/cpp/echo/echo/vendor/glfw/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h

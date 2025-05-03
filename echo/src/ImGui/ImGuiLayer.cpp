@@ -1,16 +1,15 @@
 #include "ImGuiLayer.h"
-
 #include "Events/ApplicationEvent.h"
 #include "Events/KeyEvent.h"
 #include "Log.h"
 #include "Events/Event.h"
 #include "Events/MouseEvent.h"
+#include <glad.h>
 #include "GLFW/glfw3.h"
 #include "imgui/imgui.h"
 #include "imgui/backends/imgui_impl_glfw.h"
 #include "imguiRendererOpengl3.h"
 #include "Application.h"
-#include <memory>
 
 namespace Echo
 {
@@ -168,10 +167,10 @@ namespace Echo
 
     bool ImGuiLayer::OnWindowResizeEvent(WindowResizeEvent& e)
     {
-        /* ImGuiIO& io = ImGui::GetIO(); */
-        /* io.DisplaySize = ImVec2(e.GetWidth(), e.GetHeight()); */
-        /* io.DisplayFramebufferScale = ImVec2(1.0f, 1.0f); */
-        /* glViewport(0, 0, e.GetWidth(), e.GetHeight()); */
+        // ImGuiIO& io = ImGui::GetIO();
+        // io.DisplaySize = ImVec2(e.GetWidth(), e.GetHeight());
+        // io.DisplayFramebufferScale = ImVec2(1.0f, 1.0f);
+        // glViewport(0, 0, e.GetWidth(), e.GetHeight());
 
         return false;
     }

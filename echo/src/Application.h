@@ -31,6 +31,9 @@ namespace Echo {
             LayerStack m_LayerStack;
 
             static Application* s_Instance;
+
+            /// Triangle
+            unsigned int VBO, IBO, VAO;
    };
    // Defined in CLIENT
    Application* CreateApplication();
