@@ -19,4 +19,6 @@ echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o: \
  /home/darius/Dev/cpp/echo/echo/src/Layer.h \
  /home/darius/Dev/cpp/echo/echo/src/WindowTemplate.h \
  /home/darius/Dev/cpp/echo/echo/src/ecpch.h \
- /home/darius/Dev/cpp/echo/echo/src/LayerStack.h
+ /home/darius/Dev/cpp/echo/echo/src/LayerStack.h \
+ /home/darius/Dev/cpp/echo/echo/src/Renderer/Shader.h \
+ /home/darius/Dev/cpp/echo/echo/src/Buffer.h

@@ -32,7 +32,11 @@ add_library(Echo STATIC
                         src/Layer.cpp
                         src/LayerStack.cpp
                         src/ImGui/imguiRendererOpengl3.cpp
-                        src/ImGui/ImGuiLayer.cpp)
+                        src/ImGui/ImGuiLayer.cpp
+                        src/Renderer/Shader.cpp
+                        src/Buffer.cpp
+                        src/Platform/Opengl/OpenGLBuffer.cpp
+                        src/Renderer.cpp)
 
 # IF(WIN32)
 #     target_compile_definitions(Echo PUBLIC EC_PLATFORM_WINDOWS = 1)

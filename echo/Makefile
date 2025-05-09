@@ -214,6 +214,30 @@ src/Application.cpp.s:
 	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
 
+src/Buffer.o: src/Buffer.cpp.o
+.PHONY : src/Buffer.o
+
+# target to build an object file
+src/Buffer.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o
+.PHONY : src/Buffer.cpp.o
+
+src/Buffer.i: src/Buffer.cpp.i
+.PHONY : src/Buffer.i
+
+# target to preprocess a source file
+src/Buffer.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Buffer.cpp.i
+.PHONY : src/Buffer.cpp.i
+
+src/Buffer.s: src/Buffer.cpp.s
+.PHONY : src/Buffer.s
+
+# target to generate assembly for a file
+src/Buffer.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Buffer.cpp.s
+.PHONY : src/Buffer.cpp.s
+
 src/ImGui/ImGuiLayer.o: src/ImGui/ImGuiLayer.cpp.o
 .PHONY : src/ImGui/ImGuiLayer.o
 
@@ -382,6 +406,30 @@ src/Platform/Linux/LinuxWindow.cpp.s:
 	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.s
 .PHONY : src/Platform/Linux/LinuxWindow.cpp.s
 
+src/Platform/Opengl/OpenGLBuffer.o: src/Platform/Opengl/OpenGLBuffer.cpp.o
+.PHONY : src/Platform/Opengl/OpenGLBuffer.o
+
+# target to build an object file
+src/Platform/Opengl/OpenGLBuffer.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o
+.PHONY : src/Platform/Opengl/OpenGLBuffer.cpp.o
+
+src/Platform/Opengl/OpenGLBuffer.i: src/Platform/Opengl/OpenGLBuffer.cpp.i
+.PHONY : src/Platform/Opengl/OpenGLBuffer.i
+
+# target to preprocess a source file
+src/Platform/Opengl/OpenGLBuffer.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.i
+.PHONY : src/Platform/Opengl/OpenGLBuffer.cpp.i
+
+src/Platform/Opengl/OpenGLBuffer.s: src/Platform/Opengl/OpenGLBuffer.cpp.s
+.PHONY : src/Platform/Opengl/OpenGLBuffer.s
+
+# target to generate assembly for a file
+src/Platform/Opengl/OpenGLBuffer.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.s
+.PHONY : src/Platform/Opengl/OpenGLBuffer.cpp.s
+
 src/Platform/Opengl/OpenGLContext.o: src/Platform/Opengl/OpenGLContext.cpp.o
 .PHONY : src/Platform/Opengl/OpenGLContext.o
 
@@ -406,6 +454,54 @@ src/Platform/Opengl/OpenGLContext.cpp.s:
 	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.s
 .PHONY : src/Platform/Opengl/OpenGLContext.cpp.s
 
+src/Renderer.o: src/Renderer.cpp.o
+.PHONY : src/Renderer.o
+
+# target to build an object file
+src/Renderer.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o
+.PHONY : src/Renderer.cpp.o
+
+src/Renderer.i: src/Renderer.cpp.i
+.PHONY : src/Renderer.i
+
+# target to preprocess a source file
+src/Renderer.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Renderer.cpp.i
+.PHONY : src/Renderer.cpp.i
+
+src/Renderer.s: src/Renderer.cpp.s
+.PHONY : src/Renderer.s
+
+# target to generate assembly for a file
+src/Renderer.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Renderer.cpp.s
+.PHONY : src/Renderer.cpp.s
+
+src/Renderer/Shader.o: src/Renderer/Shader.cpp.o
+.PHONY : src/Renderer/Shader.o
+
+# target to build an object file
+src/Renderer/Shader.cpp.o:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o
+.PHONY : src/Renderer/Shader.cpp.o
+
+src/Renderer/Shader.i: src/Renderer/Shader.cpp.i
+.PHONY : src/Renderer/Shader.i
+
+# target to preprocess a source file
+src/Renderer/Shader.cpp.i:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.i
+.PHONY : src/Renderer/Shader.cpp.i
+
+src/Renderer/Shader.s: src/Renderer/Shader.cpp.s
+.PHONY : src/Renderer/Shader.s
+
+# target to generate assembly for a file
+src/Renderer/Shader.cpp.s:
+	cd /home/darius/Dev/cpp/echo && $(MAKE) $(MAKESILENT) -f echo/CMakeFiles/Echo.dir/build.make echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.s
+.PHONY : src/Renderer/Shader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -425,6 +521,9 @@ help:
 	@echo "... src/Application.o"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
+	@echo "... src/Buffer.o"
+	@echo "... src/Buffer.i"
+	@echo "... src/Buffer.s"
 	@echo "... src/ImGui/ImGuiLayer.o"
 	@echo "... src/ImGui/ImGuiLayer.i"
 	@echo "... src/ImGui/ImGuiLayer.s"
@@ -446,9 +545,18 @@ help:
 	@echo "... src/Platform/Linux/LinuxWindow.o"
 	@echo "... src/Platform/Linux/LinuxWindow.i"
 	@echo "... src/Platform/Linux/LinuxWindow.s"
+	@echo "... src/Platform/Opengl/OpenGLBuffer.o"
+	@echo "... src/Platform/Opengl/OpenGLBuffer.i"
+	@echo "... src/Platform/Opengl/OpenGLBuffer.s"
 	@echo "... src/Platform/Opengl/OpenGLContext.o"
 	@echo "... src/Platform/Opengl/OpenGLContext.i"
 	@echo "... src/Platform/Opengl/OpenGLContext.s"
+	@echo "... src/Renderer.o"
+	@echo "... src/Renderer.i"
+	@echo "... src/Renderer.s"
+	@echo "... src/Renderer/Shader.o"
+	@echo "... src/Renderer/Shader.i"
+	@echo "... src/Renderer/Shader.s"
 .PHONY : help
 
 

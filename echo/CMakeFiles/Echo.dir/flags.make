@@ -28,3 +28,11 @@ CXX_FLAGS =  -fPIC -g -std=gnu++17 -flto=auto -fno-fat-lto-objects
 
 # PCH options: echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
 
+# PCH options: echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+
+# PCH options: echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+

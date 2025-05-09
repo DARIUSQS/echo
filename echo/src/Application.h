@@ -4,6 +4,8 @@
 #include "Layer.h"
 #include "WindowTemplate.h"
 #include "LayerStack.h"
+#include "Renderer/Shader.h"
+#include "Buffer.h"
 
 namespace Echo {
    ECHO_API class Application
@@ -33,7 +35,10 @@ namespace Echo {
             static Application* s_Instance;
 
             /// Triangle
-            unsigned int VBO, IBO, VAO;
+            unsigned int m_VAO;
+            std::unique_ptr<Shader> m_Shader;
+            std::unique_ptr<VertexBuffer> m_VertexBuffer;
+            std::unique_ptr<IndexBuffer> m_IndexBuffer;
    };
    // Defined in CLIENT
    Application* CreateApplication();

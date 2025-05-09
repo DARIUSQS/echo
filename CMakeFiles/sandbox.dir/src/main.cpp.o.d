@@ -283,6 +283,8 @@ CMakeFiles/sandbox.dir/src/main.cpp.o: \
  /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h \
  /home/darius/Dev/cpp/echo/echo/src/LayerStack.h \
+ /home/darius/Dev/cpp/echo/echo/src/Renderer/Shader.h \
+ /home/darius/Dev/cpp/echo/echo/src/Buffer.h \
  /home/darius/Dev/cpp/echo/echo/src/EntryPoint.h \
  /home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.h \
  /home/darius/Dev/cpp/echo/echo/src/Events/MouseEvent.h \

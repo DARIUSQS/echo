@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch" "gcc" "echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch.d"
   "/home/darius/Dev/cpp/echo/echo/src/Application.cpp" "echo/CMakeFiles/Echo.dir/src/Application.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Application.cpp.o.d"
   "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/Application.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Application.cpp.o.d"
+  "/home/darius/Dev/cpp/echo/echo/src/Buffer.cpp" "echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o.d"
+  "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o.d"
   "/home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.cpp" "echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o.d"
   "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o.d"
   "/home/darius/Dev/cpp/echo/echo/src/ImGui/imguiRendererOpengl3.cpp" "echo/CMakeFiles/Echo.dir/src/ImGui/imguiRendererOpengl3.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/ImGui/imguiRendererOpengl3.cpp.o.d"
@@ -26,8 +28,14 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxInput.cpp.o.d"
   "/home/darius/Dev/cpp/echo/echo/src/Platform/Linux/LinuxWindow.cpp" "echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o.d"
   "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Platform/Linux/LinuxWindow.cpp.o.d"
+  "/home/darius/Dev/cpp/echo/echo/src/Platform/Opengl/OpenGLBuffer.cpp" "echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o.d"
+  "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o.d"
   "/home/darius/Dev/cpp/echo/echo/src/Platform/Opengl/OpenGLContext.cpp" "echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.o.d"
   "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLContext.cpp.o.d"
+  "/home/darius/Dev/cpp/echo/echo/src/Renderer.cpp" "echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o.d"
+  "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o.d"
+  "/home/darius/Dev/cpp/echo/echo/src/Renderer/Shader.cpp" "echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o.d"
+  "/home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx" "echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o" "gcc" "echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

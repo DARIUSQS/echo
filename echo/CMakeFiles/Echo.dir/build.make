@@ -231,6 +231,70 @@ echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.s"
 	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/ImGui/ImGuiLayer.cpp -o CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.s
 
+echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o: echo/src/Renderer/Shader.cpp
+echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o -MF CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o.d -o CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Renderer/Shader.cpp
+
+echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Renderer/Shader.cpp > CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Renderer/Shader.cpp -o CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.s
+
+echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o: echo/src/Buffer.cpp
+echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o -MF CMakeFiles/Echo.dir/src/Buffer.cpp.o.d -o CMakeFiles/Echo.dir/src/Buffer.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Buffer.cpp
+
+echo/CMakeFiles/Echo.dir/src/Buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Buffer.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Buffer.cpp > CMakeFiles/Echo.dir/src/Buffer.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/Buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Buffer.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Buffer.cpp -o CMakeFiles/Echo.dir/src/Buffer.cpp.s
+
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o: echo/src/Platform/Opengl/OpenGLBuffer.cpp
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o -MF CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o.d -o CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Platform/Opengl/OpenGLBuffer.cpp
+
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Platform/Opengl/OpenGLBuffer.cpp > CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Platform/Opengl/OpenGLBuffer.cpp -o CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.s
+
+echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o: echo/CMakeFiles/Echo.dir/flags.make
+echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o: echo/src/Renderer.cpp
+echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx
+echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o: echo/CMakeFiles/Echo.dir/cmake_pch.hxx.gch
+echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o: echo/CMakeFiles/Echo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -MD -MT echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o -MF CMakeFiles/Echo.dir/src/Renderer.cpp.o.d -o CMakeFiles/Echo.dir/src/Renderer.cpp.o -c /home/darius/Dev/cpp/echo/echo/src/Renderer.cpp
+
+echo/CMakeFiles/Echo.dir/src/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Echo.dir/src/Renderer.cpp.i"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -E /home/darius/Dev/cpp/echo/echo/src/Renderer.cpp > CMakeFiles/Echo.dir/src/Renderer.cpp.i
+
+echo/CMakeFiles/Echo.dir/src/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Echo.dir/src/Renderer.cpp.s"
+	cd /home/darius/Dev/cpp/echo/echo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/darius/Dev/cpp/echo/echo/CMakeFiles/Echo.dir/cmake_pch.hxx -S /home/darius/Dev/cpp/echo/echo/src/Renderer.cpp -o CMakeFiles/Echo.dir/src/Renderer.cpp.s
+
 # Object files for target Echo
 Echo_OBJECTS = \
 "CMakeFiles/Echo.dir/src/Application.cpp.o" \
@@ -241,7 +305,11 @@ Echo_OBJECTS = \
 "CMakeFiles/Echo.dir/src/Layer.cpp.o" \
 "CMakeFiles/Echo.dir/src/LayerStack.cpp.o" \
 "CMakeFiles/Echo.dir/src/ImGui/imguiRendererOpengl3.cpp.o" \
-"CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o"
+"CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o" \
+"CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o" \
+"CMakeFiles/Echo.dir/src/Buffer.cpp.o" \
+"CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o" \
+"CMakeFiles/Echo.dir/src/Renderer.cpp.o"
 
 # External object files for target Echo
 Echo_EXTERNAL_OBJECTS =
@@ -256,9 +324,13 @@ lib/libEcho.a: echo/CMakeFiles/Echo.dir/src/Layer.cpp.o
 lib/libEcho.a: echo/CMakeFiles/Echo.dir/src/LayerStack.cpp.o
 lib/libEcho.a: echo/CMakeFiles/Echo.dir/src/ImGui/imguiRendererOpengl3.cpp.o
 lib/libEcho.a: echo/CMakeFiles/Echo.dir/src/ImGui/ImGuiLayer.cpp.o
+lib/libEcho.a: echo/CMakeFiles/Echo.dir/src/Renderer/Shader.cpp.o
+lib/libEcho.a: echo/CMakeFiles/Echo.dir/src/Buffer.cpp.o
+lib/libEcho.a: echo/CMakeFiles/Echo.dir/src/Platform/Opengl/OpenGLBuffer.cpp.o
+lib/libEcho.a: echo/CMakeFiles/Echo.dir/src/Renderer.cpp.o
 lib/libEcho.a: echo/CMakeFiles/Echo.dir/build.make
 lib/libEcho.a: echo/CMakeFiles/Echo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library ../lib/libEcho.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/darius/Dev/cpp/echo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX static library ../lib/libEcho.a"
 	cd /home/darius/Dev/cpp/echo/echo && $(CMAKE_COMMAND) -P CMakeFiles/Echo.dir/cmake_clean_target.cmake
 	cd /home/darius/Dev/cpp/echo/echo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Echo.dir/link.txt --verbose=$(VERBOSE)
 

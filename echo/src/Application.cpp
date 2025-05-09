@@ -5,6 +5,8 @@
 #include "Events/ApplicationEvent.h"
 #include "Events/Event.h"
 #include <GLFW/glfw3.h>
+#include "Renderer/Shader.h"
+#include "Buffer.h"
 
 namespace Echo {
 
@@ -22,11 +24,8 @@ namespace Echo {
         
         /// Triangle
         
-        glGenVertexArrays(1, &VAO);
-        glBindVertexArray(VAO);
-
-        glGenBuffers(1, &VBO);
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glGenVertexArrays(1, &m_VAO);
+        glBindVertexArray(m_VAO);
 
         float vertices[3 * 3] = 
         {
@@ -37,16 +36,17 @@ namespace Echo {
 
         unsigned int indices[3] = {0, 1, 2};
 
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+        m_VertexBuffer.reset(VertexBuffer::Create(vertices, sizeof(vertices)));
+        m_VertexBuffer->Bind();
+
+        m_IndexBuffer.reset(IndexBuffer::Create(indices, sizeof(indices)));
 
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
-
-        glGenBuffers(1, &IBO);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
         
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
+        m_Shader.reset(new Shader("Assets/Shaders/test.shader"));
+        m_Shader->Compile();
     }
 
     void Application::OnEvent(Event& e)
@@ -73,11 +73,12 @@ namespace Echo {
         {
             glClearColor(0.1f, 0.1f, 0.1f, 1);
             glClear(GL_COLOR_BUFFER_BIT); 
-            
-            for(Layer* layer : m_LayerStack) layer->OnUpdate();
-
-            glBindVertexArray(VAO);
+ 
+            m_Shader->Bind();
+            glBindVertexArray(m_VAO);
             glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+
+            for(Layer* layer : m_LayerStack) layer->OnUpdate();
 
             m_Window->OnUpdate();    
         }
