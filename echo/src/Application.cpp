@@ -24,27 +24,35 @@ namespace Echo {
         
         /// Triangle
         
-        glGenVertexArrays(1, &m_VAO);
-        glBindVertexArray(m_VAO);
-
-        float vertices[3 * 3] = 
+        float vertices[3 * 3] =  /// Pos Color
         {
-            -0.5f, -0.5f, 0.0f, 
+            -0.5f, -0.5f, 0.0f,
             0.5f, -0.5f, 0.0f,
-            0.0f, 0.5f, 0.0f
+            0.0f, 0.5f, 0.0f,
         };
 
         unsigned int indices[3] = {0, 1, 2};
 
+        m_VertexArray.reset(VertexArray::Create());
+
         m_VertexBuffer.reset(VertexBuffer::Create(vertices, sizeof(vertices)));
         m_VertexBuffer->Bind();
 
-        m_IndexBuffer.reset(IndexBuffer::Create(indices, sizeof(indices)));
+        BufferLayout layout( 
+        {
+            {ShaderDataType::Float3, "Position"},
+            // {ShaderDataType::Float4, "Color"}
+        });
 
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
+        m_VertexBuffer->SetLayout(layout);
         
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+        m_VertexArray->Bind();
+        m_VertexArray->AddVertexBuffer(m_VertexBuffer);
+
+        m_IndexBuffer.reset(IndexBuffer::Create(indices, sizeof(indices)));
+        m_IndexBuffer->Bind();
+        m_VertexArray->SetIndexBuffer(m_IndexBuffer);
+
         m_Shader.reset(new Shader("Assets/Shaders/test.shader"));
         m_Shader->Compile();
     }
@@ -75,7 +83,7 @@ namespace Echo {
             glClear(GL_COLOR_BUFFER_BIT); 
  
             m_Shader->Bind();
-            glBindVertexArray(m_VAO);
+            m_VertexArray->Bind();
             glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
 
             for(Layer* layer : m_LayerStack) layer->OnUpdate();

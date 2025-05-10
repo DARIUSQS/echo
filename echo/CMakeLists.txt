@@ -36,7 +36,10 @@ add_library(Echo STATIC
                         src/Renderer/Shader.cpp
                         src/Buffer.cpp
                         src/Platform/Opengl/OpenGLBuffer.cpp
-                        src/Renderer.cpp)
+                        src/Renderer.cpp
+                        src/Platform/Opengl/OpenGLVertexArray.cpp
+                        src/VertexArray.cpp
+                    )
 
 # IF(WIN32)
 #     target_compile_definitions(Echo PUBLIC EC_PLATFORM_WINDOWS = 1)

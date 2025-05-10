@@ -6,6 +6,7 @@
 #include "LayerStack.h"
 #include "Renderer/Shader.h"
 #include "Buffer.h"
+#include "VertexArray.h"
 
 namespace Echo {
    ECHO_API class Application
@@ -35,10 +36,10 @@ namespace Echo {
             static Application* s_Instance;
 
             /// Triangle
-            unsigned int m_VAO;
-            std::unique_ptr<Shader> m_Shader;
-            std::unique_ptr<VertexBuffer> m_VertexBuffer;
-            std::unique_ptr<IndexBuffer> m_IndexBuffer;
+            std::shared_ptr<Shader> m_Shader;
+            std::shared_ptr<VertexBuffer> m_VertexBuffer;
+            std::shared_ptr<IndexBuffer> m_IndexBuffer;
+            std::shared_ptr<VertexArray> m_VertexArray;
    };
    // Defined in CLIENT
    Application* CreateApplication();

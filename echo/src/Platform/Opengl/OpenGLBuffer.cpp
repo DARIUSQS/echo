@@ -27,12 +27,17 @@ namespace Echo
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
 
+    void OpenGLVertexBuffer::SetLayout(const BufferLayout& layout)
+    {
+        m_Layout = layout;
+    }
+
     /////// INDEX BUFFER
-    OpenGLIndexBuffer::OpenGLIndexBuffer(uint32_t* indices, uint32_t size)
+    OpenGLIndexBuffer::OpenGLIndexBuffer(unsigned int* indices, uint32_t size)
     {
         glGenBuffers(1, &m_RendererID);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, indices, GL_STATIC_DRAW);
     }
     
     OpenGLIndexBuffer::~OpenGLIndexBuffer()

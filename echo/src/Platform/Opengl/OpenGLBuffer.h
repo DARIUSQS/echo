@@ -11,15 +11,19 @@ namespace Echo
         
             void Bind() const override;
             void unBind() const override;
+            
+            virtual const BufferLayout& GetLayout() const override {return m_Layout;};
+            virtual void SetLayout(const BufferLayout& layout) override;
 
         private:
             uint32_t m_RendererID;
+            BufferLayout m_Layout;
     };
 
     class OpenGLIndexBuffer : public IndexBuffer
     {
         public:
-            OpenGLIndexBuffer(uint32_t* indices, uint32_t size);
+            OpenGLIndexBuffer(unsigned int* indices, uint32_t size);
             ~OpenGLIndexBuffer();
         
             void Bind() const override;
