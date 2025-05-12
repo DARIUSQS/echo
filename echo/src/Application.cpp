@@ -24,14 +24,15 @@ namespace Echo {
         
         /// Triangle
         
-        float vertices[3 * 3] =  /// Pos Color
+        float vertices[3 * 4] =  /// Pos Color
         {
             -0.5f, -0.5f, 0.0f,
             0.5f, -0.5f, 0.0f,
-            0.0f, 0.5f, 0.0f,
+            -0.5f, 0.5f, 0.0f,
+            0.5f, 0.5f, 0.0f,
         };
 
-        unsigned int indices[3] = {0, 1, 2};
+        unsigned int indices[6] = {0, 1, 2, 1, 2, 3};
 
         m_VertexArray.reset(VertexArray::Create());
 
@@ -84,7 +85,7 @@ namespace Echo {
  
             m_Shader->Bind();
             m_VertexArray->Bind();
-            glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
 
             for(Layer* layer : m_LayerStack) layer->OnUpdate();
 
