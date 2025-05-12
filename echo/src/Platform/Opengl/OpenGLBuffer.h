@@ -25,11 +25,14 @@ namespace Echo
         public:
             OpenGLIndexBuffer(unsigned int* indices, uint32_t size);
             ~OpenGLIndexBuffer();
-        
+ 
+            virtual uint32_t GetCount() const override { return m_Count;}
+
             void Bind() const override;
             void unBind() const override;
 
         private:
             uint32_t m_RendererID;
+            uint32_t m_Count;
     };
 }

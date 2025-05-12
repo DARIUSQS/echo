@@ -35,6 +35,7 @@ namespace Echo
     /////// INDEX BUFFER
     OpenGLIndexBuffer::OpenGLIndexBuffer(unsigned int* indices, uint32_t size)
     {
+        m_Count = size / sizeof(uint32_t); /// 4
         glGenBuffers(1, &m_RendererID);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, indices, GL_STATIC_DRAW);

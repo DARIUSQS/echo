@@ -34,11 +34,14 @@ add_library(Echo STATIC
                         src/ImGui/imguiRendererOpengl3.cpp
                         src/ImGui/ImGuiLayer.cpp
                         src/Renderer/Shader.cpp
-                        src/Buffer.cpp
+                        src/Renderer/Buffer.cpp
                         src/Platform/Opengl/OpenGLBuffer.cpp
-                        src/Renderer.cpp
+                        src/Renderer/Renderer.cpp
+                        src/Renderer/RenderAPI.cpp
+                        src/Renderer/RenderCommand.cpp
                         src/Platform/Opengl/OpenGLVertexArray.cpp
-                        src/VertexArray.cpp
+                        src/Platform/Opengl/OpenGLRendererAPI.cpp
+                        src/Renderer/VertexArray.cpp
                     )
 
 # IF(WIN32)
@@ -47,6 +50,7 @@ add_library(Echo STATIC
 # ENDIF()
 
 target_include_directories(Echo PUBLIC "src/")
+target_include_directories(Echo PUBLIC "src/Renderer")
 
 target_precompile_headers(Echo PRIVATE "src/ecpch.h")
 

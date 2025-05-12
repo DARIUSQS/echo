@@ -5,8 +5,10 @@
 #include "Events/ApplicationEvent.h"
 #include "Events/Event.h"
 #include <GLFW/glfw3.h>
-#include "Renderer/Shader.h"
+#include "Renderer/Shader.h" 
 #include "Buffer.h"
+#include "Renderer.h"
+#include "RenderCommand.h"
 
 namespace Echo {
 
@@ -80,12 +82,19 @@ namespace Echo {
 
         while(m_Running)
         {
-            glClearColor(0.1f, 0.1f, 0.1f, 1);
-            glClear(GL_COLOR_BUFFER_BIT); 
+            // glClearColor(0.1f, 0.1f, 0.1f, 1);
+            // glClear(GL_COLOR_BUFFER_BIT); 
  
+            // m_Shader->Bind();
+            // m_VertexArray->Bind();
+            // glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+            
+            RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
+            RenderCommand::Clear();
+
             m_Shader->Bind();
             m_VertexArray->Bind();
-            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+            Renderer::Submit(m_VertexArray);
 
             for(Layer* layer : m_LayerStack) layer->OnUpdate();
 
