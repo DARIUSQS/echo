@@ -2,6 +2,7 @@
 #include <glad.h>
 #include <sstream>
 #include <fstream>
+#include <glm/gtc/type_ptr.hpp>
 
 namespace Echo 
 {
@@ -74,6 +75,12 @@ namespace Echo
 
         glDeleteShader(vertex);
         glDeleteShader(fragment);
+    }
+    
+    void Shader::UploadUniformMat4(const glm::mat4& matrix, const std::string& name)
+    {
+        int location = glGetUniformLocation(m_RendererID, name.c_str());
+        glUniformMatrix4fv(location, 1, false, glm::value_ptr(matrix));
     }
 
     void Shader::Bind() const

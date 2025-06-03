@@ -7,6 +7,7 @@
 #include "Renderer/Shader.h"
 #include "Buffer.h"
 #include "VertexArray.h"
+#include "Camera.h"
 
 namespace Echo {
    ECHO_API class Application
@@ -32,6 +33,8 @@ namespace Echo {
             bool m_Running = true;
 
             LayerStack m_LayerStack;
+
+            OrthographicCamera m_Camera;
 
             static Application* s_Instance;
 

@@ -16,7 +16,8 @@ namespace Echo {
 
     Application* Application::s_Instance = nullptr;
 
-    Application::Application() 
+    Application::Application()
+        : m_Camera(-1.6f, 1.6f, 0.9f, -0.9f)
     {
         EC_ASSERT(!s_Instance, "Application already created")
         s_Instance = this;
@@ -79,22 +80,18 @@ namespace Echo {
     
     void Application::Run()
     {
-
         while(m_Running)
         {
-            // glClearColor(0.1f, 0.1f, 0.1f, 1);
-            // glClear(GL_COLOR_BUFFER_BIT); 
- 
-            // m_Shader->Bind();
-            // m_VertexArray->Bind();
-            // glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
-            
+            m_Camera.SetPosition({0.0f, 0.0f, 0.0f});
+            m_Camera.SetRotation(32.0f);
+
+            Renderer::BeginScene(m_Camera);
             RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
             RenderCommand::Clear();
 
-            m_Shader->Bind();
-            m_VertexArray->Bind();
-            Renderer::Submit(m_VertexArray);
+            Renderer::Submit(m_Shader, m_VertexArray);
+
+            Renderer::EndScene();
 
             for(Layer* layer : m_LayerStack) layer->OnUpdate();
 

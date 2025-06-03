@@ -42,6 +42,7 @@ add_library(Echo STATIC
                         src/Platform/Opengl/OpenGLVertexArray.cpp
                         src/Platform/Opengl/OpenGLRendererAPI.cpp
                         src/Renderer/VertexArray.cpp
+                        src/Renderer/Camera.cpp
                     )
 
 # IF(WIN32)
@@ -50,9 +51,9 @@ add_library(Echo STATIC
 # ENDIF()
 
 target_include_directories(Echo PUBLIC "src/")
-target_include_directories(Echo PUBLIC "src/Renderer")
+target_include_directories(Echo PUBLIC "src/Renderer/")
 
-target_precompile_headers(Echo PRIVATE "src/ecpch.h")
+target_precompile_headers(Echo PUBLIC "src/ecpch.h")
 
 # add_library(Echo)
 
@@ -66,5 +67,5 @@ target_precompile_headers(Echo PRIVATE "src/ecpch.h")
 #     src/Log.h
 # )
 
-target_link_libraries(Echo PRIVATE spdlog glfw glm glad stb_image imgui)
+target_link_libraries(Echo PUBLIC glm spdlog glfw glad stb_image imgui)
 
