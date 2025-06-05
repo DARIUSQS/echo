@@ -26,6 +26,7 @@ add_subdirectory(vendor/imguiInclude)
 add_library(Echo STATIC
                         src/Application.cpp
                         src/Log.cpp
+                        src/InputTemplate.cpp
                         src/Platform/Linux/LinuxWindow.cpp
                         src/Platform/Linux/LinuxInput.cpp
                         src/Platform/Opengl/OpenGLContext.cpp

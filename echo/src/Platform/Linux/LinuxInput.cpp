@@ -1,10 +1,10 @@
 #include "GLFW/glfw3.h"
-#include "InputTemplate.h"
+#include "LinuxInput.h"
 #include "Application.h"
 
 namespace Echo
 {
-    bool Input::IsKeyPressed(int keycode)
+    bool InputGlfw::IsKeyPressedImpl(int keycode)
     {
         GLFWwindow* window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowData());
         auto state = glfwGetKey(window, keycode);
@@ -12,13 +12,13 @@ namespace Echo
         return state == GLFW_PRESS || state == GLFW_REPEAT;
     }
 
-    bool Input::IsMouseButtonPressed(int button)
+    bool InputGlfw::IsMouseButtonPressedImpl(int button)
     {
         GLFWwindow* window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowData());
         return glfwGetMouseButton(window, button);
     }
 
-    std::pair<float, float> Input::GetMousePos()
+    std::pair<float, float> InputGlfw::GetMousePosImpl()
     {
         GLFWwindow* window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowData());
         double x, y;
@@ -27,15 +27,15 @@ namespace Echo
         return {x,y};
     }
 
-    float Input::GetMouseX()
+    float InputGlfw::GetMouseXImpl()
     {
-        auto[x,y] = Input::GetMousePos();
+        auto[x,y] = GetMousePosImpl();
         return x;
     }
 
-    float Input::GetMouseY()
+    float InputGlfw::GetMouseYImpl()
     {
-        auto[x,y] = Input::GetMousePos();
+        auto[x,y] = GetMousePosImpl();
         return y;
     }
 }
