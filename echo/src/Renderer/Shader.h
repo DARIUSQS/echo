@@ -15,6 +15,7 @@ namespace Echo
         inline std::pair<std::string, std::string> GetShaders() const {return {m_VertexShader, m_FragmentShader};}
 
         void UploadUniformMat4(const glm::mat4& matrix, const std::string& name);
+        void UploadUniformVec4(const glm::vec4& vec4, const std::string& name);
 
         void Bind() const;
         void unBind() const;

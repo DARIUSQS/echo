@@ -77,10 +77,17 @@ namespace Echo
         glDeleteShader(fragment);
     }
     
+
     void Shader::UploadUniformMat4(const glm::mat4& matrix, const std::string& name)
     {
         int location = glGetUniformLocation(m_RendererID, name.c_str());
-        glUniformMatrix4fv(location, 1, false, glm::value_ptr(matrix));
+        glUniformMatrix4fv(location, 1, 0, glm::value_ptr(matrix));
+    }
+
+    void Shader::UploadUniformVec4(const glm::vec4& vec4, const std::string& name)
+    {
+        int location = glGetUniformLocation(m_RendererID, name.c_str());
+        glUniform4f(location, vec4.x, vec4.y, vec4.z, vec4.w);
     }
 
     void Shader::Bind() const

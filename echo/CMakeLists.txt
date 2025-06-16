@@ -25,6 +25,7 @@ add_subdirectory(vendor/imguiInclude)
 
 add_library(Echo STATIC
                         src/Application.cpp
+                        src/DeltaTime.cpp
                         src/Log.cpp
                         src/InputTemplate.cpp
                         src/Platform/Linux/LinuxWindow.cpp

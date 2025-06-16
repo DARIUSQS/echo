@@ -13,3 +13,5 @@
 
 #include "Core.h"
 #include "Log.h"
+
+#include "DeltaTime.h"

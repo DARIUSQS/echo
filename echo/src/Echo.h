@@ -23,9 +23,11 @@
 #include "Buffer.h"
 #include "Camera.h"
 #include "RenderAPI.h"
-#include "RenderCommand.h"
-#include "Renderer.h"
+#include "RenderCommand.h" 
 #include "Shader.h"
+#include "Renderer.h"
 #include "VertexArray.h"
 
+#include "InputTemplate.h"
+#include "DeltaTime.h"
 #include "ecpch.h"
