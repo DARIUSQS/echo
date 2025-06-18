@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <functional>
 #include <stdint.h>
+#include <fstream>
 
 #include <string>
 #include <vector>

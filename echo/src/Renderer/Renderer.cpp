@@ -1,6 +1,7 @@
 #include "Renderer.h"
 #include "RenderCommand.h"
 #include "Shader.h"
+#include "Platform/Opengl/OpenGLShader.h"
 
 namespace Echo
 {
@@ -19,8 +20,8 @@ namespace Echo
     void Renderer::Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray> &vao, const glm::mat4& model)
     {
         shader->Bind();
-        shader->UploadUniformMat4(m_SceneData->ViewProjectionMatrix, "u_ViewProjection");
-        shader->UploadUniformMat4(model, "u_Model");
+        std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4(m_SceneData->ViewProjectionMatrix, "u_ViewProjection");
+        std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4(model, "u_Model");
 
         vao->Bind();
         RenderCommand::DrawIndexed(vao);

@@ -12,10 +12,13 @@ namespace Echo
     public:
         ImGuiLayer();
         ~ImGuiLayer();
-        
+      
+        void Begin();
+        void End();
         void OnAttach() override;
         void OnDetach() override;
         void OnUpdate() override;
+        void OnImGuiRender() override;
         void OnEvent(Event& event) override;
 
     private:

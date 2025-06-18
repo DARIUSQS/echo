@@ -6,21 +6,13 @@ namespace Echo
     class Shader
     {
     public:
-        Shader(const std::string& shaderSourcePath);
-        ~Shader(); 
+        virtual ~Shader() = default;  
 
-        void Compile();
-        unsigned int Create(unsigned int shaderType, const std::string& shaderSrc);
-        
-        inline std::pair<std::string, std::string> GetShaders() const {return {m_VertexShader, m_FragmentShader};}
+        virtual inline std::pair<std::string, std::string> GetShaders() const = 0;
 
-        void UploadUniformMat4(const glm::mat4& matrix, const std::string& name);
-        void UploadUniformVec4(const glm::vec4& vec4, const std::string& name);
+        virtual inline void Bind() const = 0;
+        virtual inline void unBind() const = 0;
 
-        void Bind() const;
-        void unBind() const;
-    private:
-        std::string m_VertexShader, m_FragmentShader;
-        unsigned int m_RendererID;
+        static Shader* Create(const std::string& shaderSourcePath);
     };
 }

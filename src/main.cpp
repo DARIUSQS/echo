@@ -1,5 +1,4 @@
 #include <Echo.h>
-#include "DeltaTime.h"
 
 class ExempleLayer : public Echo::Layer
 {
@@ -39,15 +38,12 @@ public:
         m_IndexBuffer->Bind();
         m_VertexArray->SetIndexBuffer(m_IndexBuffer);
 
-        m_Shader.reset(new Echo::Shader("Assets/Shaders/test.shader"));
-        m_Shader->Compile();
+        m_Shader.reset(Echo::Shader::Create("Assets/Shaders/test.shader"));
     }
 
     void OnUpdate() override
     {
         m_Camera.SetRotation(Echo::Input::GetMouseX(), Echo::Input::GetMouseY(), 0.1f);
-
-        EC_WARN(m_Camera.GetRotation());
 
         m_Camera.SetPosition(m_PlayerPos);
 
@@ -56,9 +52,14 @@ public:
         if(Echo::Input::IsKeyPressed(EC_KEY_D)) m_PlayerDir += glm::cross(m_Camera.GetCameraFront(), m_Camera.GetCameraUp());
         if(Echo::Input::IsKeyPressed(EC_KEY_S)) m_PlayerDir -= m_Camera.GetCameraFront();
         if(Echo::Input::IsKeyPressed(EC_KEY_A)) m_PlayerDir -= glm::cross(m_Camera.GetCameraFront(), m_Camera.GetCameraUp());;
+        if(Echo::Input::IsKeyPressed(EC_KEY_E)) m_PlayerDir += m_Camera.GetCameraUp();
+        if(Echo::Input::IsKeyPressed(EC_KEY_Q)) m_PlayerDir -= m_Camera.GetCameraUp();
+        if(Echo::Input::IsKeyPressed(EC_KEY_LEFT_SHIFT)) m_RunningMult = 2.0f;
+        else m_RunningMult = 1.0f;
+
         if(glm::length(m_PlayerDir)) m_PlayerDir = glm::normalize(m_PlayerDir);
         
-        m_PlayerPos += m_PlayerDir * m_PlayerSpeed * Echo::DeltaTime::Seconds();   
+        m_PlayerPos += m_PlayerDir * m_PlayerSpeed * m_RunningMult * Echo::DeltaTime::Seconds();   
 
         Echo::Renderer::BeginScene(m_Camera);
         Echo::RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
@@ -67,6 +68,13 @@ public:
         Echo::Renderer::Submit(m_Shader, m_VertexArray);
 
         Echo::Renderer::EndScene();
+    }
+
+    void OnImGuiRender() override
+    {
+        ImGui::Begin("Color");
+        ImGui::Button("Button");
+        ImGui::End();
     }
 
     void OnEvent(Echo::Event& event) override
@@ -79,6 +87,7 @@ private:
     glm::vec3 m_PlayerDir;
     glm::vec3 m_PlayerPos;
     float m_PlayerSpeed;
+    float m_RunningMult;
 
     Echo::PerspectiveCamera m_Camera;
     std::shared_ptr<Echo::Shader> m_Shader;
@@ -92,7 +101,6 @@ class Sandbox : public Echo::Application
 public:
     Sandbox()
     {
-        PushLayer(new Echo::ImGuiLayer());
         PushLayer(new ExempleLayer());
     }
     

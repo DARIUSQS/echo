@@ -10,6 +10,11 @@
 #include "Renderer.h"
 #include "RenderCommand.h"
 
+#include <imgui/imgui.h>
+
+#include "imgui/backends/imgui_impl_glfw.h"
+#include "ImGui/imguiRendererOpengl3.h"
+
 namespace Echo {
     Application* Application::s_Instance = nullptr;
 
@@ -20,6 +25,9 @@ namespace Echo {
 
         m_Window = std::unique_ptr<Window>(Window::Create());
         m_Window->SetEventCallback(BIND_EVENT_FN(Application::OnEvent));
+
+        m_ImGuiLayer = new ImGuiLayer();
+        PushOverlay(m_ImGuiLayer);
     }
 
     void Application::OnEvent(Event& e)
@@ -44,7 +52,6 @@ namespace Echo {
         /// TODO settings class or smt
         glfwSetInputMode((GLFWwindow*)m_Window->GetWindowData(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
         glEnable(GL_DEPTH_TEST);
-        
 
         while(m_Running)
         {
@@ -52,7 +59,18 @@ namespace Echo {
 
             DeltaTime::SetTime(time);
 
-            for(Layer* layer : m_LayerStack) layer->OnUpdate();
+            for(Layer* layer : m_LayerStack) 
+            {
+                layer->OnUpdate();
+            }
+
+            m_ImGuiLayer->Begin();
+
+            for(Layer* layer : m_LayerStack) 
+            {
+                layer->OnImGuiRender();
+            }
+            m_ImGuiLayer->End();
 
             m_Window->OnUpdate();    
         }

@@ -8,6 +8,7 @@
 #include "Buffer.h"
 #include "VertexArray.h"
 #include "Camera.h"
+#include "ImGui/ImGuiLayer.h"
 
 namespace Echo {
    ECHO_API class Application
@@ -33,6 +34,7 @@ namespace Echo {
             bool m_Running = true;
 
             LayerStack m_LayerStack;
+            ImGuiLayer* m_ImGuiLayer;
 
             static Application* s_Instance;
    };

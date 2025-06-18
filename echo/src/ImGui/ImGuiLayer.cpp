@@ -44,16 +44,26 @@ namespace Echo
         Application& app = Application::Get();
         io.DisplaySize = ImVec2(app.GetWindow().GetWidth(), app.GetWindow().GetHeight());
 
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
         float time = (float)glfwGetTime();
         io.DeltaTime = m_Time > 0.0 ? (time - m_Time) : (1.0f / 60.0f);
         m_Time = time;
+    }
 
+    void ImGuiLayer::OnImGuiRender()
+    {
         static bool show = true;
         ImGui::ShowDemoWindow(&show);
+    }
 
+    void ImGuiLayer::Begin()
+    {
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+    }
+
+    void ImGuiLayer::End()
+    {
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     }
@@ -149,9 +159,6 @@ namespace Echo
     {
         ImGuiIO& io = ImGui::GetIO();
         io.KeysDown[e.GetKeyCode()] = false;
-
-        EC_ERROR(e);
-
         return false;
     }
 
