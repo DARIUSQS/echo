@@ -44,7 +44,7 @@ namespace Echo
 
     struct CameraRotation 
     {
-        float pitch, yaw, roll;  
+        double pitch, yaw, roll;  
     };
     
 
@@ -64,7 +64,7 @@ namespace Echo
             virtual void SetPosition(const glm::vec3& position) override {m_Position = position; RecalculateViewMatrix();}
  
             void CalculateRotation();
-            void SetRotation(float PosX, float PosY);
+            void SetRotation(float PosX, float PosY, float sensitivity);
             const CameraRotation& GetRotation() const {return m_Rotation;}
 
             virtual const glm::mat4& GetViewMatrix() const override {return m_ViewMatrix;}
@@ -76,6 +76,8 @@ namespace Echo
         protected:
             virtual void RecalculateViewMatrix() override;
         private:         
+
+            glm::vec3 pos;
 
             glm::mat4 m_ViewMatrix;
             glm::mat4 m_ProjectionMatrix;

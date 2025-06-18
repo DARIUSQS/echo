@@ -39,6 +39,13 @@ namespace Echo {
     
     void Application::Run()
     {
+
+        /// glfw/opengl settings
+        /// TODO settings class or smt
+        glfwSetInputMode((GLFWwindow*)m_Window->GetWindowData(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+        glEnable(GL_DEPTH_TEST);
+        
+
         while(m_Running)
         {
             float time = (float)glfwGetTime();

@@ -6,7 +6,7 @@ namespace Echo
 {
     Renderer::SceneData* Renderer::m_SceneData = new Renderer::SceneData;
 
-    void Renderer::BeginScene(PerspectiveCamera& camera)
+    void Renderer::BeginScene(const Camera& camera)
     {
         m_SceneData->ViewProjectionMatrix = camera.GetViewProjectionMatrix();
     }

@@ -5,17 +5,21 @@ class ExempleLayer : public Echo::Layer
 {
 public:
     ExempleLayer()
-        : Layer("Exemple"), m_Camera(glm::radians(90.f), 16.0f/9.0f, 0.1f, 100.0f), m_PlayerDir(0.0f), m_PlayerSpeed(2.0f)
+        : Layer("Exemple"), m_Camera(glm::radians(60.f), 16.0f/9.0f, 0.1f, 100.0f), m_PlayerDir(0.0f), m_PlayerSpeed(2.0f), m_PlayerPos({0.0f, 0.0f, -1.0f})
     {
-        float vertices[4 * 4] = 
+        float vertices[3 * 8] = 
         {
-            -0.5f, -0.5f, 0.0f, 
-            0.5f, -0.5f, 0.0f,
-            -0.5f, 0.5f, 0.0f,
-            0.5f, 0.5f, 0.0f
+            -0.5f, -0.5f, 0.0f, /// 1
+            0.5f, -0.5f, 0.0f, /// 2
+            -0.5f, 0.5f, 0.0f, /// 3
+            0.5f, 0.5f, 0.0f, /// 4
+            0.5f, 0.5f, -1.0f, 
+            0.5f, -0.5f, -1.0f, 
+            -0.5f, 0.5f, -1.0f, 
+            -0.5f, -0.5f, -1.0f
         };
         
-        unsigned int indices[6] = {0, 1, 2, 1, 2, 3};
+        unsigned int indices[36] = {0, 1, 2, 1, 2, 3, 3, 1, 5, 3, 5, 4, 1, 0, 5, 0, 5, 7, 2, 0, 7, 7, 2, 6, 2, 3, 4, 2, 6, 4, 5, 4, 6, 6, 7, 5};
 
 
         m_VertexArray.reset(Echo::VertexArray::Create());
@@ -37,37 +41,30 @@ public:
 
         m_Shader.reset(new Echo::Shader("Assets/Shaders/test.shader"));
         m_Shader->Compile();
-
-        m_Camera.SetPosition({0.0f, 0.0f, 10.0f});
     }
 
     void OnUpdate() override
     {
+        m_Camera.SetRotation(Echo::Input::GetMouseX(), Echo::Input::GetMouseY(), 0.1f);
 
-        // EC_WARN("DeltaTime: {0}", Echo::DeltaTime::Miliseconds());
+        EC_WARN(m_Camera.GetRotation());
 
-        m_Camera.SetRotation(Echo::Input::GetMouseX(), Echo::Input::GetMouseY());
-
-        Echo::CameraRotation rot;
-        EC_WARN("{0}, {1}, {2}", m_Camera.GetPosition().x, m_Camera.GetPosition().y, m_Camera.GetPosition().z);
+        m_Camera.SetPosition(m_PlayerPos);
 
         m_PlayerDir = {0.0f, 0.0f, 0.0f};
-        if(Echo::Input::IsKeyPressed(EC_KEY_W)) m_PlayerDir.y ++;
-        if(Echo::Input::IsKeyPressed(EC_KEY_D)) m_PlayerDir.x ++;
-        if(Echo::Input::IsKeyPressed(EC_KEY_S)) m_PlayerDir.y --;
-        if(Echo::Input::IsKeyPressed(EC_KEY_A)) m_PlayerDir.x --;
+        if(Echo::Input::IsKeyPressed(EC_KEY_W)) m_PlayerDir += m_Camera.GetCameraFront();
+        if(Echo::Input::IsKeyPressed(EC_KEY_D)) m_PlayerDir += glm::cross(m_Camera.GetCameraFront(), m_Camera.GetCameraUp());
+        if(Echo::Input::IsKeyPressed(EC_KEY_S)) m_PlayerDir -= m_Camera.GetCameraFront();
+        if(Echo::Input::IsKeyPressed(EC_KEY_A)) m_PlayerDir -= glm::cross(m_Camera.GetCameraFront(), m_Camera.GetCameraUp());;
         if(glm::length(m_PlayerDir)) m_PlayerDir = glm::normalize(m_PlayerDir);
         
-        m_PlayerPos += m_PlayerDir * m_PlayerSpeed * Echo::DeltaTime::Seconds();
-        // m_Camera.SetPosition(m_Camera.GetPosition() + m_CameraDir * m_PlayerSpeed * Echo::DeltaTime::Seconds());
-    
-        glm::mat4 model = glm::translate(glm::mat4(1.0f), m_PlayerPos);
+        m_PlayerPos += m_PlayerDir * m_PlayerSpeed * Echo::DeltaTime::Seconds();   
 
         Echo::Renderer::BeginScene(m_Camera);
         Echo::RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
         Echo::RenderCommand::Clear();
-
-        Echo::Renderer::Submit(m_Shader, m_VertexArray, model);
+    
+        Echo::Renderer::Submit(m_Shader, m_VertexArray);
 
         Echo::Renderer::EndScene();
     }
@@ -75,7 +72,7 @@ public:
     void OnEvent(Echo::Event& event) override
     {
 
-}
+    }
 
 private:
 
