@@ -15,7 +15,7 @@ namespace Echo
             virtual void SetClearColor(const glm::vec4& color) = 0;
             virtual void Clear() = 0;
 
-            virtual void DrawIndex(const std::shared_ptr<VertexArray>& vao) = 0;
+            virtual void DrawIndex(const Ref<VertexArray>& vao) = 0;
 
             static inline API GetAPI() { return s_API;}
         private:

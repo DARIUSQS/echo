@@ -161,4 +161,15 @@ namespace Echo
         else glfwSwapInterval(0);
         m_Data.VSync = enabled;
     }
+    
+    void LinuxWindow::UnlockCursor() const
+    {
+        glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+    }
+
+    void LinuxWindow::LockCursor() const 
+    {
+        glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    }
+
 };

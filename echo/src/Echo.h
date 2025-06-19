@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Core.h"
 
 #include "Application.h"
@@ -31,4 +30,14 @@
 
 #include "InputTemplate.h"
 #include "DeltaTime.h"
+
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+#include "Platform/Opengl/OpenGLBuffer.h"
+#include "Platform/Opengl/OpenGLVertexArray.h"
+#include "Platform/Opengl/OpenGLShader.h"
+#include "Platform/Opengl/OpenGLRendererAPI.h"
+#include "Platform/Opengl/OpenGLContext.h"
+
 #include "ecpch.h"

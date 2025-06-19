@@ -17,7 +17,7 @@ namespace Echo
 
     }
 
-    void Renderer::Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray> &vao, const glm::mat4& model)
+    void Renderer::Submit(const Ref<Shader>& shader, const Ref<VertexArray> &vao, const glm::mat4& model)
     {
         shader->Bind();
         std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4(m_SceneData->ViewProjectionMatrix, "u_ViewProjection");

@@ -6,7 +6,7 @@ namespace Echo
     class RenderCommand 
     {
         public:
-            inline static void DrawIndexed(const std::shared_ptr<VertexArray>& vao)
+            inline static void DrawIndexed(const Ref<VertexArray>& vao)
             {
                 s_RendererAPI->DrawIndex(vao);
             }

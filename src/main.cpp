@@ -4,7 +4,7 @@ class ExempleLayer : public Echo::Layer
 {
 public:
     ExempleLayer()
-        : Layer("Exemple"), m_Camera(glm::radians(60.f), 16.0f/9.0f, 0.1f, 100.0f), m_PlayerDir(0.0f), m_PlayerSpeed(2.0f), m_PlayerPos({0.0f, 0.0f, -1.0f})
+        : Layer("Exemple"), m_Camera(glm::radians(60.f), 16.0f/9.0f, 0.1f, 100.0f), m_PlayerDir(0.0f), m_PlayerSpeed(2.0f), m_PlayerPos({0.0f, 0.0f, -1.0f}), isPaused(false), m_Color({0.4f, 0.3f, 0.2f})
     {
         float vertices[3 * 8] = 
         {
@@ -43,7 +43,7 @@ public:
 
     void OnUpdate() override
     {
-        m_Camera.SetRotation(Echo::Input::GetMouseX(), Echo::Input::GetMouseY(), 0.1f);
+        if(!isPaused) m_Camera.SetRotation(Echo::Input::GetMouseX(), Echo::Input::GetMouseY(), 0.1f);
 
         m_Camera.SetPosition(m_PlayerPos);
 
@@ -61,6 +61,10 @@ public:
         
         m_PlayerPos += m_PlayerDir * m_PlayerSpeed * m_RunningMult * Echo::DeltaTime::Seconds();   
 
+        ///// SHADER COLOR
+
+        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformVec4(glm::vec4(m_Color, 1.0f), "u_Color");
+
         Echo::Renderer::BeginScene(m_Camera);
         Echo::RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
         Echo::RenderCommand::Clear();
@@ -73,27 +77,47 @@ public:
     void OnImGuiRender() override
     {
         ImGui::Begin("Color");
-        ImGui::Button("Button");
+        ImGui::ColorPicker3("Pick Color", glm::value_ptr(m_Color));
+        ImGui::Separator();
+        Echo::CameraRotation rot = m_Camera.GetRotation();
+        ImGui::InputDouble("Pitch", &rot.pitch);
+        ImGui::InputDouble("Yaw", &rot.yaw);
+        ImGui::InputDouble("Roll", &rot.roll);
         ImGui::End();
     }
 
     void OnEvent(Echo::Event& event) override
     {
+        Echo::EventDispatcher dispatcher(event);
+        dispatcher.Dispatch<Echo::KeyEventPressed>(BIND_EVENT_FN(ExempleLayer::OnKeyPressedEvent));
+    }
 
+    bool OnKeyPressedEvent(Echo::KeyEventPressed& event)
+    {
+        if(event.GetKeyCode() == EC_KEY_P)
+        {
+            if(!isPaused) Echo::Application::Get().GetWindow().UnlockCursor();
+            else Echo::Application::Get().GetWindow().LockCursor();
+            isPaused = !isPaused;
+        }
+        return 0;
     }
 
 private:
 
     glm::vec3 m_PlayerDir;
     glm::vec3 m_PlayerPos;
+    glm::vec3 m_Color;
     float m_PlayerSpeed;
     float m_RunningMult;
+    bool isPaused;
+
 
     Echo::PerspectiveCamera m_Camera;
-    std::shared_ptr<Echo::Shader> m_Shader;
-    std::shared_ptr<Echo::VertexArray> m_VertexArray;
-    std::shared_ptr<Echo::VertexBuffer> m_VertexBuffer;
-    std::shared_ptr<Echo::IndexBuffer> m_IndexBuffer;
+    Echo::Ref<Echo::Shader> m_Shader;
+    Echo::Ref<Echo::VertexArray> m_VertexArray;
+    Echo::Ref<Echo::VertexBuffer> m_VertexBuffer;
+    Echo::Ref<Echo::IndexBuffer> m_IndexBuffer;
 };
 
 class Sandbox : public Echo::Application

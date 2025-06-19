@@ -13,15 +13,19 @@ namespace Echo
             LinuxWindow(const WindowProps& props);
             virtual ~LinuxWindow();
 
-            void OnUpdate() override;
+            virtual void OnUpdate() override;
 
-            inline unsigned int GetWidth() const override { return m_Data.Width;}
-            inline unsigned int GetHeight() const override { return m_Data.Height;}
+            virtual inline unsigned int GetWidth() const override { return m_Data.Width;}
+            virtual inline unsigned int GetHeight() const override { return m_Data.Height;}
 
-            inline void SetEventCallback(const std::function<void (Event &)> &callback) override { m_Data.EventCallback = callback;}
-            void* GetWindowData() override {return m_Window;}
-            void SetVSync(bool enabled) override;
-            bool inline IsVSync() const override {return m_Data.VSync;};
+            virtual inline void SetEventCallback(const std::function<void (Event &)> &callback) override { m_Data.EventCallback = callback;}
+            virtual void* GetWindowData() override {return m_Window;}
+            virtual void SetVSync(bool enabled) override;
+            virtual bool inline IsVSync() const override {return m_Data.VSync;};
+            
+            virtual void LockCursor() const override;
+            virtual void UnlockCursor() const override;
+
         private:
             virtual void Init(const WindowProps& props);
             virtual void Shutdown();

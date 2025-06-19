@@ -40,7 +40,7 @@ namespace Echo
     {
         glBindVertexArray(0);
     }
-    void OpenGLVertexArray::AddVertexBuffer(const std::shared_ptr<VertexBuffer>& vertexBuffer)
+    void OpenGLVertexArray::AddVertexBuffer(const Ref<VertexBuffer>& vertexBuffer)
     {
         m_VertexBuffers.push_back(vertexBuffer); 
         Bind();
@@ -56,7 +56,7 @@ namespace Echo
         }
 
     }
-    void OpenGLVertexArray::SetIndexBuffer(const std::shared_ptr<IndexBuffer>& indexBuffer)
+    void OpenGLVertexArray::SetIndexBuffer(const Ref<IndexBuffer>& indexBuffer)
     {
         Bind();
         indexBuffer->Bind();

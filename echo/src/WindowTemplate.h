@@ -33,8 +33,9 @@ namespace Echo
 
             virtual void* GetWindowData() = 0;
 
-            static Window* Create(const WindowProps& props = WindowProps());
+            virtual void LockCursor() const = 0;
+            virtual void UnlockCursor() const = 0;
 
-        private:
+            static Window* Create(const WindowProps& props = WindowProps());
     };
 };
