@@ -1,33 +1,66 @@
+#include <glad.h>
 #include "Platform/Opengl/OpenGLShader.h"
-#include "glad.h"
 #include "ecpch.h"
 #include <glm/gtc/type_ptr.hpp>
 
 namespace Echo 
 {
+    static GLenum ParseShaderTypeFromString(const std::string& type)
+    {
+        if(type == "vertex") return GL_VERTEX_SHADER;
+        else if(type == "fragment") return GL_FRAGMENT_SHADER; 
+        
+        EC_WARN("Shader type: " + type);
+        EC_ASSERT(false, "Shader type not supported");
+        return 0;
+    }
+
     OpenGLShader::OpenGLShader(const std::string& shaderSourcePath)
     {
-        std::stringstream shaders[2]; // vertex  fragment
-        std::string line;
-        std::ifstream fin(shaderSourcePath, std::ios::binary);
-        bool shaderindex = 0;
-        while(std::getline(fin, line))
+        std::string shadersSource = ReadFile(shaderSourcePath);
+        auto shaders = PreProcessShaders(shadersSource);
+        Compile(shaders);
+    }
+    
+    std::string OpenGLShader::ReadFile(const std::string& path)
+    {
+        std::string result;
+        std::ifstream fin(path, std::ios::binary);
+        if(fin)
         {
-            if(line.find("#shader") != std::string::npos)
-            {
-                if(line.find("vertex") != std::string::npos) shaderindex = 0;
-                else if(line.find("fragment") != std::string::npos) shaderindex = 1;
-            }
-            else 
-            {
-                shaders[shaderindex] << line << '\n';
-            }
+            fin.seekg(0, std::ios::end);
+            result.resize(fin.tellg());
+            fin.seekg(0, std::ios::beg);
+            fin.read(&result[0], result.size());
+            fin.close();
         }
-        m_VertexShader = shaders[0].str();
-        m_FragmentShader = shaders[1].str();
-        fin.close();
-
-        Compile();
+        else 
+        {
+            EC_ASSERT(0, "Shader file couldn't be read");
+        }
+        return result;
+    }
+    
+    std::unordered_map<unsigned int, std::string> OpenGLShader::PreProcessShaders(const std::string& string)
+    {
+        std::unordered_map<GLenum, std::string> Shaders;
+        const char* token = "#shader";
+        size_t tokenSize = strlen(token);
+        size_t pos = string.find(token, 0);
+        while(pos != std::string::npos)
+        {
+            size_t end = string.find_first_of("\r\n", pos);
+            EC_ASSERT(end != std::string::npos, "Shader File Syntax Error");
+            size_t startType = pos + tokenSize + 1;
+            std::string type = string.substr(startType, end - startType);
+            EC_ASSERT(type == "fragment" || type == "vertex", "Shader Type not supported");
+            
+            size_t startPos = string.find_first_not_of("\r\n", end);
+            pos = string.find(token, startPos);
+            Shaders[ParseShaderTypeFromString(type)] = string.substr(startPos,
+                    (pos == std::string::npos ? string.size() - 1 : pos - 1) - startPos);
+        }
+        return Shaders;
     }
 
     OpenGLShader::~OpenGLShader()
@@ -35,7 +68,7 @@ namespace Echo
         glDeleteProgram(m_RendererID);
     }
 
-    unsigned int OpenGLShader::CreateShaders(unsigned int shaderType, const std::string& shaderSrc)
+    unsigned int OpenGLShader::CreateShaders(GLenum shaderType, const std::string& shaderSrc)
     {
         unsigned int shader;
 
@@ -55,14 +88,19 @@ namespace Echo
         return shader;
     }
     
-    void OpenGLShader::Compile()
+    void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& shaders)
     {
-        unsigned int vertex = CreateShaders(GL_VERTEX_SHADER, m_VertexShader);    
-        unsigned int fragment = CreateShaders(GL_FRAGMENT_SHADER, m_FragmentShader);    
-
         m_RendererID = glCreateProgram();
-        glAttachShader(m_RendererID, vertex);
-        glAttachShader(m_RendererID, fragment);
+        std::vector<unsigned int> shadersID;
+        shadersID.reserve(shaders.size());
+
+        for(auto sh : shaders)
+        {
+            EC_WARN(sh.second);
+            unsigned int shaderID = CreateShaders(sh.first, sh.second);    
+            glAttachShader(m_RendererID, shaderID);
+            shadersID.push_back(shaderID);
+        }
         glLinkProgram(m_RendererID);
  
         int success;
@@ -73,9 +111,11 @@ namespace Echo
             glGetProgramInfoLog(m_RendererID, 512, NULL, infoLog);
             EC_ERROR("SHADER::PROGRAM::LINKING_FAILED {0}", infoLog);
         }
-
-        glDeleteShader(vertex);
-        glDeleteShader(fragment);
+            
+        for(unsigned int ID : shadersID)
+        {
+            glDeleteShader(ID);
+        }
     }
 
     void OpenGLShader::UploadUniformMat4(const glm::mat4& matrix, const std::string& name)

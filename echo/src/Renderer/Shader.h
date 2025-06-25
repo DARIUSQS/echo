@@ -8,8 +8,6 @@ namespace Echo
     public:
         virtual ~Shader() = default;  
 
-        virtual inline std::pair<std::string, std::string> GetShaders() const = 0;
-
         virtual void Bind() const = 0;
         virtual void unBind() const = 0;
 

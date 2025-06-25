@@ -37,8 +37,8 @@
 
 #include "Platform/Opengl/OpenGLBuffer.h"
 #include "Platform/Opengl/OpenGLVertexArray.h"
-#include "Platform/Opengl/OpenGLShader.h"
 #include "Platform/Opengl/OpenGLRendererAPI.h"
 #include "Platform/Opengl/OpenGLContext.h"
+#include "Platform/Opengl/OpenGLShader.h"
 
 #include "ecpch.h"
