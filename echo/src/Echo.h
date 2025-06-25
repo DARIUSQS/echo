@@ -27,6 +27,7 @@
 #include "Shader.h"
 #include "Renderer.h"
 #include "VertexArray.h"
+#include "Texture.h"
 
 #include "InputTemplate.h"
 #include "DeltaTime.h"

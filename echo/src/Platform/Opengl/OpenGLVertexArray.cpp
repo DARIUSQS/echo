@@ -51,7 +51,6 @@ namespace Echo
         {
             glEnableVertexAttribArray(index);
             glVertexAttribPointer(index, element.size, ShaderDataTypeOpenGLType(element.type), GL_FALSE, vertexBuffer->GetLayout().GetStride(), (void*)element.offset);
-            EC_INFO("{0} {1} {2} {3} {4}", element.size, vertexBuffer->GetLayout().GetStride(), element.offset, index, ShaderDataTypeOpenGLType(element.type));
             index++;
         }
 

@@ -28,6 +28,8 @@ namespace Echo {
 
         m_ImGuiLayer = new ImGuiLayer();
         PushOverlay(m_ImGuiLayer);
+            
+        Renderer::Init();
 
         m_Window->LockCursor();
         glEnable(GL_DEPTH_TEST);

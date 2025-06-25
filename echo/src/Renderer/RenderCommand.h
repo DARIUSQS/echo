@@ -6,6 +6,11 @@ namespace Echo
     class RenderCommand 
     {
         public:
+            inline static void Init()
+            {
+                s_RendererAPI->Init();
+            }
+
             inline static void DrawIndexed(const Ref<VertexArray>& vao)
             {
                 s_RendererAPI->DrawIndex(vao);

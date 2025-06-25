@@ -41,7 +41,9 @@ add_library(Echo STATIC
                         src/Renderer/Renderer.cpp
                         src/Renderer/RenderAPI.cpp
                         src/Renderer/RenderCommand.cpp
+                        src/Renderer/Texture.cpp
                         src/Platform/Opengl/OpenGLVertexArray.cpp
+                        src/Platform/Opengl/OpenGLTexture.cpp
                         src/Platform/Opengl/OpenGLRendererAPI.cpp
                         src/Platform/Opengl/OpenGLShader.cpp
                         src/Renderer/VertexArray.cpp

@@ -9,7 +9,7 @@ namespace Echo
     {
         std::stringstream shaders[2]; // vertex  fragment
         std::string line;
-        std::ifstream fin(shaderSourcePath);
+        std::ifstream fin(shaderSourcePath, std::ios::binary);
         bool shaderindex = 0;
         while(std::getline(fin, line))
         {
@@ -88,6 +88,12 @@ namespace Echo
     {
         int location = glGetUniformLocation(m_RendererID, name.c_str());
         glUniform4f(location, vec4.x, vec4.y, vec4.z, vec4.w);
+    }
+    
+    void OpenGLShader::UploadUniformInt(int value, const std::string& name)
+    {
+        int location = glGetUniformLocation(m_RendererID, name.c_str());
+        glUniform1i(location, value);
     }
 
     void OpenGLShader::Bind() const

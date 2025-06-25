@@ -6,19 +6,28 @@ public:
     ExempleLayer()
         : Layer("Exemple"), m_Camera(glm::radians(60.f), 16.0f/9.0f, 0.1f, 100.0f), m_PlayerDir(0.0f), m_PlayerSpeed(2.0f), m_PlayerPos({0.0f, 0.0f, -1.0f}), isPaused(false), m_Color({0.4f, 0.3f, 0.2f})
     {
-        float vertices[3 * 8] = 
+        float vertices[16 * 5] = 
         {
-            -0.5f, -0.5f, 0.0f, /// 1
-            0.5f, -0.5f, 0.0f, /// 2
-            -0.5f, 0.5f, 0.0f, /// 3
-            0.5f, 0.5f, 0.0f, /// 4
-            0.5f, 0.5f, -1.0f, 
-            0.5f, -0.5f, -1.0f, 
-            -0.5f, 0.5f, -1.0f, 
-            -0.5f, -0.5f, -1.0f
+            ////  Position //// /// Tex Coords ///
+            -0.5f, -0.5f, 0.0f, 0.0f, 0.0f, /// 1 left bot  0
+            0.5f, -0.5f, 0.0f, 1.0f, 0.0f,  /// 2 right bot 1
+            0.5f, -0.5f, 0.0f, 0.0f, 0.0f,  /// 2 left bot  2
+            -0.5f, 0.5f, 0.0f, 0.0f, 1.0f,  /// 3 left top  3
+            -0.5f, 0.5f, 0.0f, 0.0f, 0.0f,  /// 3 left bot  4
+            0.5f, 0.5f, 0.0f, 1.0f, 1.0f, /// 4 right top   5
+            0.5f, 0.5f, 0.0f, 0.0f, 1.0f, /// 4 left top    6
+            0.5f, 0.5f, 0.0f, 1.0f, 0.0f, /// 4 right bot   7
+            0.5f, 0.5f, -1.0f, 1.0f, 1.0f, /// 5 right top  8
+            0.5f, -0.5f, -1.0f, 1.0f, 0.0f, /// 6 right bot 9
+            0.5f, -0.5f, -1.0f, 1.0f, 1.0f, /// 6 right top 10
+            -0.5f, 0.5f, -1.0f, 0.0f, 1.0f, /// 7 left top  11
+            -0.5f, 0.5f, -1.0f, 1.0f, 1.0f, /// 7 right top 12
+            -0.5f, -0.5f, -1.0f, 0.0f, 1.0f, ///8 left top   13
+            -0.5f, -0.5f, -1.0f, 0.0f, 0.0f, ///8 left bot   14
+            -0.5f, -0.5f, -1.0f, 1.0f, 0.0f ///8 right bot   15
         };
         
-        unsigned int indices[36] = {0, 1, 2, 1, 2, 3, 3, 1, 5, 3, 5, 4, 1, 0, 5, 0, 5, 7, 2, 0, 7, 7, 2, 6, 2, 3, 4, 2, 6, 4, 5, 4, 6, 6, 7, 5};
+        unsigned int indices[36] = {0, 1, 3, 1, 3, 5, 0, 1, 13, 1, 13, 10, 2, 9, 6, 9, 6, 8, 4, 7, 11, 7, 11, 8, 0, 15, 3, 15, 3, 12, 14, 9, 11, 9, 11, 8};
 
 
         m_VertexArray.reset(Echo::VertexArray::Create());
@@ -27,8 +36,8 @@ public:
         m_VertexBuffer->Bind();
 
         Echo::BufferLayout layout({
-
                 {Echo::ShaderDataType::Float3, "Position"},
+                {Echo::ShaderDataType::Float2, "Tex Coords"},
         });
         m_VertexBuffer->SetLayout(layout);
         m_VertexArray->Bind();
@@ -39,6 +48,11 @@ public:
         m_VertexArray->SetIndexBuffer(m_IndexBuffer);
 
         m_Shader.reset(Echo::Shader::Create("Assets/Shaders/test.shader"));
+        m_BoxTexture = Echo::Texture2D::Create("Assets/Textures/tex.png");
+        m_TransparentTexture = Echo::Texture2D::Create("Assets/Textures/transparent.png");
+       
+        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->Bind();
+        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformInt(0, "u_Texture");
     }
 
     void OnUpdate() override
@@ -63,13 +77,14 @@ public:
 
         ///// SHADER COLOR
 
-        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformVec4(glm::vec4(m_Color, 1.0f), "u_Color");
-
         Echo::Renderer::BeginScene(m_Camera);
         Echo::RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
         Echo::RenderCommand::Clear();
-    
+
+        m_BoxTexture->Bind(0);
         Echo::Renderer::Submit(m_Shader, m_VertexArray);
+        m_TransparentTexture->Bind(0);
+        Echo::Renderer::Submit(m_Shader, m_VertexArray, glm::translate(glm::mat4(1.0f), glm::vec3(2.0f, 2.0f, 0.0f)));
 
         Echo::Renderer::EndScene();
     }
@@ -118,6 +133,7 @@ private:
     Echo::Ref<Echo::VertexArray> m_VertexArray;
     Echo::Ref<Echo::VertexBuffer> m_VertexBuffer;
     Echo::Ref<Echo::IndexBuffer> m_IndexBuffer;
+    Echo::Ref<Echo::Texture2D> m_BoxTexture, m_TransparentTexture;
 };
 
 class Sandbox : public Echo::Application
