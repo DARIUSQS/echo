@@ -4,7 +4,7 @@ class ExempleLayer : public Echo::Layer
 {
 public:
     ExempleLayer()
-        : Layer("Exemple"), m_Camera(glm::radians(60.f), 16.0f/9.0f, 0.1f, 100.0f), m_PlayerDir(0.0f), m_PlayerSpeed(2.0f), m_PlayerPos({0.0f, 0.0f, -1.0f}), isPaused(false), m_Color({0.4f, 0.3f, 0.2f})
+        : Layer("Exemple"), m_CameraController(16.0f / 9.0f, 45.0f, 0.1f, 100.0f), isPaused(false), m_Color({0.4f, 0.3f, 0.2f})
     {
         float vertices[16 * 5] = 
         {
@@ -57,34 +57,18 @@ public:
 
     void OnUpdate() override
     {
-        if(!isPaused) m_Camera.SetRotation(Echo::Input::GetMouseX(), Echo::Input::GetMouseY(), 0.1f);
-
-        m_Camera.SetPosition(m_PlayerPos);
-
-        m_PlayerDir = {0.0f, 0.0f, 0.0f};
-        if(Echo::Input::IsKeyPressed(EC_KEY_W)) m_PlayerDir += m_Camera.GetCameraFront();
-        if(Echo::Input::IsKeyPressed(EC_KEY_D)) m_PlayerDir += glm::cross(m_Camera.GetCameraFront(), m_Camera.GetCameraUp());
-        if(Echo::Input::IsKeyPressed(EC_KEY_S)) m_PlayerDir -= m_Camera.GetCameraFront();
-        if(Echo::Input::IsKeyPressed(EC_KEY_A)) m_PlayerDir -= glm::cross(m_Camera.GetCameraFront(), m_Camera.GetCameraUp());;
-        if(Echo::Input::IsKeyPressed(EC_KEY_E)) m_PlayerDir += m_Camera.GetCameraUp();
-        if(Echo::Input::IsKeyPressed(EC_KEY_Q)) m_PlayerDir -= m_Camera.GetCameraUp();
-        if(Echo::Input::IsKeyPressed(EC_KEY_LEFT_SHIFT)) m_RunningMult = 2.0f;
-        else m_RunningMult = 1.0f;
-
-        if(glm::length(m_PlayerDir)) m_PlayerDir = glm::normalize(m_PlayerDir);
-        
-        m_PlayerPos += m_PlayerDir * m_PlayerSpeed * m_RunningMult * Echo::DeltaTime::Seconds();   
+        if(!isPaused) m_CameraController.OnUpdate();
 
         ///// SHADER COLOR
-
-        Echo::Renderer::BeginScene(m_Camera);
+        Echo::Renderer::BeginScene(m_CameraController.GetCamera());
         Echo::RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
         Echo::RenderCommand::Clear();
 
         m_BoxTexture->Bind(0);
         Echo::Renderer::Submit(m_Shader, m_VertexArray);
+
         m_TransparentTexture->Bind(0);
-        Echo::Renderer::Submit(m_Shader, m_VertexArray, glm::translate(glm::mat4(1.0f), glm::vec3(2.0f, 2.0f, 0.0f)));
+        Echo::Renderer::Submit(m_Shader, m_VertexArray, glm::translate(glm::mat4(1.0f), glm::vec3(1.0f, 1.0f, 0.0f)));
 
         Echo::Renderer::EndScene();
     }
@@ -94,15 +78,23 @@ public:
         ImGui::Begin("Color");
         ImGui::ColorPicker3("Pick Color", glm::value_ptr(m_Color));
         ImGui::Separator();
-        Echo::CameraRotation rot = m_Camera.GetRotation();
+        Echo::CameraRotation rot = m_CameraController.GetCamera().GetRotation();
         ImGui::InputDouble("Pitch", &rot.pitch);
         ImGui::InputDouble("Yaw", &rot.yaw);
         ImGui::InputDouble("Roll", &rot.roll);
+
+        ImGui::Separator();
+        static float test[2] = {25.0f, 75.0f};
+        ImGui::InputFloat2("Zoom", test,"%.3f", ImGuiInputTextFlags_EnterReturnsTrue);
+        m_CameraController.SetZoom(test[0], test[1]);
+
         ImGui::End();
     }
 
     void OnEvent(Echo::Event& event) override
     {
+        m_CameraController.OnEvent(event);
+
         Echo::EventDispatcher dispatcher(event);
         dispatcher.Dispatch<Echo::KeyEventPressed>(BIND_EVENT_FN(ExempleLayer::OnKeyPressedEvent));
     }
@@ -120,15 +112,10 @@ public:
 
 private:
 
-    glm::vec3 m_PlayerDir;
-    glm::vec3 m_PlayerPos;
     glm::vec3 m_Color;
-    float m_PlayerSpeed;
-    float m_RunningMult;
     bool isPaused;
 
-
-    Echo::PerspectiveCamera m_Camera;
+    Echo::PerspectiveCameraController m_CameraController;
     Echo::Ref<Echo::Shader> m_Shader;
     Echo::Ref<Echo::VertexArray> m_VertexArray;
     Echo::Ref<Echo::VertexBuffer> m_VertexBuffer;

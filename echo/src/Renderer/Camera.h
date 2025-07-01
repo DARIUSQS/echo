@@ -73,6 +73,8 @@ namespace Echo
 
             const glm::vec3& GetCameraFront() const {return m_CameraFront;}
             const glm::vec3& GetCameraUp() const {return m_CameraUp;}
+                
+            void RecalculateProjectionMatrix(float fov, float aspectRatio, float near, float far);
         protected:
             virtual void RecalculateViewMatrix() override;
         private:         

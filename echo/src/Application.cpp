@@ -55,7 +55,6 @@ namespace Echo {
         while(m_Running)
         {
             float time = (float)glfwGetTime();
-
             DeltaTime::SetTime(time);
 
             for(Layer* layer : m_LayerStack) 

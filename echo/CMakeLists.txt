@@ -33,6 +33,7 @@ add_library(Echo STATIC
                         src/Platform/Opengl/OpenGLContext.cpp
                         src/Layer.cpp
                         src/LayerStack.cpp
+                        src/CameraController.cpp
                         src/ImGui/imguiRendererOpengl3.cpp
                         src/ImGui/ImGuiLayer.cpp
                         src/Renderer/Shader.cpp

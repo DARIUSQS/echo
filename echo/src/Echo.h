@@ -28,6 +28,7 @@
 #include "Renderer.h"
 #include "VertexArray.h"
 #include "Texture.h"
+#include "CameraController.h"
 
 #include "InputTemplate.h"
 #include "DeltaTime.h"

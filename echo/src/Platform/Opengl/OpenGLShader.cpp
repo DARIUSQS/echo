@@ -25,7 +25,7 @@ namespace Echo
     std::string OpenGLShader::ReadFile(const std::string& path)
     {
         std::string result;
-        std::ifstream fin(path, std::ios::binary);
+        std::ifstream fin(path, std::ios::in |  std::ios::binary);
         if(fin)
         {
             fin.seekg(0, std::ios::end);
@@ -91,15 +91,15 @@ namespace Echo
     void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& shaders)
     {
         m_RendererID = glCreateProgram();
-        std::vector<unsigned int> shadersID;
-        shadersID.reserve(shaders.size());
-
+        EC_ASSERT(shaders.size() <= 2, "Echo only supports 2 types of shaders");
+        std::array<unsigned int, 2> shadersID;
+        int shaderIDIndex = 0;
         for(auto sh : shaders)
         {
             EC_WARN(sh.second);
             unsigned int shaderID = CreateShaders(sh.first, sh.second);    
             glAttachShader(m_RendererID, shaderID);
-            shadersID.push_back(shaderID);
+            shadersID[shaderIDIndex++] = shaderID;
         }
         glLinkProgram(m_RendererID);
  
