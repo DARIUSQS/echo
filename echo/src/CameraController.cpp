@@ -6,7 +6,7 @@ namespace Echo
     void PerspectiveCameraController::OnUpdate()
     {
         m_Camera.SetPosition(m_CameraPos);
-        m_Camera.SetRotation(Echo::Input::GetMouseX(), Echo::Input::GetMouseY(), 0.14f);
+        m_Camera.SetRotation(Echo::Input::GetMouseX(), Echo::Input::GetMouseY(), m_Sensitivity);
 
         m_CameraDir = glm::vec3(0.0f);
         if(Echo::Input::IsKeyPressed(EC_KEY_W)) m_CameraDir += m_Camera.GetCameraFront();
@@ -42,8 +42,6 @@ namespace Echo
         m_Fov -= event.GetYOffset();
         if(m_Fov < m_MinZoom) m_Fov = m_MinZoom;
         if(m_Fov > m_MaxZoom) m_Fov = m_MaxZoom;
-
-        EC_WARN(m_Fov);
 
         m_Camera.RecalculateProjectionMatrix(m_Fov, m_AspectRatio, m_NearPlane, m_FarPlane);
         return 0;

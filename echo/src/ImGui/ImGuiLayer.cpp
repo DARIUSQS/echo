@@ -174,10 +174,9 @@ namespace Echo
 
     bool ImGuiLayer::OnWindowResizeEvent(WindowResizeEvent& e)
     {
-        // ImGuiIO& io = ImGui::GetIO();
-        // io.DisplaySize = ImVec2(e.GetWidth(), e.GetHeight());
-        // io.DisplayFramebufferScale = ImVec2(1.0f, 1.0f);
-        // glViewport(0, 0, e.GetWidth(), e.GetHeight());
+        ImGuiIO& io = ImGui::GetIO();
+        io.DisplaySize = ImVec2(e.GetWidth(), e.GetHeight());
+        io.DisplayFramebufferScale = ImVec2(1.0f, 1.0f);
 
         return false;
     }

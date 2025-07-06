@@ -87,7 +87,7 @@ namespace Echo
 
             glm::vec3 m_Position, m_CameraFront, m_CameraUp;
             
-            int lastX, lastY;
+            int lastX = 0, lastY = 0;
 
             CameraRotation m_Rotation;
     };

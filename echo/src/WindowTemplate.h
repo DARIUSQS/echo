@@ -26,12 +26,13 @@ namespace Echo
 
             virtual inline unsigned int GetWidth() const = 0;
             virtual inline unsigned int GetHeight() const = 0;
+            virtual inline float GetTime() const = 0;
 
             virtual inline void SetEventCallback(const std::function<void(Event&)>& callback) = 0; 
             virtual void SetVSync(bool enabled) = 0;
             virtual bool IsVSync() const = 0;
 
-            virtual void* GetWindowData() = 0;
+            virtual void* GetWindowData() = 0;  
 
             virtual void LockCursor() const = 0;
             virtual void UnlockCursor() const = 0;

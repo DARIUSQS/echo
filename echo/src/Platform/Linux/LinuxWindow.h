@@ -17,6 +17,7 @@ namespace Echo
 
             virtual inline unsigned int GetWidth() const override { return m_Data.Width;}
             virtual inline unsigned int GetHeight() const override { return m_Data.Height;}
+            virtual inline float GetTime() const override {return glfwGetTime();}
 
             virtual inline void SetEventCallback(const std::function<void (Event &)> &callback) override { m_Data.EventCallback = callback;}
             virtual void* GetWindowData() override {return m_Window;}

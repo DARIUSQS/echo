@@ -6,29 +6,60 @@ public:
     ExempleLayer()
         : Layer("Exemple"), m_CameraController(16.0f / 9.0f, 45.0f, 0.1f, 100.0f), isPaused(false), m_Color({0.4f, 0.3f, 0.2f})
     {
-        float vertices[16 * 5] = 
-        {
-            ////  Position //// /// Tex Coords ///
-            -0.5f, -0.5f, 0.0f, 0.0f, 0.0f, /// 1 left bot  0
-            0.5f, -0.5f, 0.0f, 1.0f, 0.0f,  /// 2 right bot 1
-            0.5f, -0.5f, 0.0f, 0.0f, 0.0f,  /// 2 left bot  2
-            -0.5f, 0.5f, 0.0f, 0.0f, 1.0f,  /// 3 left top  3
-            -0.5f, 0.5f, 0.0f, 0.0f, 0.0f,  /// 3 left bot  4
-            0.5f, 0.5f, 0.0f, 1.0f, 1.0f, /// 4 right top   5
-            0.5f, 0.5f, 0.0f, 0.0f, 1.0f, /// 4 left top    6
-            0.5f, 0.5f, 0.0f, 1.0f, 0.0f, /// 4 right bot   7
-            0.5f, 0.5f, -1.0f, 1.0f, 1.0f, /// 5 right top  8
-            0.5f, -0.5f, -1.0f, 1.0f, 0.0f, /// 6 right bot 9
-            0.5f, -0.5f, -1.0f, 1.0f, 1.0f, /// 6 right top 10
-            -0.5f, 0.5f, -1.0f, 0.0f, 1.0f, /// 7 left top  11
-            -0.5f, 0.5f, -1.0f, 1.0f, 1.0f, /// 7 right top 12
-            -0.5f, -0.5f, -1.0f, 0.0f, 1.0f, ///8 left top   13
-            -0.5f, -0.5f, -1.0f, 0.0f, 0.0f, ///8 left bot   14
-            -0.5f, -0.5f, -1.0f, 1.0f, 0.0f ///8 right bot   15
-        };
+    float vertices[36 * 8] = 
+    {
+        -0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f,
+        0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f,
+        0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f,
+        0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f,
+        -0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f,
+        -0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f,
+        -0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,
+        0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,
+        0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
+        0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
+        -0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
+        -0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,
+        -0.5f, 0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+        -0.5f, 0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+        -0.5f, -0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+        -0.5f, -0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+        -0.5f, -0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+        -0.5f, 0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+        0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+        0.5f, 0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
+        0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+        0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+        0.5f, -0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+        0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+        -0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f,
+        0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 1.0f,
+        0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f,
+        0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f,
+        -0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f,
+        -0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f,
+        -0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
+        0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
+        0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
+        0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
+        -0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
+        -0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f
+        }; 
         
-        unsigned int indices[36] = {0, 1, 3, 1, 3, 5, 0, 1, 13, 1, 13, 10, 2, 9, 6, 9, 6, 8, 4, 7, 11, 7, 11, 8, 0, 15, 3, 15, 3, 12, 14, 9, 11, 9, 11, 8};
-
+        unsigned int indices[36] = {
+        0, 8, 6,
+        8, 11, 6,
+        0, 3, 6,
+        3, 4, 6,
+        0, 8, 2, 
+        8, 15, 2,
+        1, 14, 5, 
+        14, 5, 13,
+        7, 12, 5, 
+        12, 5, 13,
+        9, 14, 10,
+        14, 10, 13
+        };
 
         m_VertexArray.reset(Echo::VertexArray::Create());
 
@@ -37,6 +68,7 @@ public:
 
         Echo::BufferLayout layout({
                 {Echo::ShaderDataType::Float3, "Position"},
+                {Echo::ShaderDataType::Float3, "Normals"},
                 {Echo::ShaderDataType::Float2, "Tex Coords"},
         });
         m_VertexBuffer->SetLayout(layout);
@@ -48,11 +80,16 @@ public:
         m_VertexArray->SetIndexBuffer(m_IndexBuffer);
 
         m_Shader.reset(Echo::Shader::Create("Assets/Shaders/test.shader"));
+        m_LightShader.reset(Echo::Shader::Create("Assets/Shaders/light.shader"));
+
         m_BoxTexture = Echo::Texture2D::Create("Assets/Textures/tex.png");
         m_TransparentTexture = Echo::Texture2D::Create("Assets/Textures/transparent.png");
        
         std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->Bind();
-        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformInt(0, "u_Texture");
+        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformFloat(0, "u_Texture");
+
+        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->Bind();
+        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformVec3(glm::vec3(1.0f, 1.0f, 1.0f), "u_LightPos");
     }
 
     void OnUpdate() override
@@ -65,18 +102,29 @@ public:
         Echo::RenderCommand::Clear();
 
         m_BoxTexture->Bind(0);
-        Echo::Renderer::Submit(m_Shader, m_VertexArray);
+        Echo::Renderer::SubmitUnindexed(m_Shader, m_VertexArray);
+        Echo::Renderer::SubmitUnindexed(m_Shader, m_VertexArray, glm::translate(glm::mat4(1.0f), glm::vec3(5.0f, 3.0f, 1.0f)));
 
         m_TransparentTexture->Bind(0);
-        Echo::Renderer::Submit(m_Shader, m_VertexArray, glm::translate(glm::mat4(1.0f), glm::vec3(1.0f, 1.0f, 0.0f)));
+        Echo::Renderer::SubmitUnindexed(m_Shader, m_VertexArray, glm::translate(glm::mat4(1.0f), glm::vec3(5.0f, 5.0f, 0.0f)));
+
+        Echo::Renderer::SubmitUnindexed(m_LightShader, m_VertexArray, glm::translate(glm::mat4(1.0f), m_lightPos) *
+                                                             glm::scale(glm::mat4(1.0f), glm::vec3(0.5, 0.5f, 0.5f)));
 
         Echo::Renderer::EndScene();
     }
 
     void OnImGuiRender() override
     {
-        ImGui::Begin("Color");
-        ImGui::ColorPicker3("Pick Color", glm::value_ptr(m_Color));
+        ImGui::Begin("Control Panel");
+        float cameraPos[3] = {
+            m_CameraController.GetCamera().GetPosition().x,
+            m_CameraController.GetCamera().GetPosition().y,
+            m_CameraController.GetCamera().GetPosition().z};
+
+        ImGui::InputFloat3("Camera Position", cameraPos);
+        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformVec3(m_CameraController.GetCamera().GetPosition(), "u_CameraPos");
+
         ImGui::Separator();
         Echo::CameraRotation rot = m_CameraController.GetCamera().GetRotation();
         ImGui::InputDouble("Pitch", &rot.pitch);
@@ -85,8 +133,35 @@ public:
 
         ImGui::Separator();
         static float test[2] = {25.0f, 75.0f};
-        ImGui::InputFloat2("Zoom", test,"%.3f", ImGuiInputTextFlags_EnterReturnsTrue);
-        m_CameraController.SetZoom(test[0], test[1]);
+        ImGui::Text("Zoom: ");
+        if(ImGui::InputFloat2("Min/Max Zoom", test,"%.3f", ImGuiInputTextFlags_EnterReturnsTrue))
+        {
+            m_CameraController.SetZoom(test[0], test[1]);
+        }
+        float zoomValue = m_CameraController.GetZoom();
+        ImGui::InputFloat("Zoom value", &zoomValue);
+        ImGui::Separator();
+        
+        static float sens = m_CameraController.GetSensitivity();
+        if(ImGui::InputFloat("Sensitivity", &sens))
+        {
+            m_CameraController.SetSensitivity(sens);
+        }
+    
+        ImGui::Separator();
+        static float lightColor[3] = {1.0f, 1.0f, 1.0f};
+        ImGui::InputFloat3("Light Color", lightColor);
+            std::dynamic_pointer_cast<Echo::OpenGLShader>(m_LightShader)->UploadUniformVec3({lightColor[0], lightColor[1], lightColor[2]}, "u_Color");
+            std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformVec3({lightColor[0], lightColor[1], lightColor[2]}, "u_LightColor");
+
+        static float ambientStrenght = 0.1f;
+        ImGui::InputFloat("AmbientStrenght", &ambientStrenght);
+            std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformFloat(ambientStrenght, "u_AmbientStrenght");
+
+        static glm::vec3 lightPos = {1.0f, 1.0f, 1.0f};
+        ImGui::DragFloat3("LightPos", &lightPos.x);
+        m_lightPos = lightPos;
+        std::dynamic_pointer_cast<Echo::OpenGLShader>(m_Shader)->UploadUniformVec3(m_lightPos, "u_LightPos");
 
         ImGui::End();
     }
@@ -112,11 +187,13 @@ public:
 
 private:
 
+    glm::vec3 m_lightPos;
     glm::vec3 m_Color;
     bool isPaused;
 
     Echo::PerspectiveCameraController m_CameraController;
     Echo::Ref<Echo::Shader> m_Shader;
+    Echo::Ref<Echo::Shader> m_LightShader;
     Echo::Ref<Echo::VertexArray> m_VertexArray;
     Echo::Ref<Echo::VertexBuffer> m_VertexBuffer;
     Echo::Ref<Echo::IndexBuffer> m_IndexBuffer;

@@ -87,13 +87,13 @@ namespace Echo {
 
     bool Application::OnWindowResize(WindowResizeEvent& e)
     {
-        glViewport(0, 0, e.GetWidth(), e.GetHeight());
+        Renderer::OnWindowResize(e.GetWidth(), e.GetHeight());
         return true;
     }
 
     bool Application::OnWindowClose(WindowCloseEvent& e)
     {
         m_Running = false;
-        return true;
+        return false;
     }
 }

@@ -20,7 +20,9 @@ namespace Echo
 
             void UploadUniformMat4(const glm::mat4& matrix, const std::string& name);
             void UploadUniformVec4(const glm::vec4& vec4, const std::string& name);
+            void UploadUniformVec3(const glm::vec3& vec4, const std::string& name);
             void UploadUniformInt(int value, const std::string& name);
+            void UploadUniformFloat(float value, const std::string& name);
         private:
             u_int32_t m_RendererID;
     };

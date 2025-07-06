@@ -33,12 +33,17 @@ namespace Echo
             const PerspectiveCamera& GetCamera() {return m_Camera;};
 
             void SetZoom(float min, float max) {m_MaxZoom = max, m_MinZoom = min;}
+            void SetSensitivity(float sens) {m_Sensitivity = sens;}
+
+            inline float GetSensitivity() const {return m_Sensitivity;}
+            inline float GetZoom() const { return m_Fov;}
+            inline float GetFov() const { return m_Fov;}
     private:
         bool OnWindowResize(WindowResizeEvent& event);
         bool OnMouseScroll(MouseScrollEvent& event);
 
         float m_AspectRatio, m_Fov, m_NearPlane, m_FarPlane;
-        float m_MinZoom = 15.0f, m_MaxZoom = 75.0f;
+        float m_MinZoom = 15.0f, m_MaxZoom = 75.0f, m_Sensitivity = 0.1f;
         PerspectiveCamera m_Camera;
 
         glm::vec3 m_CameraDir, m_CameraPos;

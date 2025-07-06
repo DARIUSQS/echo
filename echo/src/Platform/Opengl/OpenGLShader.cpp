@@ -91,6 +91,7 @@ namespace Echo
     void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& shaders)
     {
         m_RendererID = glCreateProgram();
+        Bind();
         EC_ASSERT(shaders.size() <= 2, "Echo only supports 2 types of shaders");
         std::array<unsigned int, 2> shadersID;
         int shaderIDIndex = 0;
@@ -120,21 +121,39 @@ namespace Echo
 
     void OpenGLShader::UploadUniformMat4(const glm::mat4& matrix, const std::string& name)
     {
+        Bind();
         int location = glGetUniformLocation(m_RendererID, name.c_str());
         glUniformMatrix4fv(location, 1, 0, glm::value_ptr(matrix));
     }
 
     void OpenGLShader::UploadUniformVec4(const glm::vec4& vec4, const std::string& name)
     {
+        Bind();
         int location = glGetUniformLocation(m_RendererID, name.c_str());
         glUniform4f(location, vec4.x, vec4.y, vec4.z, vec4.w);
+    }
+
+    void OpenGLShader::UploadUniformVec3(const glm::vec3& vec4, const std::string& name)
+    {
+        Bind();
+        int location = glGetUniformLocation(m_RendererID, name.c_str());
+        glUniform3f(location, vec4.x, vec4.y, vec4.z);
     }
     
     void OpenGLShader::UploadUniformInt(int value, const std::string& name)
     {
+        Bind();
         int location = glGetUniformLocation(m_RendererID, name.c_str());
         glUniform1i(location, value);
     }
+
+    void OpenGLShader::UploadUniformFloat(float value, const std::string& name)
+    {
+        Bind();
+        int location = glGetUniformLocation(m_RendererID, name.c_str());
+        glUniform1f(location, value);
+    }
+
 
     void OpenGLShader::Bind() const
     {
